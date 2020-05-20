@@ -1,0 +1,162 @@
+[
+    {   "name": "Flame Gatling",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_full_action"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 1,
+        "effect": "At the start of your next turn after you activate this system, gain 2 Heat and draw a Line 5 area from your mech. Targets caught in this area take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active.",
+        "description": "<i>A chemical-based incendiary system with a system of rotating barrels to extend operational lifespan allows a terrifying deluge of flame after a predictable windup. Limited fuel canisters and heat venting requirements interfere with normal weapons usage when the barrels are spinning up.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "ANANSI-Class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [],
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your mech gains the AI property and the ANANSI protocol.",
+            "abilities": [{
+                "effect_type": "Protocol",
+                "effect_name": "ANANSI",
+                "detail": "Your attacks gain +1 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn."
+            },
+            {
+                "effect_type": "Reaction",
+                "effect_name": "Graceful Dance",
+                "frequency": "3/round",
+                "trigger": "You cause knockback to an enemy.",
+                "detail": "You may push yourself an equal number of spaces in a direction of your choosing, as long as that direction is not directly towards your target. This counts as involuntary movement and ignores reactions."
+            }
+        ]
+        },
+        "description": "<i>ANANSI-class NHPs were born from an experiment in analyzing biometrics data from skydiving flight suits. The statistical paradoxes in simulating the goal of regulation of vital signs across a wide variety of phenotypes, genotypes, and environmental conditions resulted in an NHP with a personality humble and prideful simultaneously, constantly calculating odds and how to beat them by ignoring factory specs. ANANSI-class NHPs consistently cascade ahead of schedule; proactive cycling is advised along with aggressive maintenance of the hardware it is installed on.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Starfish Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 4}],
+        "source": "BDF",
+        "license": "KAMPILAN",
+        "license_level": 1,
+        "effect": {
+            "effect_type": "Charge",
+            "charges": [
+                {
+                    "name": "Starfish Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Range","val": 5}],
+                    "detail": "Creates 3 Line 3 areas for 1d6 damage, Hull Save for half"
+                },
+                {
+                    "name": "Starfish Mine",
+                    "charge_type": "Mine",
+                    "detail": "When detonated, this system creates 5 Line 3 areas for 2 damage, Hull Save for half."
+                }
+            ]
+        },
+        "description": "<i></i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Distributed Tactical Net",
+        "type": "Tech",
+        "sp": 2,
+        "tags": [{"id": "tg_full_tech"}],
+        "source": "BDF",
+        "license": "KAMPILAN",
+        "license_level": 1,
+        "effect": {
+            "effect_type": "Tech",
+            "activation": "Full",
+            "option_set": "Full Tech",
+            "options": [{
+                "name": "TacNet Mark",
+                "detail": "Make a tech attack against another character in sensor range. On hit, the character takes 2 heat and the next attack to hit that character deals an additional 4 heat and 2 knockback to that character."
+            },
+            {
+                "name": "Positional Mapping",
+                "detail": "Place 3 size ½ tokens within sensor range on free spaces or on spaces with planted mines. The next grenade thrown onto those spaces or mine detonated on those spaces deals an additional 2 heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 heat total)."
+            }
+        ]
+        },
+        "description": "<i></i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "BANSHEE-Class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "Kampilan",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your mech gains the AI property and the Uncaring Scream reaction.",
+            "abilities": [{
+                "effect_type": "Reaction",
+                "effect_name": "Uncaring Scream",
+                "frequency": "3/round",
+                "tags": [{"id": "tg_heat_self","val": 4}],
+                "trigger": "You take damage from an actor.",
+                "detail": "You gain resistance to that actor’s damage until the end of your next turn. If you are attacked by a closer hostile actor, as a reaction you can gain resistance to that character’s damage until the end of your next turn. These effects continue until you do not take any damage until the beginning of your next turn."
+            }]
+        },
+        "description": "<i>Borne from integrated life support Comp/Con units aboard Kampilan-pattern frame,</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Carapace Crash Pads",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 1,
+        "effect": "Gain resistance to falling damage and +1 accuracy on checks and saves versus Immobilized.",
+        "description": "<i></i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "QUEEN-Class Refraction Laser",
+        "type": "System",
+        "sp": 3,
+        "tags": [],
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 2,
+        "effect": "Gain a charge when you cool to zero heat, up to two. Expend a charge as a Quick on a character in range 8 for 1d6 Energy damage half on save; repeat this save on two targets within range 3 for 2 Energy damage each",
+        "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed.  </i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "DAEVA-Class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your mech gains the AI tag and the DAEVA Protocol.",
+            "abilities": [{
+                "effect_type": "Protocol",
+                "effect_name": "DAEVA Protocol",
+                "detail": "Expend a charge to allow your next ranged or melee attack to be drawn from a number of spaces away from you equal to the heat generated by this protocol, as long as the weapon deals any Explosive or Burn.",
+                "tags": [{"id": "tg_limited","val": 2},{"id": "tg_heat_self","val": "1d3+2"},{"id": "tg_protocol"}]
+            }]
+        },
+        "description": "<i>DAEVA-class</i>",
+        "data_type": "system",
+        "aptitude": {}
+    }
+]

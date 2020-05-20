@@ -1,0 +1,231 @@
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+},
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+},
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+},
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+},
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+},
+{
+    "source": "BDF",
+    "name": "",
+    "mechtype": [],
+    "image_url": "",
+    "y_pos": 0,
+    "description": "",
+    "mounts": [],
+    "stats": {
+        "size": 0,
+        "armor": 0,
+        "hp": 0,
+        "evasion": 0,
+        "edef": 0,
+        "heatcap": 0,
+        "repcap": 0,
+        "sensor_range": 0,
+        "tech_attack": 0,
+        "save": 0,
+        "speed": 0,
+        "sp": 0
+    },
+    "traits": [
+        {
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "core_system": {},
+    "data_type": "frame",
+    "aptitude": {}
+}
+
+{   "name": "",
+    "type": ,
+    "sp": 0,
+    "tags": [],
+    "applied_to": [],
+    "applied_string": "",
+    "source": "BDF",
+    "license": "",
+    "license_level": 0,
+    "effect": "",
+    "description": "",
+    "data_type": "mod",
+    "aptitude": {}
+},

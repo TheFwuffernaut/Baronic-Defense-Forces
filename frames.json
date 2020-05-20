@@ -1,0 +1,147 @@
+[
+    {
+        "source": "BDF",
+        "name": "AKRAFENA",
+        "mechtype": ["Striker","Controller"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
+        "mounts": ["Main","Main","Main","Main"],
+        "stats": {
+            "size": 0.5,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 6,
+            "edef": 8,
+            "heatcap": 6,
+            "repcap": 5,
+            "sensor_range": 5,
+            "tech_attack": 0,
+            "save": 10,
+            "speed": 3,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "MOUNT RULES",
+                "description": "Hi, this is here to tell you that the 4 main mounts are - in fact - 2 Main/Main mount. Its Aux/Aux but with Mains!<br>The the two on the left half are as far as the rules are concerned linked (so if you have two loading weapons and fire that mount they're both unloaded), same goes for the pair on the right.<br>Apologies that this couldn't be done in a cleaner way - maybe in the future"
+            },
+            {
+                "name": "Weapon Bracing",
+                "description": "After firing a weapon, the Akrafena cannot fire weapons from any other mount until the start of its next turn."
+            },
+            {
+                "name": "Reactive Thrusters",
+                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn."
+            },
+            {
+                "name": "Slow",
+                "description": "The Akrafena has +1 Difficulty on agility checks and saves."
+            }
+        ],
+        "core_system": {
+            "name": "PEDIPALPS Augmented Hardpoints",
+            "description": "Integrated additional limbs and recoil stabilizers allow a terrifying volume of sustained fire. During spikes of reactor activity, static defense capabilities surge as weapons are reloaded by tertiary limbs as fast as they cycle.",
+            "passive_name": "Lock and Cycle",
+            "passive_effect": "The Akrafena can fire a weapon and reload as a full action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action.",
+            "active_name": "Synchronize Limbs",
+            "active_effect": "After using this protocol, for the rest of this scene, the Akrafena can fire 2 weapons and reload 2 weapons when it uses Lock and Cycle.",
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
+        "name": "KAMPILAN",
+        "mechtype": ["Support","Defender"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit.",
+        "mounts": ["Aux/Aux"],
+        "stats": {
+            "size": 0.5,
+            "armor": 0,
+            "hp": 6,
+            "evasion": 10,
+            "edef": 8,
+            "heatcap": 5,
+            "repcap": 6,
+            "sensor_range": 15,
+            "tech_attack": 1,
+            "save": 10,
+            "speed": 5,
+            "sp": 8
+        },
+        "traits": [
+            {
+                "name": "Electronic Impulse Muscles",
+                "description": "1/round, the Kampilan gains +1d6 bonus damage on its next attack after causing involuntary movement to another character."
+            },
+            {
+                "name": "Subjectivity Diffusion Engines",
+                "description": "The Kampilan never rolls more than one die for Structure checks."
+            },
+            {
+                "name": "Plasteel Enhanced Frame",
+                "description": ""
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "",
+            "active_name": "Nuclear Dismount",
+            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame.  This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2.  The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check.  After activating the Nuclear Dismount, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits and mech talents of the Kampilan.",
+            "integrated": {"id": "bdf_binary_laser"},
+            "tags": [{"id": "tg_full_action"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
+        "name": "SHOTEL",
+        "mechtype": ["Striker"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
+        "mounts": ["Main","Main"],
+        "stats": {
+            "size": 0.5,
+            "armor": 0,
+            "hp": 6,
+            "evasion": 10,
+            "edef": 6,
+            "heatcap": 7,
+            "repcap": 3,
+            "sensor_range": 8,
+            "tech_attack": 0,
+            "save": 10,
+            "speed": 4,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "HiveFlight Boosters",
+                "description": "The Shotel can fly when it moves.  When it begins the turn flying and lands after moving at least 2 spaces, its next attack can be drawn from a space half that many spaces away in the same direction as the Shotel’s last movement and within line of sight."
+            },
+            {
+                "name": "Heat Bleed",
+                "description": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn."
+            },
+            {
+                "name": "Exposed Reactor",
+                "description": "The Shotel receives +1 Difficulty on Engineering checks and saves."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "",
+            "active_name": "Pandora's Pepperbox",
+            "active_effect": "Your Heat cools to zero.  Choose a space within Range 5 and mark a Cone 7 area; at start of your next two turns, all characters and objects caught inside take on failed Agility save take 2d6 Energy plus your Heat value when you activated this protocol, and half damage on a successful save.",
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Nanocomposite Crash Couches",
+        "source": "BDF",
+        "effect": "1/round, your mech can take 1d6 Heat to make an Agility check; on a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses.",
+        "description": ""
+    },
+    {
+        "name": "Spiderline Failsafes",
+        "source": "BDF",
+        "effect": "1/round, when it would become Prone from an attack or failed Save, your mech can take 1 Heat to make an Agility check to take the Boost action as a reaction.  A successful check prevents the Prone status and allows normal movement.",
+        "description": ""
+    },
+    {
+        "name": "Electromagnetic Thrusters",
+        "source": "BDF",
+        "effect": "1/round, your mech gains +4 Evasion after taking the Boost action.  This cannot boost your Evasion over 20.",
+        "description": ""
+    },
+    {
+        "name": "Bespoke Filigree Project",
+        "source": "BDF",
+        "effect": "+1 repair cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
+        "description": "Barons of esteem devote untold resources to preening and festooning their mech with the heraldry of their House. You have taken your frame and turned form into function."
+    },
+    {
+        "name": "Nanoweb Countermeasures",
+        "source": "BDF",
+        "effect": "1/round, your mech can remove the Lock On condition when it Boosts.  If your mech passes through or adjacent to another character when it uses this effect, you can add the Lock On condition to that character.",
+        "description": ""
+    },
+    {
+        "name": "Compression Carapace",
+        "source": "BDF",
+        "effect": "1/round, your mech has 3 additional damage reduction after it Boosts.",
+        "description": ""
+    }
+]

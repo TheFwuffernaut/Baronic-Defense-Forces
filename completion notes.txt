@@ -1,0 +1,3 @@
+Akrafena - frame complete, rest of license needs adding
+Kampilan - frame complete, add core system name and description when those are added, rest of license needs adding (and some completing)
+Shotel - frame complete, add core system name and description when those are added, rest of license needs adding
