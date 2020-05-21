@@ -50,15 +50,15 @@
             "effect_type": "Charge",
             "charges": [
                 {
-                    "name": "Starfish Grenade",
+                    "name": "Pinwheel Grenade",
                     "charge_type": "Grenade",
                     "range": [{"type": "Range","val": 5}],
-                    "detail": "Creates 3 Line 3 areas for 1d6 damage, Hull Save for half"
+                    "detail": "When thrown, the detonation creates 3 Line 3 areas originating from the targeted space. Characters caught in these areas take 2 damage, or half damage on a successful Hull Save."
                 },
                 {
-                    "name": "Starfish Mine",
+                    "name": "Supernova Mine",
                     "charge_type": "Mine",
-                    "detail": "When detonated, this system creates 5 Line 3 areas for 2 damage, Hull Save for half."
+                    "detail": "When detonated, this system creates 3 Line 5 areas originating from the mine’s space. These areas can overlap and target the same character up to one additional time.  Characters caught in these areas for 2 damage, or half damage on a successful Hull Save."
                 }
             ]
         },
@@ -100,12 +100,14 @@
         "license_level": 2,
         "effect": {
             "effect_type": "Charge",
-            "charge": [{
+            "charge": [
+            {
                 "name": "Blaze Grenade",
                 "charge_type": "Grenade",
                 "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
                 "detail": "This area created by this grenade lasts until the end of your turn. At the end of your turn, this explosion causes a new secondary Blast 1 area in a free space within Range 3 of the original. 1/round, Characters caught in either area or moving into it for the first time on their turn take 2 Burn on a failed AGILITY save. The secondary area expires at the start of your next turn."
-            },{
+            },
+            {
                 "name": "Glory Mine",
                 "charge_type": "Mine",
                 "detail": "When detonated, this system detonates in a series of sinusoidal lasers, creating 3 Burst 1 areas within range 2 of the mine’s space. These areas cannot overlap. Characters within the affected areas must succeed on an AGILITY save or take 3 Burn. On a success, they take 2 Burn."
@@ -137,13 +139,13 @@
         "license_level": 3,
         "effect": {
             "effect_type": "AI",
-            "detail": "Your mech gains the AI property and the Uncaring Scream reaction.",
+            "detail": "Your mech gains the AI property and the Uncaring Scream reaction. This AI always cascades on a Direct Hit Structure check result and automatically ends cascade when the closest character at the time of structure check is Destroyed. When cascading, it always prioritizes causing Prone, then Destroyed status to the nearest character by any means and Uncaring Howl’s heat cost is reduced to 1.",
             "abilities": [{
                 "effect_type": "Reaction",
                 "effect_name": "Uncaring Scream",
                 "frequency": "3/round",
                 "tags": [{"id": "tg_heat_self","val": 4}],
-                "trigger": "You take damage from an actor. This AI always cascades on a Direct Hit Structure check result and automatically ends cascade when the closest character at the time of structure check is Destroyed.  When cascading, it always prioritizes causing Prone, then Destroyed status to the nearest character by any means and Uncaring Howl’s heat cost is reduced to 1.",
+                "trigger": "You take damage from an actor.",
                 "detail": "You gain resistance to that actor’s damage until the end of your next turn. If you are attacked by a closer hostile actor, as a reaction you can gain resistance to that character’s attack's damage until the end of your next turn for no heat cost. These effects continue until you do not take any damage until the beginning of your next turn."
             }]
         },
