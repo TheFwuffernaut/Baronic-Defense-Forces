@@ -74,11 +74,27 @@
                     "type": "kinetic",
                     "val": "1d3"
                 }],
-                "detail":  "Attacking with this weapon counts as an Improvised Attack."
+                "detail":  "Attacking with this weapon counts as an Improvised Attack. This weapon gains +2 bonus damage for every destroyed Mount or completely expended Limited System, up to +6, including the Binary Laser Rifle."
             }
         ],
         "talent_item": false,
         "description": "<i></i>",
+        "data_type": "weapon",
+        "aptitude": {}
+    },
+    {   "id": "bdf_golden_wave",
+        "name": "Golden Wave Laser",
+        "mount": "Auxiliary",
+        "type": "Rifle",
+        "range": [{"type": "Cone","val": 3}],
+        "damage": [{"type": "Energy","val": 2},{"type": "Heat","val": 1}],
+        "tags": [{"id":"tg_heat_self","val": 2},{"id": "tg_limited","val": 6},{"id": "tg_knockback"}],
+        "effect": "This weapon is not affected by Engagement penalties.",
+        "source": "BDF",
+        "license": "Kampilan",
+        "license_level": 2,
+        "talent_item": false,
+        "description": "<i>Wrist-mounted in pairs, Golden Wave pattern laser weaponry allows frame manipulators to remain free for</i>",
         "data_type": "weapon",
         "aptitude": {}
     },

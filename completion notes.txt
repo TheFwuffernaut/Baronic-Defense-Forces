@@ -1,3 +1,3 @@
-Akrafena - frame complete, rest of license needs adding
-Kampilan - frame complete, add core system name and description when those are added, rest of license needs adding (and some completing)
-Shotel - frame complete, add core system name and description when those are added, rest of license needs adding
+Akrafena - frame complete, complete, find workaround for GMS bonus mount core bonus until Main/Main mounts are added.
+Kampilan - frame complete, complete, add core system name and description when those are added.
+Shotel - frame complete, add core system name and description when those are added

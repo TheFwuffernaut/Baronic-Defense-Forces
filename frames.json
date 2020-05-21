@@ -84,14 +84,14 @@
             },
             {
                 "name": "Plasteel Enhanced Frame",
-                "description": ""
+                "description": "If the Kampilan moves at least 6 spaces in a round, 1/round it can move 3 spaces in the same direction as its last movement as a free action."
             }
         ],
         "core_system": {
             "name": "",
             "description": "",
             "active_name": "Nuclear Dismount",
-            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame.  This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2.  The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check.  After activating the Nuclear Dismount, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits and mech talents of the Kampilan.",
+            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan.",
             "integrated": {"id": "bdf_binary_laser"},
             "tags": [{"id": "tg_full_action"}]
         },
