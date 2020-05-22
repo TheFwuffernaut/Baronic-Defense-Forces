@@ -1,6 +1,48 @@
 [
     {
         "source": "BDF",
+        "name": "AKINAKA",
+        "mechtype": [],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Flex"],
+        "stats": {
+            "size": 0,
+            "armor": 0,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 10,
+            "heatcap": 5,
+            "repcap": 8,
+            "sensor_range": 10,
+            "tech_attack": ,
+            "save": 10,
+            "speed": 4,
+            "sp": 8
+        },
+        "traits": [
+            {
+                "name": "Weak",
+                "description": "+1 difficulty on Hull Saves"
+            },
+            {
+                "name": "Eye of the Storm",
+                "description": "1/round the Akinaka is immune to damage and effects from an area of effect attack or save, hostile or allied."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "",
+            "passive_name": "Whale beacon",
+            "passive_effect": "1/round you can detonate a Drone as a Full Action, destroying it, to create an area originating from the drone's space from the list provided:<li>Line 10, width 3<li>Blast 2<li>three Blast 1 explosions in Range 5 for +1d6 extra damage<br>enemies in this area at the start of your next turn take 2d6 damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
+            "active_name": "One in the pocket",
+            "active_effect": "1/scene you can activate the whale beacon immediately on a target in ; Whale Beacon's damage is permanently increased to 3d6 damage instead of 2d6 for the rest of the scene.",
+            "tags": []
+        }
+    },
+    {
+        "source": "BDF",
         "name": "AKRAFENA",
         "mechtype": ["Striker","Controller"],
         "image_url": "",
@@ -53,6 +95,52 @@
     },
     {
         "source": "BDF",
+        "name": "JIAN",
+        "mechtype": ["Striker"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Main","Main"],
+        "stats": {
+            "size": 1,
+            "armor": 0,
+            "hp": 10,
+            "evasion": 9,
+            "edef": 7,
+            "heatcap": 6,
+            "repcap": 4,
+            "sensor_range": 8,
+            "tech_attack": -1,
+            "save": 11,
+            "speed": 4,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "Experimental Munitions",
+                "description": "Grenades have extra throw range equal to the last movement you made in a straight line and explode with +1d6 Explosive damage, targets may make an AGILITY save for half damage in a Blast 1 area of the targeted space if you self immobilize until your next turn as part of the grenade system activation."
+            },
+            {
+                "name": "Combat Roll",
+                "description": "1/turn when an attack misses you, move 1 space. If this causes you to collide with an object or terrain, deal 10 AP KINETIC damage to the object or terrain."
+            },
+            {
+                "name": "Top Heavy",
+                "description": "The Jian has +1 DIFFICULTY on saves vs Prone."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "",
+            "active_name": "Combat Cycle",
+            "active_effect": "Summon two Line 2 Drones with 20HP - they can combine to hold a size 2 actor or they can hold 1 size 1 or 1/2 actor each; mount as a Quick, they move 6 spaces at the start of your turn and you can fire a Line 5 machine Gun for 2 damage as a protocol; you can prime a Self Destruct on each one independently.",
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
         "name": "KAMPILAN",
         "mechtype": ["Support","Defender"],
         "image_url": "",
@@ -93,6 +181,54 @@
             "active_name": "Nuclear Dismount",
             "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan.",
             "integrated": {"id": "bdf_binary_laser"},
+            "tags": [{"id": "tg_full_action"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
+        "name": "KLEWANG",
+        "mechtype": ["Striker","Controller"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through.",
+        "mounts": ["Flex","Main","Heavy"],
+        "stats": {
+            "size": 3,
+            "armor": 2,
+            "hp": 9,
+            "evasion": 6,
+            "edef": 6,
+            "heatcap": 5,
+            "repcap": 6,
+            "sensor_range": 3,
+            "tech_attack": -2,
+            "save": 10,
+            "speed": 2,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "Top Heavy",
+                "description": "The Klewang has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement"
+            },
+            {
+                "name": "Aggressive Underhooks",
+                "description": "The Klewang has +1 to HULL saves and Checks while Grappling and can maintain active Grapples at up to range 3 (the Klewang losing adjacency does not break grapples until the grapple participant is 4 or more spaces away)."
+            },
+            {
+                "name": "Follow-Through",
+                "description": "The Klewang can move 2 spaces as a free action when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). If the Kulewang moves at least 4 spaces in a round, 1/round it can move 2 additional spaces as a free action."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "<i>Mechs aren’t supposed to bend like that.</i>",
+            "passive_name": "Suplex",
+            "passive_effect": "The Klewang can, as a Full Action, fly 3 spaces and initiate a Grapple; if the attack roll is successful, it may switch positions with the Grapple target.",
+            "active_name": "Six Meters Under",
+            "active_effect": "Until the end of the scene, the Klewang creates a Cone 5 shockwave for 2d6 Explosive damage when it activates Suplex or Boosts in the direction of the nearest enemy character. Characters caught in the area who pass a HULL save take half damage. ",
             "tags": [{"id": "tg_full_action"}]
         },
         "data_type": "frame",

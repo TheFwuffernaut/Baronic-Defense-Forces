@@ -48,7 +48,7 @@
         "license_level": 1,
         "effect": {
             "effect_type": "Charge",
-            "charges": [
+            "charge": [
                 {
                     "name": "Pinwheel Grenade",
                     "charge_type": "Grenade",
@@ -62,7 +62,7 @@
                 }
             ]
         },
-        "description": "<i></i>",
+        "description": "<i>A pinwheel-shaped charge, designed to saturate the target area with plasma. Crude, unfocused - not enough to get through ship armor, but more than enough to decrew it.<br><br>“The Barons like to throw a bunch of these down a shaft and think it’ll get the job done.  Not enough force to take down a p-g on their own, more than enough when you throw a dozen.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -87,7 +87,7 @@
             }
         ]
         },
-        "description": "<i></i>",
+        "description": "<i>Baronic command-and-control units rely on telemetrics provided by frontline scouts to coordinate fire support missions and troop movements.<br><br>“Hacking the BUC just isn’t fun any more. It’s all information we already know - where we are, where we’re going, what’s going to blow us up.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -114,11 +114,11 @@
             }
         ]
         },
-        "description": "<i></i>",
+        "description": "<i>“I saw one of the Barons, looking at me from the top of the ruins, caught his grenade on rebar, just laughing to himself. Didn’t miss a beat as he keyed the release and watched the charge sail down past us and into our fellow cell on the first floor. Never stopped laughing.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Picosilicarbonate Spray",
+    {   "name": "Picosilicon Spray",
         "type": "System",
         "sp": 2,
         "tags": [{"id": "tg_limited","val": 3},{"id": "tg_overshield"},{"id": "tg_full_action"},{"id": "tg_unique"}],
@@ -126,7 +126,7 @@
         "license": "KAMPILAN",
         "license_level": 3,
         "effect": "This reservoir of chemicals contains two active agents used to manipulate terrain and objects and can be activated in either mode with a Full Action.<br><b>Sledgehammer Mode:</b> An adjacent Object, Drone, or Deployable gains (8) OVERSHIELD.  If this overshield is depleted, the object explodes in a Burst 2 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save.<br><br><b>“Sixty” Solvent Mode:</b> Deal 20AP damage to an adjacent Object, Drone, or Deployable. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1.  Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character.",
-        "description": "<i></i>",
+        "description": "<i>“We keep finding this stuff abandoned among Baronic armories. Nobody wants it - it’s supposed to solidify clay for building fortifications, and it makes it either too brittle or too soft. Doesn’t explain why our Kobolds keep blowing themselves up when using Seismic Pulses.”<br>“Think it’s haunted?”<br>“It’s chemistry, how can it be haunted? There’s nothing alive in there.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -149,7 +149,46 @@
                 "detail": "You gain resistance to that actor’s damage until the end of your next turn. If you are attacked by a closer hostile actor, as a reaction you can gain resistance to that character’s attack's damage until the end of your next turn for no heat cost. These effects continue until you do not take any damage until the beginning of your next turn."
             }]
         },
-        "description": "<i>Borne from integrated life support Comp/Con units aboard Kampilan-pattern frame,</i>",
+        "description": "<i>Captured HORUS agitators embedded among the yielded several PLAYER_TWO COMP/CON units, subsequently reverse engineered by the BDF and installed in scout-pattern Kampilan frames as a long range search and destroy unit operating independently of resupply for extended periods.  These PLAYER_TWO units, designed to operate a soldier’s hardsuit while they slept based on data from a flash pattern of their subjectivity, were scrubbed of any code related to HORUS and severed from the subjectivity of the soldier - a machine to fight when the soldier could not.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Coolant Flush",
+        "type": "Shield",
+        "sp": 2,
+        "tags": [{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 1,
+        "effect": "You may activate this system as a Protocol. Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty.",
+        "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Shock Armor",
+        "type": "Armor",
+        "sp": 2,
+        "tags": [{"id": "tg_protocol"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 2,
+        "effect": "You may activate this system as a Protocol. Until the end of your next turn, when hit by a melee attack while Grappling, the damage is reduced by 2 at a cost of 1 HEAT per attack.",
+        "description": "<i>Armor heats up, flakes off; pilot stays cool.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Calcium-class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save."
+        },
+        "description": "<i>The crane game became aware. Whoops.</i>",
         "data_type": "system",
         "aptitude": {}
     },
