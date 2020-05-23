@@ -39,6 +39,203 @@
         "data_type": "system",
         "aptitude": {}
     },
+    {   "name": "Saturation Drone",
+        "type": "Drone",
+        "sp": 2,
+        "tags": [{"id": "tg_drone"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 1,
+        "effect": {
+            "name": "Saturation Drone",
+            "effect_type": "Drone",
+            "size": 0.5,
+            "hp": 5,
+            "armour": 2,
+            "edef": 10,
+            "evasion": 10,
+            "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "C80 Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 2,
+        "effect": [
+            {
+                "effect_type": "Basic",
+                "detail": "You may deploy two charges per Limited use (two grenades / a grenade and a mine / two mines per Limited use)."
+            },
+            {
+                "effect_type": "Charge",
+                "charge": [
+                    {
+                        "name": "C80 Grenade",
+                        "charge_type": "Grenade",
+                        "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                        "damage": [{"type": "Explosive", "val": "1d3"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}],
+                        "detail": "Targets caught in the area of effect may make an Agility save to take half damage."
+                    },
+                    {
+                        "name": "C80 Mine",
+                        "charge_type": "Mine",
+                        "range": [{"type": "Cone", "val": 5}],
+                        "damage": [{"type": "Explosive", "val": "1d6"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}]
+                    }
+                ]
+            }
+        ],
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Lion Coast Missiles",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_limited", "val": 1},{"id": "tg_tg_full_tech"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 3,
+        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. Requires Lock on to fire. If the tech attack succeeds, you fire a Hound Missile (Size 1, HP ,  which deals 3d6 explosive damage in a Blast 1 from the target - they may perform an Agility save to take half damage.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Nano Solder",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_full_action"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 1,
+        "effect": "Deploys a Blast 1 area. Allies can walk into/over this and spend a Quick action to gain 1d6 Overshield. This area has 3 charges before it fades.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Double Time Armor",
+        "type": "Armor",
+        "sp": 1,
+        "tags": [{"id": ""}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 1,
+        "effect": "You gain 1 Speed until the end of your next turn after getting hit.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Helicopter Drone",
+        "type": "Drone",
+        "sp": 2,
+        "tags": [{"id": "tg_invisible"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 2,
+        "effect": {
+            "name": "Helicopter Drone",
+            "effect_type": "Drone",
+            "size": 0.5,
+            "hp": 5,
+            "armour": 0,
+            "edef": 10,
+            "evasion": 10,
+            "detail": "Can fire a Cone 5 Flamethrower for 1 Burn, the target may make an Engineering save at the start of your turn to take half the damage "
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Universal Recycler",
+        "type": "System",
+        "sp": 3,
+        "tags": [],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 3,
+        "effect": "As a Quick Action you may convert a Drone or Mech wreck within range X into an allied drone. This Drone is equivalent to the GMS turret drone, with the addition that it may move 4 at the start of your turn as a protocol.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Liquid Armor",
+        "type": "Armor",
+        "sp": 1,
+        "tags": [],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 1,
+        "effect": "1/round when you are Slowed, roll a d6; on a 4+ you ignore it.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Scatter Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 3}],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 2,
+        "effect": {
+            "effect_type": "Charge",
+            "charge": [
+                {
+                    "name": "Scatter Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Range", "val": 5},{"type": "Cone", "val": 5}],
+                    "damage": [{"type": "", "val": "1d3"}]
+                },
+                {
+                    "name": "Scatter Mine",
+                    "charge_type": "Mine",
+                    "range": [{"type": "Cone", "val": 5}],
+                    "damage": [{"type": "","val": "1d3+1"}],
+                    "detail": "When you deploy a Scatter Mine, you deploy two. They have a cone 5 firing area, and anyone caught within them may make a HULL save to take half damage."
+                }
+            ]
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Volatile Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "Charge",
+            "charge": [
+                {
+                    "name": "Volatile Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Thrown","val": 3},{"type": "Blast","val": 2}],
+                    "damage": [{"type": "","val": "1d3+1"}]
+                },
+                {
+                    "name": "Volatile Mine",
+                    "charge_type": "Mine",
+                    "range": [{"type": "Blast","val": 2}],
+                    "damage": [{"type": "","val": "1d3+1"}],
+                    "detail": "Deals 1d6 bonus damage to flying/hovering targets caught in the blast area."
+                }
+            ]
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
     {   "name": "Starfish Charges",
         "type": "Deployable",
         "sp": 2,
