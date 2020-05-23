@@ -130,11 +130,11 @@
             }
         ],
         "core_system": {
-            "name": "WIP",
-            "passive_name": "WIP",
-            "passive_effect": "WIP",
-            "active_name": "WIP",
-            "active_effect": "WIP",
+            "name": "",
+            "passive_name": "Print Subaltern Drone",
+            "passive_effect": "Your mech can print independent Drone companions. This drone can be deployed in an adjacent space. The Subaltern Drone shares your EVASION, E-DEFENSE, and SPEED. This drone can attack targets as a reaction<br><br>Subaltern Drone (SIZE 1/2, [10+GRIT] HP, EVASION/E-DEFENSE, Tags: DRONE)<br><br>Begin the scene with 1 Subaltern Drone already in play.",
+            "active_name": "Full Deployment",
+            "active_effect": "Create 3 Subaltern Drones. In addition, gain the Shed Armor reaction.<br>Shed Armor<br>1/scene, Reaction<br>Trigger: You are hit by an attack or fail a hostile save and learn the damage or hostile effect.<br>Effect: Become Immune to the attack or save’s damage, heat, and all other effects. Until the end of the scene, after activating this reaction, your size is reduced by 1, your armor is reduced by 1, and you gain 2 speed. A size 2 object is created in an adjacent square that grants Hard Cover as well as resistance to all damage and heat to characters behind it.",
             "description": "The most WIP thing in this LCP and we have more mechs to add so that says something.",
             "tags": []
         },
@@ -147,7 +147,7 @@
         "mechtype": ["Striker"],
         "image_url": "",
         "y_pos": 0,
-        "description": "",
+        "description": "Baronic Unified Command issued procurement for a line mech to rival the capacity of the Harrison Armory Sherman, and the Jian is the BDF’s response.  Designed as a stick and move chassis around a lighter frame with rapid maneuver capability to integrate with infantry deployment, the Jian mounts enough firepower to disable softer armored targets and enough supplemental",
         "mounts": ["Main","Main"],
         "stats": {
             "size": 1,
@@ -174,13 +174,13 @@
             },
             {
                 "name": "Top Heavy",
-                "description": "The Jian has +1 DIFFICULTY on saves vs Prone."
+                "description": "The Jian has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement."
             }
         ],
         "core_system": {
             "name": "",
-            "description": "",
-            "active_name": "Combat Cycle",
+            "description": "<i>While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor.  Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike.</i>",
+            "active_name": "“Moonlight” Combat Cycle",
             "active_effect": "Summon two Line 2 Drones with 20HP - they can combine to hold a size 2 actor or they can hold 1 size 1 or 1/2 actor each; mount as a Quick, they move 6 spaces at the start of your turn and you can fire a Line 5 machine Gun for 2 damage as a protocol; you can prime a Self Destruct on each one independently.",
             "tags": [{"id": "tg_protocol"}]
         },

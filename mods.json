@@ -20,7 +20,7 @@
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 2,
-        "effect": "On hit you may mark an enemy. With a Quick action you may detonate this mark to deal 1d3 Explosive damage in a Burst 2 area around the marked target. Only one mark may be active at a time. Attack with this weapon count as .",
+        "effect": "On hit you may mark an enemy. With a Quick action you may detonate this mark to deal 1d3 Explosive damage in a Burst 2 area around the marked target. Only one mark may be active at a time. Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads).",
         "description": "",
         "data_type": "mod",
         "aptitude": {}

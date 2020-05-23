@@ -20,20 +20,19 @@
         "mount": "Main",
         "type": "Nexus",
         "range": [{"type": "Range","val": 10}],
-        "damage": [{"type": "Kinetic","val": 2}],
+        "damage": [{"type": "Kinetic","val": 3}],
         "tags": [{"id": "tg_smart"},{"id": "tg_seeking"},{"id": "tg_drone"}],
         "effect": {
             "effect_type": "Offensive",
-            "detail": "Fires twice when fired (targets may be separate). May be deployed as a drone.",
+            "detail": "May be deployed as a stationary drone within Range 5 and LoS as a quick action. Once deployed, it loses the Seeking tag and you may fire it 2/round as a free action with line of sight and RANGE traced from its location. You may recall or redeploy the Rapid Fire Turret Drone as a quick action. Until recalled or destroyed, it remains deployed until the end of the scene. If destroyed, it follows the rules for destroyed DRONES and can’t be used until repaired.",
             "abilities": [{
                 "name": "Rapid Fire Turret Drone",
                 "effect_type": "Drone",
                 "size": 0.5,
                 "hp": 5,
-                "armour": 2,
                 "edef": 10,
-                "evasion": 10,
-                "detail": ""
+                "armor": 1,
+                "evasion": 10
             }]
         },
         "source": "BDF",
