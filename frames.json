@@ -38,7 +38,7 @@
             "passive_effect": "1/round you can detonate a Drone as a Full Action, destroying it, to create an area originating from the drone's space from the list provided:<li>Line 10, width 3<li>Blast 2<li>three Blast 1 explosions in Range 5 for +1d6 extra damage<br>enemies in this area at the start of your next turn take 2d6 damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
             "active_name": "One in the pocket",
             "active_effect": "1/scene you can activate the whale beacon immediately on a target in ; Whale Beacon's damage is permanently increased to 3d6 damage instead of 2d6 for the rest of the scene.",
-            "tags": []
+            "tags": [{"id": "tg_full_action"}]
         }
     },
     {
@@ -136,7 +136,7 @@
             "active_name": "Full Deployment",
             "active_effect": "Create 3 Subaltern Drones. In addition, gain the Shed Armor reaction.<br>Shed Armor<br>1/scene, Reaction<br>Trigger: You are hit by an attack or fail a hostile save and learn the damage or hostile effect.<br>Effect: Become Immune to the attack or save’s damage, heat, and all other effects. Until the end of the scene, after activating this reaction, your size is reduced by 1, your armor is reduced by 1, and you gain 2 speed. A size 2 object is created in an adjacent square that grants Hard Cover as well as resistance to all damage and heat to characters behind it.",
             "description": "The most WIP thing in this LCP and we have more mechs to add so that says something.",
-            "tags": []
+            "tags": [{"id": "tg_protocol"}]
         },
         "data_type": "frame",
         "aptitude": {}
