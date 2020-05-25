@@ -1,0 +1,72 @@
+[
+    {   "name": "Saturation Drone",
+        "type": "Drone",
+        "sp": 2,
+        "tags": [{"id": "tg_drone"},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 1,
+        "effect": {
+            "name": "Saturation Drone",
+            "effect_type": "Drone",
+            "size": 0.5,
+            "hp": 5,
+            "armour": 2,
+            "edef": 10,
+            "evasion": 10,
+            "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "C80 Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 2,
+        "effect": [
+            {
+                "effect_type": "Basic",
+                "detail": "You may deploy two charges per Limited use (two grenades / a grenade and a mine / two mines per Limited use)."
+            },
+            {
+                "effect_type": "Charge",
+                "charge": [
+                    {
+                        "name": "C80 Grenade",
+                        "charge_type": "Grenade",
+                        "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                        "damage": [{"type": "Explosive", "val": "1d3"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}],
+                        "detail": "Targets caught in the area of effect may make an Agility save to take half damage."
+                    },
+                    {
+                        "name": "C80 Mine",
+                        "charge_type": "Mine",
+                        "range": [{"type": "Cone", "val": 5}],
+                        "damage": [{"type": "Explosive", "val": "1d6"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}]
+                    }
+                ]
+            }
+        ],
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Lion Coast Missiles",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_limited", "val": 1},{"id": "tg_full_tech"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 3,
+        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. Requires Lock on to fire. If the tech attack succeeds, you fire a Hound Missile (Size 1, HP ,  which deals 3d6 explosive damage in a Blast 1 from the target - they may perform an Agility save to take half damage.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    }
+]

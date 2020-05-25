@@ -1,0 +1,44 @@
+[
+    {
+        "source": "BDF",
+        "name": "AKINAKA",
+        "mechtype": ["Support","Controller"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Flex"],
+        "stats": {
+            "size": 1,
+            "armor": 0,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 10,
+            "heatcap": 5,
+            "repcap": 8,
+            "sensor_range": 15,
+            "tech_attack": 1,
+            "save": 11,
+            "speed": 4,
+            "sp": 8
+        },
+        "traits": [
+            {
+                "name": "Weak",
+                "description": "+1 difficulty on Hull Saves"
+            },
+            {
+                "name": "Eye of the Storm",
+                "description": "1/round the Akinaka is immune to damage and effects from an area of effect attack or save, hostile or allied."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "",
+            "passive_name": "Whale beacon",
+            "passive_effect": "1/round you can detonate a Drone as a Full Action, destroying it, to create an area originating from the drone's space from the list provided:<li>Line 10, width 3<li>Blast 2<li>three Blast 1 explosions in Range 5 for +1d6 extra damage<br>enemies in this area at the start of your next turn take 2d6 damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
+            "active_name": "One in the pocket",
+            "active_effect": "1/scene you can activate the whale beacon immediately on a target in ; Whale Beacon's damage is permanently increased to 3d6 damage instead of 2d6 for the rest of the scene.",
+            "tags": [{"id": "tg_full_action"}]
+        }
+    }
+]
