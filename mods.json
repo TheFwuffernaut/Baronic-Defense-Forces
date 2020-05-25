@@ -11,5 +11,31 @@
         "description": "<i>Secondary thrusters and experimental chemical catalysts allow pilots to leverage forward momentum with their weapon attacks into a devastating charge.  Pilots of Afenatene-pattern Akrafena are cleared to use this mod, as it exposes the pilot to great risk of counter-attack.</i>",
         "data_type": "mod",
         "aptitude": {}
+    },
+    {   "name": "Splendor Mod",
+        "sp": 2,
+        "tags": [{"id": "tg_mod"}],
+        "applied_to": ["nexus","launcher"],
+        "applied_string": "Launcher or Nexus",
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 2,
+        "effect": "On hit you may mark an enemy. With a Quick action you may detonate this mark to deal 1d3 Explosive damage in a Burst 2 area around the marked target. Only one mark may be active at a time. Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads).",
+        "description": "",
+        "data_type": "mod",
+        "aptitude": {}
+    },
+    {   "name": "Laser Guided Mod",
+        "sp": 2,
+        "tags": [{"id": "tg_mod"}],
+        "applied_to": ["launcher","nexus","cqb"],
+        "applied_string": "CQB, Launchers or Nexus",
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 2,
+        "effect": "The weapon this mod is equipped to gains the Arcing tag. If you miss your target you can reroll the attack against one enemy within range 5 of your original target as a Quick Action.",
+        "description": "",
+        "data_type": "mod",
+        "aptitude": {}
     }
 ]
