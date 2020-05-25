@@ -1,0 +1,54 @@
+[
+    {
+        "source": "BDF",
+        "name": "AKRAFENA",
+        "mechtype": ["Striker","Controller"],
+        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713542625831026788/Akrafena1080.png",
+        "y_pos": 0,
+        "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
+        "mounts": ["Main","Main","Main","Main"],
+        "stats": {
+            "size": 0.5,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 6,
+            "edef": 8,
+            "heatcap": 6,
+            "repcap": 5,
+            "sensor_range": 5,
+            "tech_attack": 0,
+            "save": 10,
+            "speed": 3,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "MOUNT RULES",
+                "description": "Hi, this is here to tell you that the 4 main mounts are - in fact - 2 Main/Main mount. Its Aux/Aux but with Mains!<br>The the two on the left half are as far as the rules are concerned linked (so if you have two loading weapons and fire that mount they're both unloaded), same goes for the pair on the right.<br>Apologies that this couldn't be done in a cleaner way - maybe in the future"
+            },
+            {
+                "name": "Weapon Bracing",
+                "description": "After firing a weapon, the Akrafena cannot fire weapons from any other mount until the start of its next turn."
+            },
+            {
+                "name": "Reactive Thrusters",
+                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn."
+            },
+            {
+                "name": "Slow",
+                "description": "The Akrafena has +1 Difficulty on agility checks and saves."
+            }
+        ],
+        "core_system": {
+            "name": "PEDIPALPS Augmented Hardpoints",
+            "description": "Integrated additional limbs and recoil stabilizers allow a terrifying volume of sustained fire. During spikes of reactor activity, static defense capabilities surge as weapons are reloaded by tertiary limbs as fast as they cycle.",
+            "passive_name": "Lock and Cycle",
+            "passive_effect": "The Akrafena can fire a weapon and reload as a full action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action.",
+            "active_name": "Synchronize Limbs",
+            "active_effect": "After using this protocol, for the rest of this scene, the Akrafena can fire 2 weapons and reload 2 weapons when it uses Lock and Cycle.",
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    }
+]

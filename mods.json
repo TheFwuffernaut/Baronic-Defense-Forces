@@ -1,0 +1,15 @@
+[
+    {   "name": "Heartpiercer",
+        "sp": 2,
+        "tags": [{"id": "tg_quick_action"},{"id": "tg_mod"}],
+        "applied_to": ["melee"],
+        "applied_string": "Melee",
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 2,
+        "effect": "1/round, you can activate this mod with a Quick Action. Your next attack with this weapon allows you to lunge two spaces towards your attack target (ignoring reactions) and adds +2 Knockback. If the target collides with a wall, object, or character, the target must pass a hull save or take 1d6 kinetic damage and become prone.",
+        "description": "<i>Secondary thrusters and experimental chemical catalysts allow pilots to leverage forward momentum with their weapon attacks into a devastating charge.  Pilots of Afenatene-pattern Akrafena are cleared to use this mod, as it exposes the pilot to great risk of counter-attack.</i>",
+        "data_type": "mod",
+        "aptitude": {}
+    }
+]
