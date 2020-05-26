@@ -26,5 +26,17 @@
         "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
         "data_type": "system",
         "aptitude": {}
-    } 
+    },
+    {   "name": "Calcium-class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 3,
+        "effect": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save.",
+        "description": "<i>The crane game became aware. Whoops.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    }
 ]
