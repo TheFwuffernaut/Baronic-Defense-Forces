@@ -34,7 +34,7 @@
             },
             {
                 "effect_type": "Charge",
-                "charge": [
+                "charges": [
                     {
                         "name": "C80 Grenade",
                         "charge_type": "Grenade",
