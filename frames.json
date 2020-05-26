@@ -37,9 +37,9 @@
         ],
         "core_system": {
             "name": "",
-            "description": "<i>While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor.  Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike.</i>",
             "active_name": "“Moonlight” Combat Cycle",
             "active_effect": "Summon two Line 2 Drones with 20HP - they can combine to hold a size 2 actor or they can hold 1 size 1 or 1/2 actor each; mount as a Quick, they move 6 spaces at the start of your turn and you can fire a Line 5 machine Gun for 2 damage as a protocol; you can prime a Self Destruct on each one independently.",
+            "description": "<i>While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor.  Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike.</i>",
             "tags": [{"id": "tg_protocol"}]
         },
         "data_type": "frame",

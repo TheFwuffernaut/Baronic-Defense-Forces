@@ -3,7 +3,7 @@
         "sp": 2,
         "tags": [{"id": "tg_mod"}],
         "applied_to": ["launcher","nexus","cqb"],
-        "applied_string": "CQB, Launchers or Nexus",
+        "applied_string": "CQB, Launchers and Nexus",
         "source": "BDF",
         "license": "JIAN",
         "license_level": 2,

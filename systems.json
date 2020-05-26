@@ -20,7 +20,7 @@
         "license_level": 2,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
                 {
                     "name": "Scatter Grenade",
                     "charge_type": "Grenade",
@@ -49,7 +49,7 @@
         "license_level": 3,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
                 {
                     "name": "Volatile Grenade",
                     "charge_type": "Grenade",
