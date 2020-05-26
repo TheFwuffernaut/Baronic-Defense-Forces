@@ -2,22 +2,22 @@
     {
         "source": "BDF",
         "name": "AKINAKA",
-        "mechtype": [],
+        "mechtype": ["Support","Controller"],
         "image_url": "",
         "y_pos": 0,
         "description": "",
         "mounts": ["Flex"],
         "stats": {
-            "size": 0,
+            "size": 1,
             "armor": 0,
             "hp": 8,
             "evasion": 7,
             "edef": 10,
             "heatcap": 5,
             "repcap": 8,
-            "sensor_range": 10,
-            "tech_attack": ,
-            "save": 10,
+            "sensor_range": 15,
+            "tech_attack": 1,
+            "save": 11,
             "speed": 4,
             "sp": 8
         },
@@ -38,14 +38,14 @@
             "passive_effect": "1/round you can detonate a Drone as a Full Action, destroying it, to create an area originating from the drone's space from the list provided:<li>Line 10, width 3<li>Blast 2<li>three Blast 1 explosions in Range 5 for +1d6 extra damage<br>enemies in this area at the start of your next turn take 2d6 damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
             "active_name": "One in the pocket",
             "active_effect": "1/scene you can activate the whale beacon immediately on a target in ; Whale Beacon's damage is permanently increased to 3d6 damage instead of 2d6 for the rest of the scene.",
-            "tags": []
+            "tags": [{"id": "tg_full_action"}]
         }
     },
     {
         "source": "BDF",
         "name": "AKRAFENA",
         "mechtype": ["Striker","Controller"],
-        "image_url": "",
+        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713542625831026788/Akrafena1080.png",
         "y_pos": 0,
         "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
         "mounts": ["Main","Main","Main","Main"],
@@ -95,11 +95,59 @@
     },
     {
         "source": "BDF",
+        "name": "DAO",
+        "mechtype": ["Support","Artillery"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Main/Aux","Main"],
+        "stats": {
+            "size": 2,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 8,
+            "edef": 9,
+            "heatcap": 5,
+            "repcap": 3,
+            "sensor_range": 12,
+            "tech_attack": 1,
+            "save": 10,
+            "speed": 4,
+            "sp": 7
+        },
+        "traits": [
+            {
+                "name": "",
+                "description": "Drones have +2 HP and +2 Evasion and E-Defense"
+            },
+            {
+                "name": "Bottom Heavy",
+                "description": "The Dao is Immobilized when Prone. It can still stand up from Prone."
+            },
+            {
+                "name": "Guardian",
+                "description": "Adjacent allies may use the Dao as Hard Cover."
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "passive_name": "Print Subaltern Drone",
+            "passive_effect": "Your mech can print independent Drone companions. This drone can be deployed in an adjacent space. The Subaltern Drone shares your EVASION, E-DEFENSE, and SPEED. This drone can attack targets as a reaction<br><br>Subaltern Drone (SIZE 1/2, [10+GRIT] HP, EVASION/E-DEFENSE, Tags: DRONE)<br><br>Begin the scene with 1 Subaltern Drone already in play.",
+            "active_name": "Full Deployment",
+            "active_effect": "Create 3 Subaltern Drones. In addition, gain the Shed Armor reaction.<br>Shed Armor<br>1/scene, Reaction<br>Trigger: You are hit by an attack or fail a hostile save and learn the damage or hostile effect.<br>Effect: Become Immune to the attack or save’s damage, heat, and all other effects. Until the end of the scene, after activating this reaction, your size is reduced by 1, your armor is reduced by 1, and you gain 2 speed. A size 2 object is created in an adjacent square that grants Hard Cover as well as resistance to all damage and heat to characters behind it.",
+            "description": "The most WIP thing in this LCP and we have more mechs to add so that says something.",
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
         "name": "JIAN",
         "mechtype": ["Striker"],
         "image_url": "",
         "y_pos": 0,
-        "description": "",
+        "description": "Baronic Unified Command issued procurement for a line mech to rival the capacity of the Harrison Armory Sherman, and the Jian is the BDF’s response.  Designed as a stick and move chassis around a lighter frame with rapid maneuver capability to integrate with infantry deployment, the Jian mounts enough firepower to disable softer armored targets and enough supplemental",
         "mounts": ["Main","Main"],
         "stats": {
             "size": 1,
@@ -126,13 +174,13 @@
             },
             {
                 "name": "Top Heavy",
-                "description": "The Jian has +1 DIFFICULTY on saves vs Prone."
+                "description": "The Jian has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement."
             }
         ],
         "core_system": {
             "name": "",
-            "description": "",
-            "active_name": "Combat Cycle",
+            "description": "<i>While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor.  Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike.</i>",
+            "active_name": "“Moonlight” Combat Cycle",
             "active_effect": "Summon two Line 2 Drones with 20HP - they can combine to hold a size 2 actor or they can hold 1 size 1 or 1/2 actor each; mount as a Quick, they move 6 spaces at the start of your turn and you can fire a Line 5 machine Gun for 2 damage as a protocol; you can prime a Self Destruct on each one independently.",
             "tags": [{"id": "tg_protocol"}]
         },
@@ -143,7 +191,7 @@
         "source": "BDF",
         "name": "KAMPILAN",
         "mechtype": ["Support","Defender"],
-        "image_url": "",
+        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541792846446592/KampilanSketch.jpeg",
         "y_pos": 0,
         "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit.",
         "mounts": ["Aux/Aux"],
@@ -190,7 +238,7 @@
         "source": "BDF",
         "name": "KLEWANG",
         "mechtype": ["Striker","Controller"],
-        "image_url": "",
+        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541803256578188/KlewangSketch.png",
         "y_pos": 0,
         "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through.",
         "mounts": ["Flex","Main","Heavy"],
@@ -238,7 +286,7 @@
         "source": "BDF",
         "name": "SHOTEL",
         "mechtype": ["Striker"],
-        "image_url": "",
+        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541820843556944/ShotelSketch.jpeg",
         "y_pos": 0,
         "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
         "mounts": ["Main","Main"],

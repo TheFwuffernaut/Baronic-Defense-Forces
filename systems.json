@@ -14,7 +14,7 @@
     {   "name": "ANANSI-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [],
+        "tags": [{"id": "tg_ai"}],
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 3,
@@ -39,6 +39,203 @@
         "data_type": "system",
         "aptitude": {}
     },
+    {   "name": "Saturation Drone",
+        "type": "Drone",
+        "sp": 2,
+        "tags": [{"id": "tg_drone"},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 1,
+        "effect": {
+            "name": "Saturation Drone",
+            "effect_type": "Drone",
+            "size": 0.5,
+            "hp": 5,
+            "armour": 2,
+            "edef": 10,
+            "evasion": 10,
+            "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "C80 Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 2,
+        "effect": [
+            {
+                "effect_type": "Basic",
+                "detail": "You may deploy two charges per Limited use (two grenades / a grenade and a mine / two mines per Limited use)."
+            },
+            {
+                "effect_type": "Charge",
+                "charges": [
+                    {
+                        "name": "C80 Grenade",
+                        "charge_type": "Grenade",
+                        "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                        "damage": [{"type": "Explosive", "val": "1d3"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}],
+                        "detail": "Targets caught in the area of effect may make an Agility save to take half damage."
+                    },
+                    {
+                        "name": "C80 Mine",
+                        "charge_type": "Mine",
+                        "range": [{"type": "Cone", "val": 5}],
+                        "damage": [{"type": "Explosive", "val": "1d6"}],
+                        "tags": [{"id": "tg_knockback", "val": 1}]
+                    }
+                ]
+            }
+        ],
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Lion Coast Missiles",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_limited", "val": 1},{"id": "tg_full_tech"}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 3,
+        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. Requires Lock on to fire. If the tech attack succeeds, you fire a Hound Missile (Size 1, HP ,  which deals 3d6 explosive damage in a Blast 1 from the target - they may perform an Agility save to take half damage.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Nano Solder",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_full_action"},{"id": "tg_deployable"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 1,
+        "effect": "Deploys a Blast 1 area. Allies can walk into/over this and spend a Quick action to gain 1d6 Overshield. This area has 3 charges before it fades.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Double Time Armor",
+        "type": "Armor",
+        "sp": 1,
+        "tags": [{"id": "tg_armor"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 1,
+        "effect": "You gain 1 Speed until the end of your next turn after getting hit.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Helicopter Drone",
+        "type": "Drone",
+        "sp": 2,
+        "tags": [{"id": "tg_invisible"},{"id": "tg_drone"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 2,
+        "effect": {
+            "effect_type": "Drone",
+            "effect_name": "Helicopter Drone",
+            "size": 0.5,
+            "hp": 5,
+            "armour": 0,
+            "edef": 10,
+            "evasion": 10,
+            "detail": "Has a Cone 5 flamethrower attached, when fired targets caught in the area must make an ENGINEERING save. On a successful save, the target takes 1 Energy Damage; on a failed save the target takes 1 Burn."
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Universal Recycler",
+        "type": "System",
+        "sp": 3,
+        "tags": [{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 3,
+        "effect": "As a Quick Action you may convert a Drone or Mech wreck that is adjacent to you into an allied drone.<br>You may move the drone 4 spaces in any direction at the start of your turn as a protocol.<br>This Drone makes an attack roll at the nearest target to it that it has LoS to, using your Grit modifier to deal 3 damage. This effect triggers 1/round at the same time you perform the Skirmish action.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Liquid Armor",
+        "type": "Armor",
+        "sp": 1,
+        "tags": [{"id": "tg_armor"}],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 1,
+        "effect": "1/round when you are Slowed, roll a d6; on a 4+ you ignore it.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Scatter Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 2,
+        "effect": {
+            "effect_type": "Charge",
+            "charges": [
+                {
+                    "name": "Scatter Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Range", "val": 5},{"type": "Cone", "val": 5}],
+                    "damage": [{"type": "Explosive", "val": "1d3"}]
+                },
+                {
+                    "name": "Scatter Mine",
+                    "charge_type": "Mine",
+                    "range": [{"type": "Cone", "val": 5}],
+                    "damage": [{"type": "Explosive","val": "1d3+1"}],
+                    "detail": "When you deploy a Scatter Mine, you deploy two. They have a cone 5 firing area, and anyone caught within them may make a HULL save to take half damage."
+                }
+            ]
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Volatile Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "Charge",
+            "charges": [
+                {
+                    "name": "Volatile Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Thrown","val": 3},{"type": "Blast","val": 2}],
+                    "damage": [{"type": "Explosive","val": "1d3+1"}]
+                },
+                {
+                    "name": "Volatile Mine",
+                    "charge_type": "Mine",
+                    "range": [{"type": "Blast","val": 2}],
+                    "damage": [{"type": "Explosive","val": "1d3+1"}],
+                    "detail": "Deals 1d6 bonus damage to flying/hovering targets caught in the blast area."
+                }
+            ]
+        },
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
     {   "name": "Starfish Charges",
         "type": "Deployable",
         "sp": 2,
@@ -48,7 +245,7 @@
         "license_level": 1,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
                 {
                     "name": "Pinwheel Grenade",
                     "charge_type": "Grenade",
@@ -100,7 +297,7 @@
         "license_level": 2,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
             {
                 "name": "Blaze Grenade",
                 "charge_type": "Grenade",
@@ -156,11 +353,15 @@
     {   "name": "Coolant Flush",
         "type": "Shield",
         "sp": 2,
-        "tags": [{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 1,
-        "effect": "You may activate this system as a Protocol. Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty.",
+        "effect": [{
+            "effect_type": "Basic",
+            "activation": "Protocol",
+            "detail": "Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty."
+        }],
         "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
         "data_type": "system",
         "aptitude": {}
@@ -177,17 +378,14 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Calcium-class NHP",
+    {   "name": "CALCIUM-class NHP",
         "type": "AI",
         "sp": 3,
         "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save."
-        },
+        "effect": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save.",
         "description": "<i>The crane game became aware. Whoops.</i>",
         "data_type": "system",
         "aptitude": {}
@@ -207,7 +405,7 @@
     {   "name": "QUEEN-Class Refraction Laser",
         "type": "System",
         "sp": 3,
-        "tags": [],
+        "tags": [{"id": "tg_unique"}],
         "source": "BDF",
         "license": "SHOTEL",
         "license_level": 2,
