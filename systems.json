@@ -8,7 +8,7 @@
         "license_level": 1,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
                 {
                     "name": "Pinwheel Grenade",
                     "charge_type": "Grenade",
@@ -60,7 +60,7 @@
         "license_level": 2,
         "effect": {
             "effect_type": "Charge",
-            "charge": [
+            "charges": [
             {
                 "name": "Blaze Grenade",
                 "charge_type": "Grenade",
