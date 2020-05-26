@@ -1,16 +1,4 @@
 [
-    {   "name": "Coolant Flush",
-        "type": "Shield",
-        "sp": 2,
-        "tags": [{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
-        "source": "BDF",
-        "license": "KLEWANG",
-        "license_level": 1,
-        "effect": "You may activate this system as a Protocol. Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty.",
-        "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
-        "data_type": "system",
-        "aptitude": {}
-    },
     {   "name": "Shock Armor",
         "type": "Armor",
         "sp": 2,
@@ -23,19 +11,20 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Calcium-class NHP",
-        "type": "AI",
-        "sp": 3,
-        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+    {   "name": "Coolant Flush",
+        "type": "Shield",
+        "sp": 2,
+        "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KLEWANG",
-        "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save."
-        },
-        "description": "<i>The crane game became aware. Whoops.</i>",
+        "license_level": 1,
+        "effect": [{
+            "effect_type": "Basic",
+            "activation": "Protocol",
+            "detail": "Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty."
+        }],
+        "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
         "data_type": "system",
         "aptitude": {}
-    }
+    } 
 ]
