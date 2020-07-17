@@ -11,7 +11,7 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "ANANSI-Class NHP",
+    {   "name": "WEAVER-Class NHP",
         "type": "AI",
         "sp": 3,
         "tags": [{"id": "tg_ai"}],
@@ -20,11 +20,12 @@
         "license_level": 3,
         "effect": {
             "effect_type": "AI",
-            "detail": "Your mech gains the AI property and the ANANSI protocol.",
+            "detail": "Your mech gains the AI property and the WEAVER protocol.",
             "abilities": [{
                 "effect_type": "Protocol",
-                "effect_name": "ANANSI",
-                "detail": "Your attacks gain +1 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn."
+                "effect_name": "WEAVER",
+                "detail": "Your attacks gain +2 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn.",
+                "tags": [{"id": "tg_heat_self","val": 2}]
             },
             {
                 "effect_type": "Reaction",
@@ -35,7 +36,7 @@
             }
         ]
         },
-        "description": "<i>ANANSI-class NHPs were born from an experiment in analyzing biometrics data from skydiving flight suits. The statistical paradoxes in simulating the goal of regulation of vital signs across a wide variety of phenotypes, genotypes, and environmental conditions resulted in an NHP with a personality humble and prideful simultaneously, constantly calculating odds and how to beat them by ignoring factory specs. ANANSI-class NHPs consistently cascade ahead of schedule; proactive cycling is advised along with aggressive maintenance of the hardware it is installed on.</i>",
+        "description": "<i>WEAVER-class NHPs were born from an experiment in analyzing biometrics data from skydiving flight suits. The statistical paradoxes in simulating the goal of regulation of vital signs across a wide variety of phenotypes, genotypes, and environmental conditions resulted in an NHP with a personality humble and prideful simultaneously, constantly calculating odds and how to beat them by ignoring factory specs. WEAVER-class NHPs consistently cascade ahead of schedule; proactive cycling is advised along with aggressive maintenance of the hardware it is installed on.</i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -322,7 +323,7 @@
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 3,
-        "effect": "This reservoir of chemicals contains two active agents used to manipulate terrain and objects and can be activated in either mode with a Full Action.<br><b>Sledgehammer Mode:</b> An adjacent Object, Drone, or Deployable gains (8) OVERSHIELD.  If this overshield is depleted, the object explodes in a Burst 2 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save.<br><br><b>“Sixty” Solvent Mode:</b> Deal 20AP damage to an adjacent Object, Drone, or Deployable. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1.  Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character.",
+        "effect": "This reservoir of chemicals contains two active agents used to manipulate terrain and objects and can be activated in either mode with a Full Action.<br><b>Sledgehammer Mode:</b> Pick up to 3 of any: Object, Drone, or Deployable within Burst 2, they gain (8) OVERSHIELD. If this overshield is depleted, the object explodes in a Burst 3 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save. These charges can set each other off, and you are able to pick the order of detonation if multiple are set off at once.<br><br><b>“Sixty” Solvent Mode:</b> Pick up to 3 of any: 3 Objects, Drones, or Deployables within Burst 2, deal 20AP damage to them. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1.  Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character.",
         "description": "<i>“We keep finding this stuff abandoned among Baronic armories. Nobody wants it - it’s supposed to solidify clay for building fortifications, and it makes it either too brittle or too soft. Doesn’t explain why our Kobolds keep blowing themselves up when using Seismic Pulses.”<br>“Think it’s haunted?”<br>“It’s chemistry, how can it be haunted? There’s nothing alive in there.”</i>",
         "data_type": "system",
         "aptitude": {}
@@ -387,6 +388,54 @@
         "license_level": 3,
         "effect": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save.",
         "description": "<i>The crane game became aware. Whoops.</i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Shockwave Pistons",
+        "type": "System",
+        "sp": 2,
+        "tags": [{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "MACUAHUITL",
+        "license_level": 1,
+        "effect": "When you jump you craete a Burst 1 section of Difficult Terrain from where you jumped. You gain +2 Horizontal jump range on Vertical jumps.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Missile Minefield",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 4},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "MACUAHUITL",
+        "license_level": 2,
+        "effect": "Choose a space within Range 5 of you. You create a Blast 1 Area that deals 1d6 AP Explosive Damage.",
+        "description": "",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "SALMON-Class NHP",
+        "type": "AI",
+        "sp": 3,
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "MACUAHUITL",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your mech gains the AI tag and the AGGRESSIVE OVERWATCH Reaction",
+            "abilities": [{
+                "effect_type": "Reaction",
+                "effect_name": "AGGRESIVE OVERWATCH",
+                "detail": "Your attacks gain +2 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn.",
+                "frequency": "1/turn",
+                "trigger": "An ally within range 5 takes damage",
+                "detail": "You may Skirmish for 1/2 damage. If this attack hits the attacker must make a Hull Save or fall Prone.",
+                "tags": [{"id": "tg_heat_self","val": 2}]
+            }]
+            },
+        "description": "",
         "data_type": "system",
         "aptitude": {}
     },

@@ -1,13 +1,4 @@
-Akinaka - frame near complete (need size and tech attack stats, also Save if its different to the standard 10, also needs core active tags if any applicable and a mech role), license pending systems and rapid fire turret drone, add core system name and description when those are added, add weapon and system fluff when those are added.
-
 Akrafena - frame complete, complete, find workaround for GMS bonus mount core bonus until Main/Main mounts are added.
-
-Dao - incomplete, needs everything added
-
-Jian - frame complete, rest needs completion, add core system name and description, frame description and weapon and system fluff when those are added.
-
 Kampilan - frame complete, complete, add core system name and description when those are added.
-
-Klewang - frame complete, complete, add core system name and description when those are added and additional weapon and system fluff when those are added.
-
-Shotel - frame complete, add core system name and description when those are added
+Shotel - frame complete, add core system name and description when those are added.
+Macuahuitl - watch for updates. Weapons are getting changes, systems getting tweaks, fluff to be added.

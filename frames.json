@@ -2,7 +2,7 @@
     {
         "source": "BDF",
         "name": "AKINAKA",
-        "mechtype": ["Support","Controller"],
+        "mechtype": ["Support","Artillery"],
         "image_url": "",
         "y_pos": 0,
         "description": "",
@@ -190,11 +190,11 @@
     {
         "source": "BDF",
         "name": "KAMPILAN",
-        "mechtype": ["Support","Defender"],
+        "mechtype": ["Support","Controller"],
         "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541792846446592/KampilanSketch.jpeg",
         "y_pos": 0,
-        "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit.",
-        "mounts": ["Aux/Aux"],
+        "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit. Companies of warrior-pattern Kampilan chassis were deployed en masse and found lacking in operational capacity, as the high powered lasers they carried required frequent resupply and their command structure reliant on omninet connection - a favorite target of HORUS.  Despite a projected success rate of 10%, the Kampilan scout-pattern pilots came back from each sortie the sole survivors.  Distant and aloof, unwilling to discuss what happened in the tunnels of Free Sanjak, the craters of the Dawnline Shore, or in the palaces of Throne Karrakis, Baronic Unified Command continues to accumulate telemetry to tune the frame’s performance further beyond factory spec.",
+        "mounts": ["Aux/Aux","Aux/Aux"],
         "stats": {
             "size": 0.5,
             "armor": 0,
@@ -212,11 +212,11 @@
         "traits": [
             {
                 "name": "Electronic Impulse Muscles",
-                "description": "1/round, the Kampilan gains +1d6 bonus damage on its next attack after causing involuntary movement to another character."
+                "description": "1/round, the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack when a character fails a save against you."
             },
             {
-                "name": "Subjectivity Diffusion Engines",
-                "description": "The Kampilan never rolls more than one die for Structure checks."
+                "name": "Statistical Anomaly",
+                "description": "The Kampilan never rolls more than one die for Structure checks and only costs 2 repairs to repair Destroyed status"
             },
             {
                 "name": "Plasteel Enhanced Frame",
@@ -227,7 +227,7 @@
             "name": "",
             "description": "",
             "active_name": "Nuclear Dismount",
-            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan.",
+            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a blast 4 profile instead of a blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. Unlike a normal Self Destruct, this leaves behind a Destroyed mech wreck. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan.",
             "integrated": {"id": "bdf_binary_laser"},
             "tags": [{"id": "tg_full_action"}]
         },
@@ -278,6 +278,55 @@
             "active_name": "Six Meters Under",
             "active_effect": "Until the end of the scene, the Klewang creates a Cone 5 shockwave for 2d6 Explosive damage when it activates Suplex or Boosts in the direction of the nearest enemy character. Characters caught in the area who pass a HULL save take half damage. ",
             "tags": [{"id": "tg_full_action"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
+        "name": "MACUAHUITL",
+        "mechtype": ["Artillery","Striker"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Flex","Main","Heavy"],
+        "stats": {
+            "size": 3,
+            "armor": 2,
+            "hp": 10,
+            "evasion": 6,
+            "edef": 12,
+            "heatcap": 8,
+            "repcap": 4,
+            "sensor_range": 3,
+            "tech_attack": -2,
+            "save": 10,
+            "speed": 2,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "Stable Footing",
+                "description": "The Macuahuitl has +1 difficulty on attacks made when not on level ground, and 1/round gets +1 accuracy on attacks it makes on level ground."
+            },
+            {
+                "name": "Leg Room",
+                "description": "Integrated Expanded Compartment, can mount an additional NHP without modifications or core bonuses (can stack)."
+            },
+            {
+                "name": "Top Heavy",
+                "description": "+1 difficulty vs Saves vs Prone"
+            }
+        ],
+        "core_system": {
+            "name": "",
+            "description": "<i></i>",
+            "passive_name": "Integrated NHP Copilot",
+            "passive_effect": "As a protocol choose 1 of the listed effects per equipped AI: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2<li>Gain +2 speed for round<li>Gain Accurate on 1 mount",
+            "active_name": "Fire The Big Gun",
+            "active_effect": "All attacks gain Blast 1 and Knockback 2. You may also fire The Big Gun until the end of the scene after activating this Core Power",
+            "tags": [{"id": "tg_protocol"},{"id": "tg_cooperation"}],
+            "integrated": {"id": "bdf_Big_Gun"}
         },
         "data_type": "frame",
         "aptitude": {}

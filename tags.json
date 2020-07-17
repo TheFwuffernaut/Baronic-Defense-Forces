@@ -1,0 +1,17 @@
+[
+    {
+        "id": "tg_magazine",
+        "name": "MAGAZINE {VAL}",
+        "description": "This weapon must be reloaded after {VAL} uses. Mechs can reload with Stabilize and some systems."
+    },
+    {
+        "id": "tg_repeating",
+        "name": "REPEATING {VAL}",
+        "description": "This weapon fires {VAL} times. You re-roll the attack even if its on the same target. E.g. Repeating 2 will have you roll for two separate attacks on the same target, indepedantly of eachother."
+    },
+    {
+        "id": "tg_cooperation",
+        "name": "Jolly Cooperation",
+        "description": "Systems and Weapons with this tag require outside help to use/for you to man them while an NHP keeps hold of the frame."
+    }
+]
