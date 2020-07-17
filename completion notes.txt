@@ -11,3 +11,5 @@ Kampilan - frame complete, complete, add core system name and description when t
 Klewang - frame complete, complete, add core system name and description when those are added and additional weapon and system fluff when those are added.
 
 Shotel - frame complete, add core system name and description when those are added
+
+Macuahuitl - watch for updates. Weapons are getting changes, systems getting tweaks, fluff to be added.
