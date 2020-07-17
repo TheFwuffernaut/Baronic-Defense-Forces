@@ -3,9 +3,9 @@
         "source": "BDF",
         "name": "MACUAHUITL",
         "mechtype": ["Artillery","Striker"],
-        "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541803256578188/KlewangSketch.png",
+        "image_url": "",
         "y_pos": 0,
-        "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through.",
+        "description": "",
         "mounts": ["Flex","Main","Heavy"],
         "stats": {
             "size": 3,
@@ -37,9 +37,9 @@
         ],
         "core_system": {
             "name": "",
-            "description": "<i>Mechs aren’t supposed to bend like that.</i>",
+            "description": "<i></i>",
             "passive_name": "Integrated NHP Copilot",
-            "passive_effect": "As a protocol choose 1 of the listed effects per equipped AI: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2<li>Gain +2 speed for round<li>Gain Accurate on 1 mount)",
+            "passive_effect": "As a protocol choose 1 of the listed effects per equipped AI: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2<li>Gain +2 speed for round<li>Gain Accurate on 1 mount",
             "active_name": "Fire The Big Gun",
             "active_effect": "All attacks gain Blast 1 and Knockback 2. You may also fire The Big Gun until the end of the scene after activating this Core Power",
             "tags": [{"id": "tg_protocol"},{"id": "tg_cooperation"}],
