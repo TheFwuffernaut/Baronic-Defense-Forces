@@ -350,6 +350,70 @@
         "data_type": "system",
         "aptitude": {}
     },
+    {   "name": "Lock On Nuggets",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_quick_action"}],
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 1,
+        "effect": {
+            "effect_type": "Charge",
+            "charges": [
+                {
+                    "name": "Lock On Grenade",
+                    "charge_type": "Grenade",
+                    "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                    "detail": "All characters caught within this grenade's blast area must make a Systems Save or become Locked On."
+                },
+                {
+                    "name": "Lock On Mine",
+                    "charge_type": "Mine",
+                    "range": [{"type": "Blast","val":2}],
+                    "detail": "All characters caught within the Mine's Blast area are Locked On."
+                }
+            ]
+        },
+        "description": "<i></i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
+    {   "name": "Anti-Air Bunker",
+        "type":"Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 2,
+        "effect": {
+            "effect_type": "Deployable",
+            "activation": "Quick",
+            "count": 1,
+            "size": 6,
+            "hp": 20,
+            "evasion": 5,
+            "detail": "This deployable is 6 spaces tall, 2 spaces wide and 1 space long. You pick the orientation upon deployment. Grants Hard Cover to all within it."
+        }
+    },
+    {   "name": "Fire Jump",
+        "type": "System",
+        "sp": 3,
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 3,
+        "effect": {
+            "effect_type": "AI",
+            "detail": "Your frame gains the AI tag (this is not an NHP and as such cannot cascade) and the following effect.",
+            "abilities": [{
+                "effect_type": "Basic",
+                "detail": "Whenever and wherever you jump you leave a trail of Dangerous Terrain (Energy) behind you."
+            }]
+        },
+        "description": "<i></i>",
+        "data_type": "system",
+        "aptitude": {}
+    },
     {   "name": "Coolant Flush",
         "type": "Shield",
         "sp": 2,

@@ -37,5 +37,18 @@
         "description": "",
         "data_type": "mod",
         "aptitude": {}
+    },
+    {   "name": "Impact Mod",
+        "sp": 2,
+        "tags": [{"id": "tg_mod"}],
+        "applied_to": ["cannon","cqb","launcher"],
+        "applied_string": "Cannon, CQB or Launcher",
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 2,
+        "effect": "On a Critical Hit, enemies hit by the weapon this mod is attached to must make a Hull Save or become Immobilized.",
+        "description": "",
+        "data_type": "mod",
+        "aptitude": {}
     }
 ]

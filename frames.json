@@ -237,6 +237,53 @@
     },
     {
         "source": "BDF",
+        "name": "KHANDA",
+        "mechtype": ["Balanced"],
+        "image_url": "",
+        "y_pos": 0,
+        "description": "",
+        "mounts": ["Heavy","Heavy"],
+        "stats": {
+            "size": 2,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 7,
+            "heatcap": 5,
+            "repcap": 4,
+            "sensor_range": 12,
+            "tech_attack": -1,
+            "save": 10,
+            "speed": 3,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "PARALLEL PROCESSORS",
+                "description": "The Khanda gains +1 accuracy on attacks when consuming Lock On."
+            },
+            {
+                "name": "JOINT THRUSTERS",
+                "description": "When the Khanda jumps, it may fly 3 spaces."
+            },
+            {
+                "name": "LOAD BALANCING",
+                "description": "The Khanda cannot mount Superheavy weapons and is Immobilized until the start of its next turn if it takes falling damage."
+            }
+        ],
+        "core_system": {
+            "name": "Placeholder",
+            "description": "",
+            "active_name": "All Power To Main Cannons",
+            "active_effect": "The Aura Missile Launcher may be fired 6 times at targets upon lock-on consumption.",
+            "integrated": {"id": "bdf_notanautopod"},
+            "tags": [{"id": "tg_protocol"}]
+        },
+        "data_type": "frame",
+        "aptitude": {}
+    },
+    {
+        "source": "BDF",
         "name": "KLEWANG",
         "mechtype": ["Striker","Controller"],
         "image_url": "https://cdn.discordapp.com/attachments/711937493787738194/713541803256578188/KlewangSketch.png",
