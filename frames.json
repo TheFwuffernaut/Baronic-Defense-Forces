@@ -8,7 +8,7 @@
         "description": "",
         "mounts": ["Flex"],
         "stats": {
-            "size": 1,
+            "size": 0.5,
             "armor": 0,
             "hp": 8,
             "evasion": 7,
@@ -28,7 +28,7 @@
             },
             {
                 "name": "Eye of the Storm",
-                "description": "1/round the Akinaka is immune to damage and effects from an area of effect attack or save, hostile or allied."
+                "description": "1/round the Akinaka is immune to damage and effects from an area of effect attack or save caused by Blast, Cone Burst, or Line area, hostile or allied."
             }
         ],
         "core_system": {
@@ -37,7 +37,7 @@
             "passive_name": "Whale beacon",
             "passive_effect": "1/round you can detonate a Drone as a Full Action, destroying it, to create an area originating from the drone's space from the list provided:<li>Line 10, width 3<li>Blast 2<li>three Blast 1 explosions in Range 5 for +1d6 extra damage<br>enemies in this area at the start of your next turn take 2d6 damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
             "active_name": "One in the pocket",
-            "active_effect": "1/scene you can activate the whale beacon immediately on a target in ; Whale Beacon's damage is permanently increased to 3d6 damage instead of 2d6 for the rest of the scene.",
+            "active_effect": "1/scene you can activate the whale beacon immediately on a target in Sensors; Whale Beacon's damage is permanently increased to 3d6 damage for the rest of the scene.",
             "tags": [{"id": "tg_full_action"}]
         }
     },
@@ -117,7 +117,7 @@
         },
         "traits": [
             {
-                "name": "",
+                "name": "My Precious",
                 "description": "Drones have +2 HP and +2 Evasion and E-Defense"
             },
             {
@@ -173,8 +173,8 @@
                 "description": "1/turn when an attack misses you, move 1 space. If this causes you to collide with an object or terrain, deal 10 AP KINETIC damage to the object or terrain."
             },
             {
-                "name": "Top Heavy",
-                "description": "The Jian has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement."
+                "name": "Combat Bandolier",
+                "description": "The Jian has +2 to Limited Systems and Weapons.  It suffers +1 Knockback from all sources of Knockback."
             }
         ],
         "core_system": {
@@ -182,7 +182,8 @@
             "description": "<i>While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor.  Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike.</i>",
             "active_name": "“Moonlight” Combat Cycle",
             "active_effect": "Summon two Line 2 Drones with 20HP - they can combine to hold a size 2 actor or they can hold 1 size 1 or 1/2 actor each; mount as a Quick, they move 6 spaces at the start of your turn and you can fire a Line 5 machine Gun for 2 damage as a protocol; you can prime a Self Destruct on each one independently.",
-            "tags": [{"id": "tg_protocol"}]
+            "tags": [{"id": "tg_protocol"}],
+            "integrated": {"id": "bdf_coinboom"}
         },
         "data_type": "frame",
         "aptitude": {}
@@ -267,7 +268,7 @@
             },
             {
                 "name": "Follow-Through",
-                "description": "The Klewang can move 2 spaces as a free action when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). If the Kulewang moves at least 4 spaces in a round, 1/round it can move 2 additional spaces as a free action."
+                "description": "The Klewang can move 2 spaces as a free action when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Kulewang moves at least 4 spaces in a round, 1/round it can move 2 additional spaces as a free action."
             }
         ],
         "core_system": {
@@ -356,7 +357,7 @@
         "traits": [
             {
                 "name": "HiveFlight Boosters",
-                "description": "The Shotel can fly when it moves.  When it begins the turn flying and lands after moving at least 2 spaces, its next attack can be drawn from a space half that many spaces away in the same direction as the Shotel’s last movement and within line of sight."
+                "description": "The Shotel can fly when it moves. When it begins the turn flying and lands after moving at least 2 spaces, its next attack can be drawn from a space half that many spaces away in the same direction as the Shotel’s last movement and within line of sight."
             },
             {
                 "name": "Heat Bleed",

@@ -13,3 +13,5 @@ Klewang - frame complete, complete, add core system name and description when th
 Shotel - frame complete, add core system name and description when those are added
 
 Macuahuitl - watch for updates. Weapons are getting changes, systems getting tweaks, fluff to be added.
+
+Khanda - problem child

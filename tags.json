@@ -13,5 +13,10 @@
         "id": "tg_cooperation",
         "name": "Jolly Cooperation",
         "description": "Systems and Weapons with this tag require outside help to use/for you to man them while an NHP keeps hold of the frame."
+    },
+    {
+        "id": "tg_infotext",
+        "name": "System",
+        "description": "The “Weapon” that this tag is on, is in fact, a System. Why does it need this tag? No integrated systems for mechs yet."
     }
 ]
