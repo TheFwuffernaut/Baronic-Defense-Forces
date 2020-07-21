@@ -14,4 +14,4 @@ Shotel - frame complete, add core system name and description when those are add
 
 Macuahuitl - watch for updates. Weapons are getting changes, systems getting tweaks, fluff to be added.
 
-Khanda - problem child
+Khanda - problem child, but complete for now - watch for updates etc etc. same notes for Macu basically for now.
