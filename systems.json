@@ -57,7 +57,7 @@
             "evasion": 10,
             "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
         },
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -80,21 +80,22 @@
                         "name": "C80 Grenade",
                         "charge_type": "Grenade",
                         "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
-                        "damage": [{"type": "Explosive", "val": "1d3"}],
-                        "tags": [{"id": "tg_knockback", "val": 1}],
-                        "detail": "Targets caught in the area of effect may make an Agility save to take half damage."
+                        "damage": [{"type": "Explosive", "val": 4}],
+                        "tags": [{"id": "tg_knockback", "val": 3}],
+                        "detail": "Targets caught in the area of effect make an Agility save. On a success they take half damage and are only knocked back 1 space."
                     },
                     {
                         "name": "C80 Mine",
                         "charge_type": "Mine",
-                        "range": [{"type": "Cone", "val": 5}],
-                        "damage": [{"type": "Explosive", "val": "1d6"}],
-                        "tags": [{"id": "tg_knockback", "val": 1}]
+                        "range": [{"type": "Blast", "val": 4}],
+                        "damage": [{"type": "Kinetic", "val": "2d6"}],
+                        "tags": [{"id": "tg_knockback", "val": 3}],
+                        "detail": "This mine's activation area is a Line 8 that you determine when you place the mine. Targets within the Range 4 up to Height 4 and targets further than range 4 between Heights 5 and 10 caught in the detonation area must pass a Hull Save or take full damage and be knocked back 3 spaces. On a successful save they take half damage and aren't knocked back. Each mine may activate twice before they stop functioning."
                     }
                 ]
             }
         ],
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -105,8 +106,8 @@
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 3,
-        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. Requires Lock on to fire. If the tech attack succeeds, you fire a Hound Missile (Size 1, HP ,  which deals 3d6 explosive damage in a Blast 1 from the target - they may perform an Agility save to take half damage.",
-        "description": "",
+        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. To activate this system you must make a Full Action tech attack against a target that has the Lock On condition and consume it. Whether you hit or miss, your target will regain the Lock On condition. If the tech attack is unsuccessful the Limited charge is not consumed. If the tech attack is successful, you deploy the Lion Coast Missile Drone in an adjacent space and lose a Limited charge. The missile moves up to 6 spaces towards your target at the start of your turn as long as your target has the Lock On condition, or up to 3 spaces if the target does not have Lock On. The missile moves as directly as possible, but maneuvers around cover and obstructions as long as there is space to do so. If the missile collides with a character during its movement it detonates in a Blast 1 explosion. Characters within the area must make an Agility save or take 3d6+2 Explosive damage, if the save is successful they take half damage.",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -118,7 +119,7 @@
         "license": "DAO",
         "license_level": 1,
         "effect": "Deploys a Blast 1 area. Allies can walk into/over this and spend a Quick action to gain 1d6 Overshield. This area has 3 charges before it fades.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -130,7 +131,7 @@
         "license": "DAO",
         "license_level": 1,
         "effect": "You gain 1 Speed until the end of your next turn after getting hit.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -151,7 +152,7 @@
             "evasion": 10,
             "detail": "Has a Cone 5 flamethrower attached, when fired targets caught in the area must make an ENGINEERING save. On a successful save, the target takes 1 Energy Damage; on a failed save the target takes 1 Burn."
         },
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -163,7 +164,7 @@
         "license": "DAO",
         "license_level": 3,
         "effect": "As a Quick Action you may convert a Drone or Mech wreck that is adjacent to you into an allied drone.<br>You may move the drone 4 spaces in any direction at the start of your turn as a protocol.<br>This Drone makes an attack roll at the nearest target to it that it has LoS to, using your Grit modifier to deal 3 damage. This effect triggers 1/round at the same time you perform the Skirmish action.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -175,36 +176,33 @@
         "license": "JIAN",
         "license_level": 1,
         "effect": "1/round when you are Slowed, roll a d6; on a 4+ you ignore it.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Scatter Charges",
-        "type": "Deployable",
+    {   "name": "Cadence Module",
+        "type": "System",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_quick_tech"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "JIAN",
         "license_level": 2,
         "effect": {
-            "effect_type": "Charge",
-            "charges": [
+            "effect_type": "Tech",
+            "activation": "Quick",
+            "option_set": "Invade",
+            "options": [
                 {
-                    "name": "Scatter Grenade",
-                    "charge_type": "Grenade",
-                    "range": [{"type": "Range", "val": 5},{"type": "Cone", "val": 5}],
-                    "damage": [{"type": "Explosive", "val": "1d3"}]
+                    "name": "Hit the Deck",
+                    "detail": "Character is pushed 3 spaces, made Prone and has +2 difficulty against all incoming attacks until their next turn"
                 },
                 {
-                    "name": "Scatter Mine",
-                    "charge_type": "Mine",
-                    "range": [{"type": "Cone", "val": 5}],
-                    "damage": [{"type": "Explosive","val": "1d3+1"}],
-                    "detail": "When you deploy a Scatter Mine, you deploy two. They have a cone 5 firing area, and anyone caught within them may make a HULL save to take half damage."
+                    "name": "Inspiring Anthem",
+                    "detail": "Character has +2 accuracy on next attack and +2 accuracy on next attack made against them"
                 }
             ]
         },
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -222,7 +220,8 @@
                     "name": "Volatile Grenade",
                     "charge_type": "Grenade",
                     "range": [{"type": "Thrown","val": 3},{"type": "Blast","val": 2}],
-                    "damage": [{"type": "Explosive","val": "1d3+1"}]
+                    "damage": [{"type": "Explosive","val": "1d3+1"}],
+                    "tags": [{"id": "tg_knockback","val": 3}]
                 },
                 {
                     "name": "Volatile Mine",
@@ -233,7 +232,7 @@
                 }
             ]
         },
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -333,7 +332,7 @@
         "sp": 3,
         "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
         "source": "BDF",
-        "license": "Kampilan",
+        "license": "KAMPILAN",
         "license_level": 3,
         "effect": {
             "effect_type": "AI",
@@ -361,7 +360,7 @@
         "effect": [{
             "effect_type": "Basic",
             "activation": "Protocol",
-            "detail": "Until the end of your next turn, all incoming Tech Attacks have +2 DIFFICULTY to hit you and your Tech Attacks gain +2 Difficulty."
+            "detail": "Choose a target within Sensors. Until the end of your next turn, all incoming Tech Attacks from your target have +2 DIFFICULTY to hit you and your Tech Attacks against them gain +2 DIFFICULTY."
         }],
         "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
         "data_type": "system",
@@ -374,7 +373,7 @@
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 2,
-        "effect": "You may activate this system as a Protocol. Until the end of your next turn, when hit by a melee attack while Grappling, the damage is reduced by 2 at a cost of 1 HEAT per attack.",
+        "effect": "You may activate this system as a Protocol. Until the end of your next turn, when hit by a melee attack while Grappling, at a cost of 1 HEAT per attack, the damage to you is reduced by 2 and you may inflict 2 Kinetic damage to a target you are Grappling.",
         "description": "<i>Armor heats up, flakes off; pilot stays cool.</i>",
         "data_type": "system",
         "aptitude": {}
@@ -386,7 +385,7 @@
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 3,
-        "effect": "Your mech gains the AI tag. +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Targets affected by the area, including the target, take 1d6+1 damage on a failed HULL save.",
+        "effect": "Your mech gains the AI tag. You gain +2 knockback on melee attacks. When enemies knocked back by your attacks come into contact with objects, that object takes 5 AP KINETIC damage. If the object is destroyed, a Cone 3 shockwave originates from the target. Characters affected by the area, including the initial target that destroyed the object, take 1d6+1 damage on a failed HULL save.",
         "description": "<i>The crane game became aware. Whoops.</i>",
         "data_type": "system",
         "aptitude": {}
@@ -399,7 +398,7 @@
         "license": "MACUAHUITL",
         "license_level": 1,
         "effect": "When you jump you craete a Burst 1 section of Difficult Terrain from where you jumped. You gain +2 Horizontal jump range on Vertical jumps.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -411,7 +410,7 @@
         "license": "MACUAHUITL",
         "license_level": 2,
         "effect": "Choose a space within Range 5 of you. You create a Blast 1 Area that deals 1d6 AP Explosive Damage.",
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
@@ -435,7 +434,7 @@
                 "tags": [{"id": "tg_heat_self","val": 2}]
             }]
             },
-        "description": "",
+        "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
