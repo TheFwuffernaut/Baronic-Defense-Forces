@@ -575,7 +575,7 @@
         "name": "SHOTEL",
         "mechtype": ["Striker"],
         "y_pos": 0,
-        "description": "",
+        "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero-G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
         "mounts": ["Main","Main"],
         "stats": {
             "size": 0.5,
