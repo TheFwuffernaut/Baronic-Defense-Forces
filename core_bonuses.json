@@ -9,7 +9,8 @@
             {
                 "name": "placeholder 1",
                 "activation": "Free",
-                "detail": "1/round you may make an Agility check for 1d6 Heat. On a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
+                "frequency": "1/round",
+                "detail": "You may make an Agility check for 1d6 Heat. On a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
             },
             {
                 "name": "Duck And Weave",
