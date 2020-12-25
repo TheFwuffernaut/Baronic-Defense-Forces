@@ -1,177 +1,243 @@
 [
-    {   "name": "Flame Gatling",
+    {   
+        "id": "bdf_flame_gatling",
+        "name": "Flame Gatling",
         "type": "System",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_full_action"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 1,
-        "effect": "At the start of your next turn after you activate this system, gain 2 Heat and draw a Line 5 area from your mech. Targets caught in this area take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active.",
-        "description": "<i>A chemical-based incendiary system with a system of rotating barrels to extend operational lifespan allows a terrifying deluge of flame after a predictable windup. Limited fuel canisters and heat venting requirements interfere with normal weapons usage when the barrels are spinning up.</i>",
-        "data_type": "system",
-        "aptitude": {}
+        "actions": [
+            {
+                "name": "Line Of Fire",
+                "activation": "Full",
+                "detail": "At the start of your next turn after you activate this system, gain 2 Heat and draw a Line 5 area from your mech. Targets caught in this area take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active."
+            }
+        ],
+        "description": "<i>A chemical-based incendiary system with a system of rotating barrels to extend operational lifespan allows a terrifying deluge of flame after a predictable windup. Limited fuel canisters and heat venting requirements interfere with normal weapons usage when the barrels are spinning up.</i>"
     },
-    {   "name": "WEAVER-Class NHP",
+    {   
+        "id": "bdf_weaver_class_nhp",
+        "name": "WEAVER-Class NHP",
         "type": "AI",
         "sp": 3,
         "tags": [{"id": "tg_ai"}],
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI property and the WEAVER protocol.",
-            "abilities": [{
-                "effect_type": "Protocol",
-                "effect_name": "WEAVER",
+        "effect": "Your mech gains the AI property and the WEAVER protocol.",
+        "actions": [
+            {
+                "name": "WEAVER Protocol",
+                "activation": "Protocol",
                 "detail": "Your attacks gain +2 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn.",
                 "tags": [{"id": "tg_heat_self","val": 2}]
             },
             {
-                "effect_type": "Reaction",
-                "effect_name": "Graceful Dance",
+                "name": "Graceful Dance",
+                "activation": "Reaction",
                 "frequency": "3/round",
                 "trigger": "You cause knockback to an enemy.",
                 "detail": "You may push yourself an equal number of spaces in a direction of your choosing, as long as that direction is not directly towards your target. This counts as involuntary movement and ignores reactions."
             }
-        ]
-        },
-        "description": "<i>WEAVER-class NHPs were born from an experiment in analyzing biometrics data from skydiving flight suits. The statistical paradoxes in simulating the goal of regulation of vital signs across a wide variety of phenotypes, genotypes, and environmental conditions resulted in an NHP with a personality humble and prideful simultaneously, constantly calculating odds and how to beat them by ignoring factory specs. WEAVER-class NHPs consistently cascade ahead of schedule; proactive cycling is advised along with aggressive maintenance of the hardware it is installed on.</i>",
-        "data_type": "system",
-        "aptitude": {}
+        ],
+        "description": "<i>WEAVER-class NHPs were born from an experiment in analyzing biometrics data from skydiving flight suits. The statistical paradoxes in simulating the goal of regulation of vital signs across a wide variety of phenotypes, genotypes, and environmental conditions resulted in an NHP with a personality humble and prideful simultaneously, constantly calculating odds and how to beat them by ignoring factory specs. WEAVER-class NHPs consistently cascade ahead of schedule; proactive cycling is advised along with aggressive maintenance of the hardware it is installed on.</i>"
     },
-    {   "name": "Saturation Drone",
+    {   
+        "id": "bdf_saturation_drone",
+        "name": "Saturation Drone",
         "type": "Drone",
         "sp": 2,
-        "tags": [{"id": "tg_drone"},{"id": "tg_quick_action"}],
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 1,
-        "effect": {
-            "name": "Saturation Drone",
-            "effect_type": "Drone",
-            "size": 0.5,
-            "hp": 5,
-            "armour": 2,
-            "edef": 10,
-            "evasion": 10,
-            "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
-        },
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
-    },
-    {   "name": "C80 Charges",
-        "type": "Deployable",
-        "sp": 2,
-        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
-        "source": "BDF",
-        "license": "AKINAKA",
-        "license_level": 2,
-        "effect": [
+        "deployables": [
             {
-                "effect_type": "Basic",
-                "detail": "You may deploy two charges per Limited use (two grenades / a grenade and a mine / two mines per Limited use)."
-            },
-            {
-                "effect_type": "Charge",
-                "charges": [
-                    {
-                        "name": "C80 Grenade",
-                        "charge_type": "Grenade",
-                        "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
-                        "damage": [{"type": "Explosive", "val": 4}],
-                        "tags": [{"id": "tg_knockback", "val": 3}],
-                        "detail": "Targets caught in the area of effect make an Agility save. On a success they take half damage and are only knocked back 1 space."
-                    },
-                    {
-                        "name": "C80 Mine",
-                        "charge_type": "Mine",
-                        "range": [{"type": "Blast", "val": 4}],
-                        "damage": [{"type": "Kinetic", "val": "2d6"}],
-                        "tags": [{"id": "tg_knockback", "val": 3}],
-                        "detail": "This mine's activation area is a Line 8 that you determine when you place the mine. Targets within the Range 4 up to Height 4 and targets further than range 4 between Heights 5 and 10 caught in the detonation area must pass a Hull Save or take full damage and be knocked back 3 spaces. On a successful save they take half damage and aren't knocked back. Each mine may activate twice before they stop functioning."
-                    }
-                ]
+                "name": "Saturation Drone",
+                "type": "Drone",
+                "activation": "Quick",
+                "size": 0.5,
+                "hp": 5,
+                "armour": 2,
+                "edef": 10,
+                "evasion": 10,
+                "detail": "Cannon and Launcher attacks within a Burst 2 radius of this drone have +1 Accuracy."
             }
         ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Lion Coast Missiles",
+    {
+        "id": "bdf_c80_charges",
+        "name": "C80 Charges",
+        "type": "Deployable",
+        "sp": 2,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 2,
+        "effect": "You may deploy two charges per Limited use (two grenades / a grenade and a mine / two mines per Limited use).",
+        "actions": [
+            {
+                "name": "C80 Grenade",
+                "activation": "Quick",
+                "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                "damage": [{"type": "Explosive", "val": 4}],
+                "tags": [{"id": "tg_knockback", "val": 3}],
+                "detail": "Targets caught in the area of effect make an Agility save. On a success they take half damage and are only knocked back 1 space."
+            }
+        ],
+        "deployables": [
+            {
+                "name": "C80 Mine",
+                "type": "Mine",
+                "range": [{"type": "Burst", "val": 4}],
+                "damage": [{"type": "Kinetic", "val": "2d6"}],
+                "tags": [{"id": "tg_knockback", "val": 3}],
+                "detail": "This mine's activation area is a Line 8 that you determine when you place the mine. Targets within the Range 4 up to Height 4 and targets further than range 4 between Heights 5 and 10 caught in the detonation area must pass a Hull Save or take full damage and be knocked back 3 spaces. On a successful save they take half damage and aren't knocked back. Each mine may activate twice before they stop functioning."
+            }
+        ],
+        "description": "<i></i>"
+    },
+    {
+        "id": "bdf_lion_coast_missiles",
+        "name": "Lion Coast Missiles",
         "type": "System",
         "sp": 2,
-        "tags": [{"id": "tg_limited", "val": 1},{"id": "tg_full_tech"}],
+        "tags": [{"id": "tg_limited", "val": 1}],
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 3,
-        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System. To activate this system you must make a Full Action tech attack against a target that has the Lock On condition and consume it. Whether you hit or miss, your target will regain the Lock On condition. If the tech attack is unsuccessful the Limited charge is not consumed. If the tech attack is successful, you deploy the Lion Coast Missile Drone in an adjacent space and lose a Limited charge. The missile moves up to 6 spaces towards your target at the start of your turn as long as your target has the Lock On condition, or up to 3 spaces if the target does not have Lock On. The missile moves as directly as possible, but maneuvers around cover and obstructions as long as there is space to do so. If the missile collides with a character during its movement it detonates in a Blast 1 explosion. Characters within the area must make an Agility save or take 3d6+2 Explosive damage, if the save is successful they take half damage.",
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
+        "effect": "Limited uses start at 0 - you gain 1 charge upon Stabilizing or get a kill with the System.",
+        "actions": [
+            {
+                "name": "Release the Beast",
+                "activation": "Full Tech",
+                "detail": "This Full Tech can only be performed by consuming a Lock On with the Full Tech. Whether you hit or miss, your target will regain the Lock On condition. If the tech attack is unsuccessful the Limited charge is not consumed. If the tech attack is successful, you deploy the Lion Coast Missile Drone in an adjacent space and lose a Limited charge. The missile moves up to 6 spaces towards your target at the start of your turn as long as your target has the Lock On condition, or up to 3 spaces if the target does not have Lock On. The missile moves as directly as possible, but maneuvers around cover and obstructions as long as there is space to do so. If the missile collides with a character during its movement it detonates in a Blast 1 explosion. Characters within the area must make an Agility save or take 3d6+2 Explosive damage, if the save is successful they take half damage."
+            }
+        ],
+        "description": "<i></i>"
     },
-    {   "name": "Nano Solder",
+    {
+        "id": "bdf_nano_solder",
+        "name": "Nano Solder",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_full_action"},{"id": "tg_deployable"}],
+        "tags": [{"id": "tg_deployable"}],
         "source": "BDF",
         "license": "DAO",
         "license_level": 1,
-        "effect": "Deploys a Blast 1 area. Allies can walk into/over this and spend a Quick action to gain 1d6 Overshield. This area has 3 charges before it fades.",
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
+        "actions": [
+            {
+                "name": "Deploy Nano Solder",
+                "activation": "Full",
+                "detail": "This system creates a BLAST 1 area of nanites within Range 5.  Characters standing in this area immediately gain 4 Overshield. When in this area, allied characters can spend a quick action to gain 4 Overshield.  The zone lasts until the end of the scene or expires after 3 uses of the quick action. Only 1 Nano Solder area can be active at a time; if you create a new one, the old one disintegrates."
+            }
+        ],
+        "description": "<i></i>"
     },
-    {   "name": "Double Time Armor",
+    {
+        "id": "bdf_double_time_armor",
+        "name": "Double Time Armor",
         "type": "Armor",
         "sp": 1,
-        "tags": [{"id": "tg_shield"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_shield"}, {"id": "tg_unique"}],
         "source": "BDF",
         "license": "DAO",
         "license_level": 1,
-        "effect": "You gain 1 Speed until the end of your next turn after getting hit.",
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
+        "effect": "After you are hit by an attack, you can move 1 space in a direction of your choice at the start of your turn and each time after you BOOST. This effect does not stack and lasts until the end of your next turn.  This free movement is not prevented by BRACE or the SLOWED condition.",
+        "description": "<i></i>"
     },
-    {   "name": "Helicopter Drone",
+    {
+        "id": "bdf_helicopter_drone",
+        "name": "Helicopter Drone",
         "type": "Drone",
         "sp": 2,
-        "tags": [{"id": "tg_invisible"},{"id": "tg_drone"}],
+        "tags": [{"id": "tg_drone"}],
         "source": "BDF",
         "license": "DAO",
         "license_level": 2,
-        "effect": {
-            "effect_type": "Drone",
-            "effect_name": "Helicopter Drone",
-            "size": 0.5,
-            "hp": 5,
-            "armour": 0,
-            "edef": 10,
-            "evasion": 10,
-            "detail": "Has a Cone 5 flamethrower attached, when fired targets caught in the area must make an ENGINEERING save. On a successful save, the target takes 1 Energy Damage; on a failed save the target takes 1 Burn."
-        },
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
+        "deployables": [
+            {
+                "type": "Drone",
+                "name": "Helicopter Drone",
+                "activation": "Quick",
+                "size": 0.5,
+                "hp": 5,
+                "armour": 0,
+                "edef": 10,
+                "evasion": 10,
+                "recall": "Quick",
+                "redeploy": "Quick",
+                "detail": "This drone flies and can be deployed to a free space within SENSORS and line of sight. Gain the FIRE SUPPORT reaction, which can be taken once for each deployed Helicopter Drone.",
+                "actions": [
+                    {
+                        "name": "Fire Support",
+                        "activation": "Reaction",
+                        "frequency": "1/round per Helicopter Drone",
+                        "trigger": "An Ally makes an attack versus a target within Range 8 of the Helicopter Drone",
+                        "detail": "The Helicopter Drone can fly up to 3 spaces in a direction of the controller's choice and draw a cone 5 area that includes the ally's original target; targets inside this area take 1 Burn."
+                    }
+                ]
+            }
+        ],
+        "description": "<i></i>"
     },
-    {   "name": "Universal Recycler",
+    {
+        "id": "bdf_universal_recycler",
+        "name": "Universal Recycler",
         "type": "System",
         "sp": 3,
-        "tags": [{"id": "tg_quick_action"}],
         "source": "BDF",
         "license": "DAO",
         "license_level": 3,
-        "effect": "As a Quick Action you may convert a Drone or Mech wreck that is adjacent to you into an allied drone.<br>You may move the drone 4 spaces in any direction at the start of your turn as a protocol.<br>This Drone makes an attack roll at the nearest target to it that it has LoS to, using your Grit modifier to deal 3 damage. This effect triggers 1/round at the same time you perform the Skirmish action.",
-        "description": "<i></i>",
-        "data_type": "system",
-        "aptitude": {}
+        "actions": [
+            {
+                "name": "Patch Job",
+                "activation": "Quick",
+                "detail": "As a Quick Action, you can deal 10 AP damage to an adjacent object, piece of terrain, or destroyed Mech or Drone to create a FLOWER DRONE turret in a free adjacent space."
+            },
+            {
+                "name": "Scrapyard Rollout",
+                "activation": "Protocol",
+                "detail": "You may move all drones 4 spaces in any direction."
+            }
+        ],
+        "deployables": [
+            {
+                "type": "Drone",
+                "name": "Flower Drone",
+                "activation": "Quick",
+                "size": 0.5,
+                "hp": 5,
+                "armour": 0,
+                "edef": 10,
+                "evasion": 10,
+                "detail": "Flower Drone turrets attack the nearest hostile character within range 10 at the start of your turn for 3 ENERGY damage using your Grit versus evasion, counting as a ranged attack.  On hit, all other characters within a Burst 1 area of the flower drone's target take 2 ENERGY damage. On a miss, characters in the area are knocked back 1 space.<br><br>This drone can move 3 spaces in any direction at the start of your turn as a protocol. When a Flower Drone turret is destroyed, it explodes in a BLAST 1 area for 4 EXPLOSIVE damage.",
+                "actions": [
+                    {
+                        "name": "Pew",
+                        "activation": "Passive",
+                        "detail": "Each Flower Drone Turret makes an attack (d20+Grit) against the nearest hostile character within range 10 of it at the start of your turn. On Hit the target takes 3 ENERGY damage and all characters within a Burst 1 area of the target take 2 ENERGY damage. On a miss, characters in the area are knocked back 1 space."
+                    },
+                    {
+                        "name": "Zoom",
+                        "activation": "Protocol",
+                        "detail": "Move the Flower Drone up to 3 spaces in any direction"
+                    }
+                ]
+            }
+        ],
+        "description": "<i></i>"
     },
-    {   "name": "Liquid Armor",
+    {
+        "id": "bdf_liquid_armor",
+        "name": "Liquid Armor",
         "type": "Armor",
         "sp": 1,
-        "tags": [{"id": "tg_shield"}],
+        "tags": [],
         "source": "BDF",
         "license": "JIAN",
         "license_level": 1,
@@ -180,269 +246,308 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Cadence Module",
+    {
+        "id": "bdf_cadence_module",
+        "name": "Cadence Module",
         "type": "System",
         "sp": 2,
-        "tags": [{"id": "tg_quick_tech"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_unique"}],
         "source": "BDF",
         "license": "JIAN",
         "license_level": 2,
-        "effect": {
-            "effect_type": "Tech",
-            "activation": "Quick",
-            "option_set": "Invade",
-            "options": [
-                {
-                    "name": "Hit the Deck",
-                    "detail": "Character is pushed 3 spaces, made Prone and has +2 difficulty against all incoming attacks until their next turn"
-                },
-                {
-                    "name": "Inspiring Anthem",
-                    "detail": "Character has +2 accuracy on next attack and +2 accuracy on next attack made against them"
-                }
-            ]
-        },
+        "effect": "Gain access to the Hit The Deck and Inspiring Anthem Invade Options.",
+        "actions": [
+            {
+                "name": "Hit the Deck",
+                "activation": "Invade",
+                "detail": "Character is pushed 3 spaces, made Prone and has +2 difficulty against all incoming attacks until their next turn"
+            },
+            {
+                "name": "Inspiring Anthem",
+                "activation": "Invade",
+                "detail": "Character has +2 accuracy on next attack and +2 accuracy on next attack made against them"
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Volatile Charges",
+    {
+        "id": "bdf_volatile_charges",
+        "name": "Volatile Charges",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_limited","val": 2}],
         "source": "BDF",
         "license": "JIAN",
         "license_level": 3,
-        "effect": {
-            "effect_type": "Charge",
-            "charges": [
-                {
-                    "name": "Volatile Grenade",
-                    "charge_type": "Grenade",
-                    "range": [{"type": "Thrown","val": 3},{"type": "Blast","val": 2}],
-                    "damage": [{"type": "Explosive","val": "1d3+1"}],
-                    "tags": [{"id": "tg_knockback","val": 3}]
-                },
-                {
-                    "name": "Volatile Mine",
-                    "charge_type": "Mine",
-                    "range": [{"type": "Blast","val": 2}],
-                    "damage": [{"type": "Explosive","val": "1d3+1"}],
-                    "detail": "Deals 1d6 bonus damage to flying/hovering targets caught in the blast area."
-                }
-            ]
-        },
+        "actions": [
+            {
+                "name": "Volatile Grenade",
+                "activation": "Quick",
+                "range": [{"type": "Thrown","val": 3},{"type": "Blast","val": 2}],
+                "damage": [{"type": "Explosive","val": "1d3+1"}],
+                "tags": [{"id": "tg_knockback","val": 3}]
+            }
+        ],
+        "deployables": [
+            {
+                "name": "Volatile Mine",
+                "type": "Mine",
+                "range": [{"type": "Blast","val": 2}],
+                "damage": [{"type": "Explosive","val": "1d3+1"}],
+                "detail": "Deals 1d6 bonus damage to flying/hovering targets caught in the blast area."
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Starfish Charges",
+    {
+        "id": "bdf_starfish_charges",
+        "name": "Starfish Charges",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 4},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_limited","val": 4}],
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 1,
-        "effect": {
-            "effect_type": "Charge",
-            "charges": [
-                {
-                    "name": "Pinwheel Grenade",
-                    "charge_type": "Grenade",
-                    "range": [{"type": "Range","val": 5}],
-                    "detail": "When thrown, the detonation creates 3 Line 3 areas originating from the targeted space. Characters caught in these areas take 2 damage, or half damage on a successful Hull Save."
-                },
-                {
-                    "name": "Supernova Mine",
-                    "charge_type": "Mine",
-                    "detail": "When detonated, this system creates 3 Line 5 areas originating from the mine’s space. These areas can overlap and target the same character up to one additional time.  Characters caught in these areas for 2 damage, or half damage on a successful Hull Save."
-                }
-            ]
-        },
+        "actions": [
+            {
+                "name": "Pinwheel Grenade",
+                "activation": "Quick",
+                "range": [{"type": "Range","val": 5}],
+                "detail": "When thrown, the detonation creates 3 Line 3 areas originating from the targeted space. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
+            }
+        ],
+        "deployables": [
+            {
+                "name": "Supernova Mine",
+                "type": "Mine",
+                "detail": "When detonated, this system creates 3 Line 5 areas originating from the mine’s space. These areas can overlap and target the same character up to one additional time. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
+            }
+        ],
         "description": "<i>A pinwheel-shaped charge, designed to saturate the target area with plasma. Crude, unfocused - not enough to get through ship armor, but more than enough to decrew it.<br><br>“The Barons like to throw a bunch of these down a shaft and think it’ll get the job done.  Not enough force to take down a p-g on their own, more than enough when you throw a dozen.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Distributed Tactical Net",
+    {
+        "id": "bdf_distributed_tactical_net",
+        "name": "Distributed Tactical Net",
         "type": "Tech",
         "sp": 2,
-        "tags": [{"id": "tg_full_tech"}],
+        "tags": [],
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 1,
-        "effect": {
-            "effect_type": "Tech",
-            "activation": "Full",
-            "option_set": "Full Tech",
-            "options": [{
+        "effect": "You gain access to the TacNet Mark and Positional Mapping Full Tech actions.",
+        "actions": [
+            {
                 "name": "TacNet Mark",
+                "activation": "Full Tech",
                 "detail": "Make a tech attack against another character in sensor range. On hit, the character takes 2 heat and the next attack to hit that character deals an additional 4 heat and 2 knockback to that character."
             },
             {
                 "name": "Positional Mapping",
+                "activation": "Full Tech",
                 "detail": "Place 3 size ½ tokens within sensor range on free spaces or on spaces with planted mines. The next grenade thrown onto those spaces or mine detonated on those spaces deals an additional 2 heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 heat total)."
             }
-        ]
-        },
+        ],
         "description": "<i>Baronic command-and-control units rely on telemetrics provided by frontline scouts to coordinate fire support missions and troop movements.<br><br>“Hacking the BUC just isn’t fun any more. It’s all information we already know - where we are, where we’re going, what’s going to blow us up.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Binary Charges",
+    {
+        "id": "bdf_binary_charges",
+        "name": "Binary Charges",
         "type": "Deployable",
         "sp": 3,
-        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 2,
-        "effect": {
-            "effect_type": "Charge",
-            "charges": [
+        "actions": [
             {
                 "name": "Blaze Grenade",
-                "charge_type": "Grenade",
+                "activation": "Quick",
                 "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
                 "detail": "This area created by this grenade lasts until the end of your turn. At the end of your turn, this explosion causes a new secondary Blast 1 area in a free space within Range 3 of the original. 1/round, Characters caught in either area or moving into it for the first time on their turn take 2 Burn on a failed AGILITY save. The secondary area expires at the start of your next turn."
-            },
+            }
+        ],
+        "deployables": [
             {
                 "name": "Glory Mine",
-                "charge_type": "Mine",
+                "type": "Mine",
                 "detail": "When detonated, this system detonates in a series of sinusoidal lasers, creating 3 Burst 1 areas within range 2 of the mine’s space. These areas cannot overlap. Characters within the affected areas must succeed on an AGILITY save or take 3 Burn. On a success, they take 2 Burn."
             }
-        ]
-        },
+        ],
         "description": "<i>“I saw one of the Barons, looking at me from the top of the ruins, caught his grenade on rebar, just laughing to himself. Didn’t miss a beat as he keyed the release and watched the charge sail down past us and into our fellow cell on the first floor. Never stopped laughing.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Picosilicon Spray",
+    {
+        "id": "bdf_",
+        "name": "Picosilicon Spray",
         "type": "System",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_overshield"},{"id": "tg_full_action"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_overshield"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 3,
-        "effect": "This reservoir of chemicals contains two active agents used to manipulate terrain and objects and can be activated in either mode with a Full Action.<br><b>Sledgehammer Mode:</b> Pick up to 3 of any: Object, Drone, or Deployable within Burst 2, they gain (8) OVERSHIELD. If this overshield is depleted, the object explodes in a Burst 3 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save. These charges can set each other off, and you are able to pick the order of detonation if multiple are set off at once.<br><br><b>“Sixty” Solvent Mode:</b> Pick up to 3 of any: 3 Objects, Drones, or Deployables within Burst 2, deal 20AP damage to them. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1.  Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character.",
+        "actions": [
+            {
+                "name": "Sledgehammer Spray",
+                "activation": "Full",
+                "detail": "An adjacent Object, Drone, or Deployable gains (8) OVERSHIELD.  If this overshield is depleted, the object explodes in a Burst 3 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save."
+            },
+            {
+                "name": "“Sixty-Six” Solvent Spray",
+                "activation": "Full",
+                "detail": "Deal 20 AP KINETIC damage to an adjacent object, Drone, or Deployable. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1. Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character."
+            }
+        ],
         "description": "<i>“We keep finding this stuff abandoned among Baronic armories. Nobody wants it - it’s supposed to solidify clay for building fortifications, and it makes it either too brittle or too soft. Doesn’t explain why our Kobolds keep blowing themselves up when using Seismic Pulses.”<br>“Think it’s haunted?”<br>“It’s chemistry, how can it be haunted? There’s nothing alive in there.”</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "BANSHEE-Class NHP",
+    {
+        "id": "bdf_banshee_class_nhp",
+        "name": "BANSHEE-Class NHP",
         "type": "AI",
         "sp": 3,
         "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI property and the Uncaring Scream reaction. This AI always cascades on a Direct Hit Structure check result and automatically ends cascade when the closest character at the time of structure check is Destroyed. When cascading, it always prioritizes causing Prone, then Destroyed status to the nearest character by any means and Uncaring Howl’s heat cost is reduced to 1.",
-            "abilities": [{
-                "effect_type": "Reaction",
-                "effect_name": "Uncaring Scream",
+        "effect": "Your mech gains the AI property and the Uncaring Howl reaction. This AI always cascades on a Direct Hit Structure check result and automatically ends cascade when the closest character at the time of structure check is Destroyed. When cascading, it always prioritizes causing Prone, then Destroyed status to the nearest character by any means and Uncaring Howl’s heat cost is reduced to 1.",
+        "actions": [
+            {
+                "name": "Uncaring Howl",
+                "activation": "Reaction",
                 "frequency": "3/round",
                 "tags": [{"id": "tg_heat_self","val": 4}],
                 "trigger": "You take damage from an actor.",
                 "detail": "You gain resistance to that actor’s damage until the end of your next turn. If you are attacked by a closer hostile actor, as a reaction you can gain resistance to that character’s attack's damage until the end of your next turn for no heat cost. These effects continue until you do not take any damage until the beginning of your next turn."
-            }]
-        },
+            }
+        ],
         "description": "<i>Captured HORUS agitators embedded among the yielded several PLAYER_TWO COMP/CON units, subsequently reverse engineered by the BDF and installed in scout-pattern Kampilan frames as a long range search and destroy unit operating independently of resupply for extended periods.  These PLAYER_TWO units, designed to operate a soldier’s hardsuit while they slept based on data from a flash pattern of their subjectivity, were scrubbed of any code related to HORUS and severed from the subjectivity of the soldier - a machine to fight when the soldier could not.</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Lock On Nuggets",
+    {
+        "id": "bdf_lock_on_nuggets",
+        "name": "Lock On Nuggets",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 3},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_limited","val": 3}],
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 1,
-        "effect": {
-            "effect_type": "Charge",
-            "charges": [
-                {
-                    "name": "Lock On Grenade",
-                    "charge_type": "Grenade",
-                    "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
-                    "detail": "All characters caught within this grenade's blast area must make a Systems Save or become Locked On."
-                },
-                {
-                    "name": "Lock On Mine",
-                    "charge_type": "Mine",
-                    "range": [{"type": "Blast","val":2}],
-                    "detail": "All characters caught within the Mine's Blast area are Locked On."
-                }
-            ]
-        },
+        "actions": [
+            {
+                "name": "Lock On Grenade",
+                "activation": "Quick",
+                "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
+                "detail": "All characters caught within this grenade's blast area must make a Systems Save or become Locked On."
+            }
+        ],
+        "deployables": [
+            {
+                "name": "Lock On Mine",
+                "type": "Mine",
+                "range": [{"type": "Blast","val":2}],
+                "detail": "All characters caught within the Mine's Blast area are Locked On."
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Anti-Air Bunker",
+    {
+        "id": "bdf_anti_air_bunker",
+        "name": "Anti-Air Bunker",
         "type":"Deployable",
         "sp": 2,
         "tags": [{"id": "tg_limited","val": 2}],
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 2,
-        "effect": {
-            "effect_type": "Deployable",
-            "activation": "Quick",
-            "count": 1,
-            "size": 6,
-            "hp": 20,
-            "evasion": 5,
-            "detail": "This deployable is 6 spaces tall, 2 spaces wide and 1 space long. You pick the orientation upon deployment. Grants Hard Cover to all within it."
-        }
+        "deployables": [
+            {
+                "name": "AAB",
+                "type": "Deployable",
+                "activation": "Quick",
+                "count": 1,
+                "size": 6,
+                "hp": 20,
+                "evasion": 5,
+                "detail": "This deployable is 6 spaces tall, 2 spaces wide and 1 space long. You pick the orientation upon deployment. It grants Hard Cover to all characters within it."
+            }
+        ]
     },
-    {   "name": "Fire Jump",
+    {
+        "id": "bdf_fire_jump",
+        "name": "Fire Jump",
         "type": "System",
         "sp": 3,
         "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your frame gains the AI tag (this is not an NHP and as such cannot cascade) and the following effect.",
-            "abilities": [{
-                "effect_type": "Basic",
+        "effect": "Your frame gains the AI tag (this is not an NHP and as such cannot cascade) and the Blazing Jump passive effect.",
+        "actions": [
+            {
+                "name": "Blazing Jump",
+                "activation": "Passive",
                 "detail": "Whenever and wherever you jump you leave a trail of Dangerous Terrain (Energy) behind you."
-            }]
-        },
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Coolant Flush",
+    {
+        "id": "bdf_coolant_flush",
+        "name": "Coolant Flush",
         "type": "Shield",
         "sp": 2,
         "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_shield"},{"id": "tg_protocol"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 1,
-        "effect": [{
-            "effect_type": "Basic",
+        "actions": [
+            {
+            "name": "Creative Coolant Flushing",
             "activation": "Protocol",
             "detail": "Choose a target within Sensors. Until the end of your next turn, all incoming Tech Attacks from your target have +2 DIFFICULTY to hit you and your Tech Attacks against them gain +2 DIFFICULTY."
-        }],
+            }
+        ],
         "description": "<i>Can’t be hacked if they can’t get a signal.</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Shock Armor",
+    {
+        "id": "bdf_shock_armor",
+        "name": "Shock Armor",
         "type": "Armor",
         "sp": 2,
         "tags": [{"id": "tg_protocol"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "KLEWANG",
         "license_level": 2,
-        "effect": "You may activate this system as a Protocol. Until the end of your next turn, when hit by a melee attack while Grappling, at a cost of 1 HEAT per attack, the damage to you is reduced by 2 and you may inflict 2 Kinetic damage to a target you are Grappling.",
+        "actions": [
+            {
+                "activation": "Protocol",
+                "detail": "You may activate this system as a Protocol. Until the end of your next turn, when hit by a melee attack while Grappling, at a cost of 1 HEAT per attack, the damage to you is reduced by 2 and you may inflict 2 Kinetic damage to a target you are Grappling."
+            }
+        ],
         "description": "<i>Armor heats up, flakes off; pilot stays cool.</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "CALCIUM-class NHP",
+    {
+        "id": "bdf_calcium_class_nhp",
+        "name": "CALCIUM-class NHP",
         "type": "AI",
         "sp": 3,
         "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
@@ -454,7 +559,9 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Shockwave Pistons",
+    {
+        "id": "bdf_shockwave_pistons",
+        "name": "Shockwave Pistons",
         "type": "System",
         "sp": 2,
         "tags": [{"id": "tg_unique"}],
@@ -466,43 +573,52 @@
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Missile Minefield",
+    {
+        "id": "bdf_missile_minefield",
+        "name": "Missile Minefield",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 4},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_limited","val": 4}],
         "source": "BDF",
         "license": "MACUAHUITL",
         "license_level": 2,
-        "effect": "Choose a space within Range 5 of you. You create a Blast 1 Area that deals 1d6 AP Explosive Damage.",
+        "actions": [
+            {
+                "name": "Deploy Missile Minefield",
+                "activation": "Quick",
+                "detail": "Choose a space within Range 5 of you. You create a Blast 1 Area that deals 1d6 AP Explosive Damage."
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "SALMON-Class NHP",
+    {
+        "id": "bdf_salmon_class_nhp",
+        "name": "SALMON-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_quick_action"}],
+        "tags": [{"id": "tg_limited","val": 2},{"id": "tg_heat_self","val": 2}],
         "source": "BDF",
         "license": "MACUAHUITL",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI tag and the AGGRESSIVE OVERWATCH Reaction",
-            "abilities": [{
+        "effect": "Your mech gains the AI tag and can activate the SALMON-Class NHP as a Protocol to gain access to the AGGRESSIVE OVERWATCH Reaction until the start of your next turn",
+        "actions": [
+            {
                 "effect_type": "Reaction",
                 "effect_name": "AGGRESIVE OVERWATCH",
-                "detail": "Your attacks gain +2 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn.",
                 "frequency": "1/turn",
-                "trigger": "An ally within range 5 takes damage",
-                "detail": "You may Skirmish for 1/2 damage. If this attack hits the attacker must make a Hull Save or fall Prone.",
-                "tags": [{"id": "tg_heat_self","val": 2}]
-            }]
-            },
+                "trigger": "An ally within range 5 is hit by an attack.",
+                "detail": "You may Skirmish for 1/2 damage. If this attack hits the attacker must make a Hull Save or fall Prone."
+            }
+        ],
         "description": "<i></i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "Carapace Crash Pads",
+    {
+        "id": "bdf_carapace_crash_pads",
+        "name": "Carapace Crash Pads",
         "type": "System",
         "sp": 2,
         "tags": [{"id": "tg_unique"}],
@@ -510,41 +626,76 @@
         "license": "SHOTEL",
         "license_level": 1,
         "effect": "Gain resistance to falling damage and +1 accuracy on checks and saves versus Immobilized.",
-        "description": "<i></i>",
+        "description": "<i>Layers of organic polymers sandwiched between insulated foam provide cushioning for pilots caught on the wrong end of physics in a ship-to-ship boarding operation.</i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "QUEEN-Class Refraction Laser",
+    {
+        "id": "bdf_queen_class_refraction_laser",
+        "name": "QUEEN-Class Refraction Laser",
         "type": "System",
         "sp": 3,
         "tags": [{"id": "tg_unique"}],
         "source": "BDF",
         "license": "SHOTEL",
         "license_level": 2,
-        "effect": "Gain a charge when you cool to zero heat, up to two. Expend a charge as a Quick on a character in range 8 for 1d6 Energy damage half on save; repeat this save on two targets within range 3 for 2 Energy damage each",
+        "effect": "Every time you cool to 0 Heat by any means gain a Queen's Retort Charge up to a maximum of 2. You may expend a charge to take the Queen's Retort Quick Action.",
+        "counters": [
+            {
+                "id": "bdf_queens_retort",
+                "name": "QUEEN'S RETORT",
+                "default_value": 0,
+                "min": 0,
+                "max": 2
+            }
+        ],
+        "actions": [
+            {
+                "name": "Queen's Retort",
+                "activation": "Quick",
+                "cost": 1,
+                "detail": "Target a character within range 8. They must make an Agility Save, taking 1d6 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
+            }
+        ],
         "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed.  </i>",
         "data_type": "system",
         "aptitude": {}
     },
-    {   "name": "DAEVA-Class NHP",
+    {
+        "id": "bdf_daeva_class_nhp",
+        "name": "DAEVA-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"},{"id": "tg_limited","val": 2}],
         "source": "BDF",
         "license": "SHOTEL",
         "license_level": 3,
-        "effect": {
-            "effect_type": "AI",
-            "detail": "Your mech gains the AI tag and the DAEVA Protocol.",
-            "abilities": [{
-                "effect_type": "Protocol",
-                "effect_name": "DAEVA Protocol",
+        "effect": "Your mech gains the AI tag and the DAEVA Protocol.",
+        "abilities": [
+            {
+                "name": "DAEVA Protocol",
+                "activation": "Protocol",
                 "detail": "Expend a charge to allow your next ranged or melee attack to be drawn from a number of spaces away from you equal to the heat generated by this protocol, as long as the weapon deals any Explosive or Burn.",
-                "tags": [{"id": "tg_limited","val": 2},{"id": "tg_heat_self","val": "1d3+2"},{"id": "tg_protocol"}]
-            }]
-        },
-        "description": "<i>DAEVA-class</i>",
+                "tags": [{"id": "tg_heat_self","val": "1d3+2"}]
+            }
+        ],
+        "description": "<i>The first DAEVA-class NHP was found in the COMP/CON unit attending the Baron O’Hara of the House of Thunder, cascading after attempting to balance the dietary needs of his collection of giant insects and frogs against his penchant to bring them on his trips across the Barony.  DAEVA-class NHPs were installed on frames across the Barony in fire support roles using their personality to sort items meticulously among a barrage of incoming telemetry.</i>",
         "data_type": "system",
         "aptitude": {}
+    },
+    {
+        "id": "bdf_coin_grenade",
+        "name": "Coin Grenade",
+        "type": "Deployable",
+        "sp": 0,
+        "tags": [{"id": "tg_limited","val": 2}],
+        "actions": [
+            {
+                "name": "Scattered Coins",
+                "activation": "Quick",
+                "range": [{"type": "Cone", "val": 5}],
+                "detail": "Targets inside the affected area must pass a Hull Save or take 4 Explosive damage, on a success they take half damage. Targets within Range 3 of the Jian take an additional 2 Explosive damage. Targets adjacent to the Jian take an additional 3 Explosive damage (this stacks with the first bonus)."
+            }
+        ]
     }
 ]

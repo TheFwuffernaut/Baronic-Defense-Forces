@@ -2,8 +2,10 @@
     {
         "id": "BDF",
         "name": "Baronic Defense Force",
-        "color": "",
-        "description": "",
-        "quote": "<i></i>"
+        "logo_url": "",
+        "light": "",
+        "dark": "",
+        "quote": "<i></i>",
+        "description": ""
     }
 ]
