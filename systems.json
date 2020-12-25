@@ -657,7 +657,7 @@
                 "detail": "Target a character within range 8. They must make an Agility Save, taking 1d6 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
             }
         ],
-        "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed.  </i>",
+        "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed. Mirror-bearing hover micro-drones are deployed into strategic positions to reflect shots from an under-barrel-mounted laser. The system was quickly repurposed by minor Barons for political assassinations and mine clearing during labor disputes.</i>",
         "data_type": "system",
         "aptitude": {}
     },
