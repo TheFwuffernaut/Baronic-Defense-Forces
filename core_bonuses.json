@@ -1,0 +1,91 @@
+[
+    {
+        "id": "bdf_nanocomposite_crash_couches",
+        "name": "Nanocomposite Crash Couches",
+        "source": "BDF",
+        "effect": "1/round, your mech can take 1d6 Heat to make an Agility check; on a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses.",
+        "description": "",
+        "actions": [
+            {
+                "name": "placeholder 1",
+                "activation": "Free",
+                "detail": "1/round you may make an Agility check for 1d6 Heat. On a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
+            },
+            {
+                "name": "Duck And Weave",
+                "activation": "Reaction",
+                "frequency": "1/round",
+                "trigger": "A hostile target makes an attack roll on you.",
+                "detail": "Your mech takes the Boost action, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
+            }
+        ]
+    },
+    {
+        "id": "bdf_spiderline_failsafes",
+        "name": "Spiderline Failsafes",
+        "source": "BDF",
+        "effect": "1/round, when it would become Prone from an attack or failed Save, your mech can take 1 Heat to make an Agility check to take the Boost action as a reaction. A successful check prevents the Prone status and allows normal movement.",
+        "description": "",
+        "actions": [
+            {
+                "name": "placeholder 2",
+                "activation": "Reaction",
+                "frequency": "1/round",
+                "trigger": "Your mech would become Prone from an attack or failed Save",
+                "detail": "You take 1 Heat to make an Agility Check. On a success you prevent the Prone status and may take the Boost action"
+            }
+        ]
+    },
+    {
+        "id": "bdf_electromagnetic_thrusters",
+        "name": "Electromagnetic Thrusters",
+        "source": "BDF",
+        "effect": "1/round, your mech gains +4 Evasion after taking the Boost action. This cannot cause your Evasion to be greater than 20.",
+        "description": "",
+        "synergies": [
+            {
+                "locations": ["boost"],
+                "detail": "1/round, your mech gains +4 Evasion after taking the Boost action. This cannot cause your Evasion to be greater than 20."
+            }
+        ]
+    },
+    {
+        "id": "bdf_bespoke_filigree_project",
+        "name": "Bespoke Filigree Project",
+        "source": "BDF",
+        "effect": "+1 repair cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
+        "description": "Barons of esteem devote untold resources to preening and festooning their mech with the heraldry of their House. You have taken your frame and turned form into function.",
+        "bonus": [
+            {
+                "id": "repcap",
+                "val": 1
+            }
+        ]
+    },
+    {
+        "id": "bdf_nanoweb_countermeasures",
+        "name": "Nanoweb Countermeasures",
+        "source": "BDF",
+        "effect": "1/round, your mech can remove the Lock On condition when it Boosts. If your mech passes through or adjacent to another character when it uses this effect, you can add the Lock On condition to that character.",
+        "description": "",
+        "synergies": [
+            {
+                "locations": ["boost"],
+                "detail": "1/round, your mech can remove the Lock On condition when it Boosts. If your mech passes through or adjacent to another character when it uses this effect, you can add the Lock On condition to that character."
+            }
+        ]
+    },
+    {
+        "id": "bdf_compression_carapace",
+        "name": "Compression Carapace",
+        "source": "BDF",
+        "effect": "1/round, after you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against an attack.",
+        "description": "",
+        "synergies": [
+            {
+                "locations": ["stabilize"],
+                "detail": "1/round, after you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against an attack."
+            }
+        ]
+    }
+]

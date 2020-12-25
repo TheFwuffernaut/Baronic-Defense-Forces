@@ -1,48 +1,80 @@
 [
-    {   "name": "Heartpiercer",
+    {   
+        "id": "bdf_heartpiercer",
+        "name": "Heartpiercer",
         "sp": 2,
-        "tags": [{"id": "tg_quick_action"},{"id": "tg_mod"}],
-        "applied_to": ["melee"],
-        "applied_string": "Melee",
+        "tags": [{"id": "tg_unique"}],
+        "allowed_types": ["Melee"],
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 2,
-        "effect": "1/round, you can activate this mod with a Quick Action. Your next attack with this weapon allows you to lunge two spaces towards your attack target (ignoring reactions) and adds +2 Knockback. If the target collides with a wall, object, or character, the target must pass a hull save or take 1d6 kinetic damage and become prone.",
+        "actions": [
+            {
+                "name": "Pierce The Heart",
+                "activation": "Quick",
+                "frequency": "1/round",
+                "detail": "Your next attack with this weapon allows you to lunge two spaces towards your attack target (ignoring reactions) and adds +2 Knockback. If the target collides with a wall, object, or character, the target must pass a hull save or take 1d6 kinetic damage and become prone."
+            }
+        ],
         "description": "<i>Secondary thrusters and experimental chemical catalysts allow pilots to leverage forward momentum with their weapon attacks into a devastating charge.  Pilots of Afenatene-pattern Akrafena are cleared to use this mod, as it exposes the pilot to great risk of counter-attack.</i>",
         "data_type": "mod",
         "aptitude": {}
     },
-    {   "name": "Splendor Mod",
+    {
+        "id": "bdf_splendor_mod",
+        "name": "Splendor Mod",
         "sp": 2,
-        "tags": [{"id": "tg_mod"}],
-        "applied_to": ["nexus","launcher"],
-        "applied_string": "Launcher or Nexus",
+        "tags": [{"id": "tg_unique"}],
+        "allowed_types": ["Launcher","Nexus"],
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 2,
-        "effect": "On hit you may mark an enemy. With a Quick action you may detonate this mark to deal 1d3 Explosive damage in a Burst 2 area around the marked target. Only one mark may be active at a time. Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads).",
+        "effect": "Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads).",
+        "actions": [
+            {
+                "name": "Mark of Splendor",
+                "activation": "Passive",
+                "detail": "On hit you may mark an enemy with the Mark of Splendor. Only one mark may be active at a time."
+            },
+            {
+                "name": "Splendid Blaze",
+                "activation": "Quick",
+                "detail": "Detonate the Mark of Splendor to deal 1d3 Explosive damage to the Marked character and all characters within Burst 2 of them."
+            }
+        ],
         "description": "",
         "data_type": "mod",
         "aptitude": {}
     },
-    {   "name": "Laser Guided Mod",
+    {   
+        "id": "bdf_laser_guided_mod",
+        "name": "Laser Guided Mod",
         "sp": 2,
-        "tags": [{"id": "tg_mod"}],
-        "applied_to": ["launcher","nexus","cqb"],
-        "applied_string": "CQB, Launchers or Nexus",
+        "tags": [{"id": "tg_unique"}],
+        "allowed_types": ["CQB","Launcher","Nexus"],
         "source": "BDF",
         "license": "JIAN",
         "license_level": 2,
-        "effect": "The weapon this mod is equipped to gains the Arcing tag. If you miss your target you can reroll the attack against one enemy within range 5 of your original target as a Quick Action.",
+        "added_tags": [{"id": "tg_arcing"}],
+        "actions": [
+            {
+                "name": "Laser Guided Course Correction",
+                "activation": "Quick",
+                "frequency": "1/round",
+                "trigger": "You miss your initial attack target.",
+                "detail": "You may reroll the attack against one enemy within Range 5 of the original target."
+            }
+        ],
         "description": "",
         "data_type": "mod",
         "aptitude": {}
     },
-    {   "name": "Impact Mod",
+    {   
+        "id": "bdf_impact_mod",
+        "name": "Impact Mod",
         "sp": 2,
-        "tags": [{"id": "tg_mod"}],
-        "applied_to": ["cannon","cqb","launcher"],
-        "applied_string": "Cannon, CQB or Launcher",
+        "tags": [{"id": "tg_unique"}],
+        "allowed_types": ["Cannon","CQB","Launcher"],
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 2,
