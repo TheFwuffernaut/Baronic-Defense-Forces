@@ -3,21 +3,15 @@
         "id": "bdf_nanocomposite_crash_couches",
         "name": "Nanocomposite Crash Couches",
         "source": "BDF",
-        "effect": "1/round, your mech can take 1d6 Heat to make an Agility check; on a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses.",
-        "description": "",
+        "effect": "1/round, your mech can take 1d6 Heat to take the Boost action as a reaction to an incoming attack, interrupting the attack and ignoring reactions. If this causes your mech to move out of range or line of sight of the attack, the attack resolves as normal and the damage is resisted.",
+        "description": "Baronic pilots routinely perform maneuvers that would shake apart lesser cockpit chairs. Your cockpit contains the latest in compression materials science, for it is your throne.",
         "actions": [
-            {
-                "name": "placeholder 1",
-                "activation": "Free",
-                "frequency": "1/round",
-                "detail": "You may make an Agility check for 1d6 Heat. On a successful check, your mech can take the Boost action as a reaction to an incoming attack, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
-            },
             {
                 "name": "Duck And Weave",
                 "activation": "Reaction",
                 "frequency": "1/round",
                 "trigger": "A hostile target makes an attack roll on you.",
-                "detail": "Your mech takes the Boost action, interrupting the attack. If this causes your mech to move out of range or line of sight of the attack, the attack automatically misses."
+                "detail": "Take 1d6 Heat to take the Boost action, interrupting the attack and ignoring Reactions. If this causes your mech to move out of range or line of sight of the attack, the triggering attack resolves as normal and the damage is resisted."
             }
         ]
     },
@@ -25,15 +19,16 @@
         "id": "bdf_spiderline_failsafes",
         "name": "Spiderline Failsafes",
         "source": "BDF",
-        "effect": "1/round, when it would become Prone from an attack or failed Save, your mech can take 1 Heat to make an Agility check to take the Boost action as a reaction. A successful check prevents the Prone status and allows normal movement.",
-        "description": "",
+        "effect": "1/round, when it would become Prone from an attack or failed Save, as a reaction, your mech can take 2 Heat to force a hostile character in range 5 to make an Agility save. A failed Save prevents your Prone status and instead inflicts Prone on your target.",
+        "description": "Reactive armor lined with hypertensile tethers is primed to fire off when gyroscopes in the mech indicate a cataclysmic fall, using the momentum of a nearby opponent to kip up and return the finest war machine in the Baronies back to the fight.",
         "actions": [
             {
-                "name": "placeholder 2",
+                "name": "Safety Net",
                 "activation": "Reaction",
                 "frequency": "1/round",
                 "trigger": "Your mech would become Prone from an attack or failed Save",
-                "detail": "You take 1 Heat to make an Agility Check. On a success you prevent the Prone status and may take the Boost action"
+                "heat_cost": 2,
+                "detail": "You take 2 Heat to force a hostile character in Range 5 to make an Agility Save. A failed Save prevents your Prone status and instead inflicts Prone on your target."
             }
         ]
     },
@@ -41,12 +36,12 @@
         "id": "bdf_electromagnetic_thrusters",
         "name": "Electromagnetic Thrusters",
         "source": "BDF",
-        "effect": "1/round, your mech gains +4 Evasion after taking the Boost action. This cannot cause your Evasion to be greater than 20.",
-        "description": "",
+        "effect": "1/round, your mech gains +4 Evasion against the next melee or ranged attack after taking the Boost action. This cannot cause your Evasion to be greater than 20.",
+        "description": "Speed is life, and BDF engineers have engineered vector thrusters to give a mechanized chassis the life of a Cosmopolitan for only four times the Manna cost of traditional maneuver equipment.",
         "synergies": [
             {
                 "locations": ["boost"],
-                "detail": "1/round, your mech gains +4 Evasion after taking the Boost action. This cannot cause your Evasion to be greater than 20."
+                "detail": "1/round, your mech gains +4 Evasion against the next melee or ranged attack after taking the Boost action. This cannot cause your Evasion to be greater than 20."
             }
         ]
     },
@@ -54,12 +49,12 @@
         "id": "bdf_bespoke_filigree_project",
         "name": "Bespoke Filigree Project",
         "source": "BDF",
-        "effect": "+1 repair cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
+        "effect": "Gain 1 Repair Cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
         "description": "Barons of esteem devote untold resources to preening and festooning their mech with the heraldry of their House. You have taken your frame and turned form into function.",
         "bonus": [
             {
                 "id": "repcap",
-                "val": 1
+                "val": 2
             }
         ]
     },
@@ -67,12 +62,12 @@
         "id": "bdf_nanoweb_countermeasures",
         "name": "Nanoweb Countermeasures",
         "source": "BDF",
-        "effect": "1/round, your mech can remove the Lock On condition when it Boosts. If your mech passes through or adjacent to another character when it uses this effect, you can add the Lock On condition to that character.",
-        "description": "",
+        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to another character when it uses this effect, you can add the Lock On condition to that character.",
+        "description": "Self-sealing nanite armor plates in the BDF’s elite units allow them to both stay in the fight longer as well as channel the resultant sparks into a light show capable of painting targets.",
         "synergies": [
             {
                 "locations": ["boost"],
-                "detail": "1/round, your mech can remove the Lock On condition when it Boosts. If your mech passes through or adjacent to another character when it uses this effect, you can add the Lock On condition to that character."
+                "detail": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to another character when it uses this effect, you can add the Lock On condition to that character."
             }
         ]
     },
@@ -80,12 +75,12 @@
         "id": "bdf_compression_carapace",
         "name": "Compression Carapace",
         "source": "BDF",
-        "effect": "1/round, after you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against an attack.",
-        "description": "",
+        "effect": "After you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against the next source of damage you take. This effect stacks with other sources of damage reduction.",
+        "description": "Layered armor plates compress on impact instead of shatter, directing the force away from BDF pilots and their allies.",
         "synergies": [
             {
                 "locations": ["stabilize"],
-                "detail": "1/round, after you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against an attack."
+                "detail": "After you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against the next source of damage you take. This effect stacks with other sources of damage reduction."
             }
         ]
     }
