@@ -45,7 +45,7 @@
         "mount": "Main",
         "type": "Cannon",
         "range": [{"type": "Range","val": 5},{"type": "Cone","val": 3}],
-        "damage": [{"type": "Energy","val": "1d3+2"}],
+        "damage": [{"type": "Energy","val": "1d3+3"}],
         "tags": [{"id": "tg_loading"},{"id": "tg_inaccurate"},{"id": "tg_arcing"}],
         "effect": "This weapon can make two attacks when fired. The attack areas cannot overlap.",
         "source": "BDF",
@@ -129,11 +129,18 @@
         "type": "Launcher",
         "range": [{"type": "Range","val": 10},{"type": "Blast","val": 1}],
         "damage": [{"type": "Explosive","val": "1d6"}],
-        "tags": [{"id": "tg_loading"}],
-        "effect": "This weapon can fire twice before it needs to reload.",
+        "tags": [{"id": "tg_loading"}, {"id": "tg_knockback", "val": 1}, {"id": "tg_unique"}],
+        "effect": "This weapon can fire twice before it needs to reload.<br>Mounting the Stinger Launcher grants the <b>Suppressing Fire Wall</b> Invade option. Using the granted Invade option counts as firing the Stinger Launcher. This Invade option cannot be used while the Stinger Launcher is Unloaded.",
         "source": "BDF",
         "license": "JIAN",
         "license_level": 1,
+        "actions": [
+            {
+                "name": "SUPPRESSING FIRE WALL",
+                "activation": "Invade",
+                "detail": "Push your target up to 3 spaces directly away from you. All characters within Burst 2 of your target must succeed on a Hull Save or gain +1 Difficulty on attacks until the end of their next turn."
+            }
+        ],
         "description": "<i>BDF engineers understand that the worst situation to be is out of ammunition, and so design their munitions to come with double double capacity loads, since the line forces of the BDF responded enthusiastically in surveys that double loads were simply not enough firepower.</i>"
     },
     {   "id": "bdf_slaughter_shotgun",
@@ -220,6 +227,8 @@
         "damage": [{"type": "Explosive","val": "2d6"}],
         "tags": [{"id": "tg_loading"}],
         "effect": "This weapon cannot attack targets within Range 5 of you.",
+        "on_hit": "This weapon rolls all damage dice one additional time, keeping the highest damage dice as per a critical hit.",
+        "on_crit": "Damage dice are rolled three times in total, keeping the highest result.",
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 1,
@@ -264,7 +273,7 @@
         ]
     },
     {   "id": "bdf_tungsten_boot",
-        "name": "Tungsten Boot",
+        "name": "Typhoon Boot",
         "mount": "Heavy",
         "type": "Melee",
         "range": [{"type": "Threat","val": 2}],
@@ -292,6 +301,11 @@
                 "name": "Lift Together",
                 "activation": "Full",
                 "detail": "You may lift and drag objects up to Size 6, becoming Slowed while doing so."
+            },
+            {
+                "name": "Reposition Cargo",
+                "activation": "Protocol",
+                "detail": "You may rotate lifted or dragged objects with the crane freely around you into adjacent free spaces."
             }
         ],
         "source": "BDF",
@@ -417,7 +431,7 @@
         "range": [{"type": "Range", "val": 5}],
         "damage": [{"type": "Energy", "val": "1d6+1"}],
         "tags": [{"id": "tg_heat_self", "val": 2}],
-        "effect": "Create 3 adjacent Line 6 areas extending in the same direction as your attack, with the middle area originating from your target’s space. All targets in these areas may also be attacked.",
+        "effect": "Create an adjacent Line 8 area extending in the same direction as your attack, with the area originating from your target’s space. All targets adjacnet to this area may also be attacked.",
         "source": "BDF",
         "license": "KIEM",
         "license_level": 3,

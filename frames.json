@@ -83,7 +83,7 @@
             "sensor_range": 5,
             "tech_attack": 0,
             "save": 10,
-            "speed": 3,
+            "speed": 5,
             "sp": 5
         },
         "traits": [
@@ -99,11 +99,11 @@
             },
             {
                 "name": "Reactive Thrusters",
-                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn.",
+                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn.<br>You may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed.",
                 "synergies": [
                     {
                         "locations": ["boost"],
-                        "detail": "After you boost you cannot be knocked back, pushed, pulled or knocked prone by actors up to your size +1 (rounded up) until the start of your next turn."
+                        "detail": "After you boost you cannot be knocked back, pushed, pulled or knocked prone by actors up to your size +1 (rounded up) until the start of your next turn.<br>You may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed."
                     }
                 ]
             },
@@ -134,7 +134,7 @@
                 {
                     "name": "Lock And Cycle",
                     "activation": "Full",
-                    "detail": "The Akrefena fires a weapon and reloads a weapon as a Full Action. This counts as a Barrage. The Akrefena is Slowed until the start of its next turn after using this action."
+                    "detail": "The Akrafena fires a weapon and reloads a weapon as a Full Action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action."
                 }
             ]
         }
@@ -145,8 +145,8 @@
         "source": "BDF",
         "name": "CHAMBI",
         "mechtype": ["Artillery"],
-        "image_url": "https://i.imgur.com/P4VokkU.png",
-        "y_pos": 15,
+        "image_url": "https://i.imgur.com/5Vfur8J.png",
+        "y_pos": 26,
         "description": "The siege of Creighton and defeat of the Baronic Warhost resulted in a black eye for the Baronies and the genesis of the artillery project that became the BDF Chambi.  Dissent in the ranks on naming the project after a blunt instrument instead of the swords of the rest of the BDF chassis was quelled when field tests resulted in an entire battlefield of nails melting under the hammer.  The Chambi sports an integrated NHP co-pilot to serve as weapons officer during extended sieges, freeing mental capacity for the pilot to navigate the mech through hostile environments.",
         "mounts": ["Flex","Main","Heavy"],
         "stats": {
@@ -333,7 +333,7 @@
             "heatcap": 6,
             "repcap": 4,
             "sensor_range": 8,
-            "tech_attack": -1,
+            "tech_attack": 1,
             "save": 11,
             "speed": 4,
             "sp": 6
@@ -410,7 +410,7 @@
             },
             {
                 "name": "Statistical Anomaly",
-                "description": "The Kampilan never rolls more than one die for Structure checks and only costs 2 repairs to repair Destroyed status.",
+                "description": "The Kampilan never rolls more than one die for Structure checks and only costs 2 repairs to repair Destroyed status. No matter the circumstances surrounding the wreck, after a battle the Kampilan can always be repaired.",
                 "synergies": [
                     {
                         "locations": ["structure"],
@@ -450,8 +450,8 @@
         "source": "BDF",
         "name": "KHANDA",
         "mechtype": ["Striker"],
-        "image_url": "",
-        "y_pos": 0,
+        "image_url": "https://i.imgur.com/3XTFtPr.png",
+        "y_pos": 20,
         "description": "BDF Engineers were tasked with the impossible, of mounting the heaviest payloads on the tallest, most mobile chassis on the battlefield.  Aggressive negotiations during the prototyping phase thanks to the House of Hues resulted in the development of the Khanda, a frame capable of rapid repositioning and unparalleled firepower at angles traditional chassis could not make. Often festooned in regalia and with signature forearm-mounted weaponry allowing for unhindered hands, Khanda chassis are often seen on public relations tours by aspiring Barons of minor Houses fraternizing with BDF pilots and civilians alike.",
         "mounts": ["Heavy","Heavy"],
         "stats": {
@@ -493,7 +493,7 @@
             },
             {
                 "name": "Load Balancing",
-                "description": "The Khanda cannot mount Superheavy weapons and after firing a Heavy weapon, the Khanda cannot fire other Heavy weapons until the start of the next turn."
+                "description": "The Khanda cannot mount Superheavy weapons and after firing a Heavy weapon, the Khanda cannot fire other Heavy weapons until the start of the next turn. All Heavy Weapons mounted on the Khanda gain the Unique tag."
             }
         ],
         "core_system": {
@@ -512,8 +512,8 @@
         "license_level": 2,
         "name": "KIEM",
         "mechtype": ["Defender"],
-        "image_url": "",
-        "y_pos": 0,
+        "image_url": "https://i.imgur.com/7laChaP.png",
+        "y_pos": 40,
         "description": "The Kiem is a chassis designed for aggressive interdiction of incoming fire, placing itself in front of its allies to clear fortifications with heavy suppressive fire.  Advances in materials engineering resulted in a compact frame capable of underground operations and in hostile environments. The designer of the Kiem, Colonel Mi Ceran of the minor House of Luggage, was shot out of her frame in every sortie she ever went on, spurring her to layer every available shielding system onto the design document in an attempt to prevent other BDF troopers from meeting such a fate.",
         "mounts": ["Main","Heavy"],
         "stats": {
@@ -539,7 +539,7 @@
             },
             {
                 "name": "Angled Plating",
-                "description": "When damaged by an attack, roll a d6. On a 5+, gain Resistance to the attack's damage."
+                "description": "1/turn, when damaged by an attack, roll a d6. On a 5+, gain Resistance to all damage until the end of the turn."
             },
             {
                 "name": "Low Profile",
@@ -613,7 +613,7 @@
             "name": "Greywash Actuators",
             "description": "Mechs aren’t supposed to bend like that.",
             "active_name": "Six Meters Under",
-            "active_effect": "Until the end of the scene, the Klewang creates a Cone 5 shockwave at the end of its movement for 2d6 Explosive damage when it activates Suplex or Boosts in the direction of the nearest enemy character. Characters caught in the area who pass a HULL save take half damage.",
+            "active_effect": "Until the end of the scene, when the Klewang activates Piledriver Protocols or Boosts in the direction of the nearest enemy character it creates a Cone 5 shockwave at the end of its movement for 2d6 Explosive damage that must at least partially include one of the original targets in the case of Piledriver Protocols or include the nearest enemy character in the case of a Boost. Characters caught in the area who pass a HULL save take half damage.",
             "use": "Encounter",
             "activation": "Full",
             "passive_name": "Piledriver Protocols",
@@ -656,21 +656,21 @@
         "traits": [
             {
                 "name": "HiveFlight Boosters",
-                "description": "The Shotel can fly when it moves. When the Shotel ends its turn without having performed a Skirmish or Barrage, its next weapon attack after the start of its next turn deals an additional +2d6 bonus damage.",
+                "description": "The Shotel can fly when it moves. When the Shotel ends its turn without having made a weapon attack, its next weapon attack after the start of its next turn Impairs all enemies affected.",
                 "synergies": [
                     {
                         "locations": ["move","boost"],
-                        "detail": "The Shotel can fly when it moves. When the Shotel ends its turn without having performed a Skirmish or Barrage, its next weapon attack after the start of its next turn deals an additional +2d6 bonus damage."
+                        "detail": "The Shotel can fly when it moves."
                     }
                 ]
             },
             {
                 "name": "Heat Bleed",
-                "description": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn.",
+                "description": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn. Each turn this trait activates, the Shotel inflicts an additional +2 Heat on its next attack, up to +6.",
                 "synergies": [
                     {
                         "locations": ["heat","stress","structure"],
-                        "detail": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn."
+                        "detail": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn. Each turn this trait activates, the Shotel inflicts an additional +2 Heat on its next attack, up to +6."
                     }
                 ]
             },

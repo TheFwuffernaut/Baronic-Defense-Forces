@@ -40,7 +40,7 @@
                 "range": [{"type": "Range","val": 3},{"type": "Blast","val": 2}],
                 "damage": [{"type": "Explosive", "val": 4}],
                 "tags": [{"id": "tg_knockback", "val": 3}],
-                "detail": "This grenade must be thrown or placed onto a surface, object, or character, and can be detonated with a Quick Action. When detonated the grenade saturates a Blast 2 area, targets caught in this area must make an Agility save or take 4 <b>EXPLOSIVE</b> damage and are knocked back 3 spaces. On a successful save, they take half damage and are only knocked back 1 space."
+                "detail": "This grenade must be thrown or placed onto a surface, object, or character, and can be detonated with a Quick Action. When detonated the grenade saturates a Blast 2 area, targets caught in this area must make an Agility save or take 4 <b>EXPLOSIVE</b> damage, are impaired, and are knocked back 3 spaces. On a successful save, they take half damage and are only knocked back 1 space."
             }
         ],
         "deployables": [
@@ -50,7 +50,7 @@
                 "range": [{"type": "Burst", "val": 4}],
                 "damage": [{"type": "Kinetic", "val": "2d6"}],
                 "tags": [{"id": "tg_knockback", "val": 3}],
-                "detail": "This mine's activation area is a Line 8, selected from free spaces when placed and with the first 4 spaces touching the ground. Targets within the Range 4 up to Height 4, and targets from Ranges 5 to 8 between Heights 5 to 8 caught in the detonation area must pass a <b>HULL</b> Save or take 2d6 <b>KINETIC</b> damage and be knocked back 3 spaces. Each use places two C-Spray Mines."
+                "detail": "This mine's activation area is a Line 8 that is up to 8 spaces tall, selected from free spaces when placed. Targets within the Range 4 up to Height 4, and targets from Ranges 5 to 8 between Heights 5 to 8 caught in the detonation area must pass a <b>HULL</b> Save or take 2d6 <b>KINETIC</b> damage and be knocked back 3 spaces. Each use places two C-Spray Mines."
             }
         ],
         "description": "<i>Some demolition work requires charges tailored to close quarters combat. Experimental tactics from the Hosue of Cured Meats to stave off local megafauna predators resulted in wide area munitions capable of scattering foes across wide areas.</i>"
@@ -100,7 +100,7 @@
             {
                 "name": "Line Of Fire",
                 "activation": "Full",
-                "detail": "At the start of your next turn after you activate this system, gain 2 Heat and draw a Line 5 area from your mech. Targets caught in this area take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active."
+                "detail": "At the start of your next turn after you activate this system, gain 2 Heat and draw two Line 5 areas from your mech. Targets caught in these areas take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active."
             }
         ],
         "description": "<i>A chemical-based incendiary system with a system of rotating barrels to extend operational lifespan allows a terrifying deluge of flame after a predictable windup. Limited fuel canisters and heat venting requirements interfere with normal weapons usage when the barrels are spinning up.</i>"
@@ -144,7 +144,7 @@
         "actions": [
             {
                 "name": "Deploy Nano Solder",
-                "activation": "Full",
+                "activation": "Quick",
                 "detail": "This system creates a BLAST 1 area of nanites within Range 5. Characters standing in this area immediately gain 4 Overshield. When in this area, allied characters can spend a free action to gain 4 Overshield. The zone lasts until the end of the scene or expires after 3 uses of the quick action. Only 1 Nano Solder area can be active at a time; if you create a new one, the old one disintegrates."
             }
         ],
@@ -438,10 +438,10 @@
     },
     {
         "id": "bdf_lock_on_nuggets",
-        "name": "Lock On Nuggets",
+        "name": "Electric Smoke Charges",
         "type": "Deployable",
         "sp": 2,
-        "tags": [{"id": "tg_limited","val": 3}],
+        "tags": [{"id": "tg_limited","val": 3}, {"id": "tg_unique"}],
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 1,
@@ -450,7 +450,7 @@
                 "name": "Lock On Grenade",
                 "activation": "Quick",
                 "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
-                "detail": "All characters caught within this grenade's blast area must make a Systems Save or gain the Locked On condition. Biological targets in the area take 3 Energy damage."
+                "detail": "All characters caught within this grenade's blast area must make a Systems Save or gain the Locked On condition and 2 Heat. Biological targets in the area take 3 Energy damage."
             }
         ],
         "deployables": [
@@ -458,7 +458,7 @@
                 "name": "Lock On Mine",
                 "type": "Mine",
                 "range": [{"type": "Blast","val":2}],
-                "detail": "Targets in a Blast 2 area gain the Lock On condition. Biological targets in the area take 6 Energy damage."
+                "detail": "Targets in a Blast 2 area gain the Lock On condition and 2 Heat. Biological targets in the area take 6 Energy damage."
             }
         ],
         "description": "<i>Operating on a principle opposite of chaff, electric smoke uses the ionic charge to paint targets for fire support, and results in a hostile environment to non-grounded beings. The minor House of Residuals has used these in aggressive copyright negotiations to assert primary use of certain wrestling and concert performances.</i>"
@@ -481,7 +481,7 @@
                 "size": "see description",
                 "hp": 20,
                 "evasion": 5,
-                "detail": "This deployable is 6 spaces tall, 2 spaces wide, 1 space long, and grants Hard Cover. You pick the orientation upon deployment. This is not an obstruction to allies, can be targeted, and does not block line of sight. Characters can stand inside the zone and cannot Hide in it."
+                "detail": "This deployable is 6 spaces tall, 2 spaces wide, 2 spaces long, and grants Hard Cover. You pick the orientation upon deployment. This is not an obstruction to allies, can be targeted, and does not block line of sight. Characters can stand inside the zone and cannot Hide in it."
             }
         ],
         "description": "<i>In crowded battlefield conditions, directed shields were needed on a larger scale than the Type-3 GMS Shield could provide. BDF engineers hailing from the minor House of Sour Candy and the minor House of Amplification created the Tiger Cage Anti-Air Bunker as a way to cut off enemy approaches while safeguarding BDF troops in all directions.</i>"
@@ -495,7 +495,7 @@
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 3,
-        "effect": "Your mech’s reactor is controlled by an advanced RIVER-class Comp/Con unit. Your frame gains the AI tag and the Blazing Jump passive effect. Comp/con units are not true NHPs and thus cannot enter cascade.",
+        "effect": "Your mech’s reactor is controlled by an advanced RIVER-class Comp/Con unit. Your jumps gain 2 spaces of horizontal movement, and your frame gains the AI tag along with the Blazing Jump passive effect. Comp/con units are not true NHPs and thus cannot enter cascade.",
         "actions": [
             {
                 "name": "Blazing Jump",
@@ -672,7 +672,7 @@
                 "name": "Queen's Retort",
                 "activation": "Quick",
                 "cost": 1,
-                "detail": "Target a character within range 8. They must make an Agility Save, taking 1d6 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
+                "detail": "Target a character within range 8. They must make an Agility Save, taking 1d6+1 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
             }
         ],
         "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed. Mirror-bearing hover micro-drones are deployed into strategic positions to reflect shots from an under-barrel-mounted laser. The system was quickly repurposed by minor Barons for political assassinations and mine clearing during labor disputes.</i>"

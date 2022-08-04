@@ -8,7 +8,7 @@
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 2,
-        "effect": "Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads).",
+        "effect": "Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads), and allow you to make attacks against characters with the Hidden status.",
         "actions": [
             {
                 "name": "Mark of Splendor",
@@ -110,7 +110,7 @@
             {
                 "name": "Additional Firepower",
                 "activation": "Quick",
-                "detail": "You may ignore the Loaded status to fire the weapon again for half damage. This Quick Action ignores the Ordnance restriction on being the first action of the turn."
+                "detail": "You may ignore the Loaded status to fire the weapon again for half damage. This Quick Action ignores the Ordnance restriction on being the first action of the turn.<br>You may use this Quick Action on subsequent turns to ignore the LOADED status and fire the weapon for half damage and heat, until the weapon is reloaded."
             }
         ],
         "description": "<i>Quantity of fire is its own quality of fire.  BDF engineers are able to modify ordnance to streamline ammo feeds and increase reserves to allow suppressive fire long beyond factory limits.</i>"
