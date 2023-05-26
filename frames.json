@@ -5,7 +5,7 @@
         "source": "BDF",
         "name": "AKINAKA",
         "mechtype": ["Controller","Support"],
-        "image_url": "https://i.imgur.com/wQNUskB.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/akinaka_1080.png?raw=true",
         "y_pos": 5,
         "description": "Every combined arms assault needs air power. Air power needs eyes on the ground. BDF engineers created a platform to take the radio-equipped infantryman and elevate them to the station they deserve - armored cowls to protect CIC infrastructure on the frame and elevated limbs to provide better spotting and laser painting capabilities. Whether it’s mortars, satellites, or laser-guided bombs, there’s no fashion statement like overwhelming firepower.",
         "mounts": ["Aux/Aux","Flex"],
@@ -54,7 +54,7 @@
                 {
                     "name": "Whale Beacon",
                     "activation": "Quick",
-                    "detail": "1/round you can detonate a Drone as a Quick Action, destroying it. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6 EXPLOSIVE damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
+                    "detail": "1/round you can detonate a Drone as a Quick Action, destroying it. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6+GRIT EXPLOSIVE damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
                     "use": "round"
                 }
             ]
@@ -66,7 +66,7 @@
         "source": "BDF",
         "name": "AKRAFENA",
         "mechtype": ["Striker","Controller"],
-        "image_url": "https://i.imgur.com/PMRoH4A.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/Akrafena1080.png?raw=true",
         "y_pos": 47,
         "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
         "mounts": ["Main","Main","Main","Main"],
@@ -99,11 +99,11 @@
             },
             {
                 "name": "Reactive Thrusters",
-                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn.<br>You may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed.",
+                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn.<br>During the Boost, you may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed.",
                 "synergies": [
                     {
                         "locations": ["boost"],
-                        "detail": "After you boost you cannot be knocked back, pushed, pulled or knocked prone by actors up to your size +1 (rounded up) until the start of your next turn.<br>You may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed."
+                        "detail": "After you boost you cannot be knocked back, pushed, pulled or knocked prone by actors up to your size +1 (rounded up) until the start of your next turn.<br>During the Boost, you may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed."
                     }
                 ]
             },
@@ -126,7 +126,7 @@
             "name": "PEDIPALPS Augmented Hardpoints",
             "description": "Integrated additional limbs and recoil stabilizers allow a terrifying volume of sustained fire. During spikes of reactor activity, static defense capabilities surge as weapons are reloaded by tertiary limbs as fast as they cycle.",
             "active_name": "Synchronize Limbs",
-            "active_effect": "After using this protocol, for the rest of this scene, the Akrafena can fire 2 weapons and reload 2 weapons when it uses Lock And Cycle.",
+            "active_effect": "After using this protocol, for the rest of this scene, the Akrafena can fire 2 weapons and reload 2 weapons when it uses Lock And Cycle.<br>If less than 2 weapons on the Akrafena need to be reloaded, the Akrafena may instead reload an adjacent allied character's weapon or be pushed 4 spaces directly away from its target.",
             "use": "Encounter",
             "activation": "Protocol",
             "passive_name": "Lock And Cycle",
@@ -134,7 +134,7 @@
                 {
                     "name": "Lock And Cycle",
                     "activation": "Full",
-                    "detail": "The Akrafena fires a weapon and reloads a weapon as a Full Action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action."
+                    "detail": "The Akrafena fires a weapon and reloads a weapon as a Full Action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action.<br>If no weapons on the Akrafena need to be reloaded, the Akrafena may reload an adjacent allied character's weapon or be pushed 4 spaces directly away from its target."
                 }
             ]
         }
@@ -145,7 +145,7 @@
         "source": "BDF",
         "name": "CHAMBI",
         "mechtype": ["Artillery"],
-        "image_url": "https://i.imgur.com/5Vfur8J.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/Chambi_1080.png?raw=true",
         "y_pos": 26,
         "description": "The siege of Creighton and defeat of the Baronic Warhost resulted in a black eye for the Baronies and the genesis of the artillery project that became the BDF Chambi.  Dissent in the ranks on naming the project after a blunt instrument instead of the swords of the rest of the BDF chassis was quelled when field tests resulted in an entire battlefield of nails melting under the hammer.  The Chambi sports an integrated NHP co-pilot to serve as weapons officer during extended sieges, freeing mental capacity for the pilot to navigate the mech through hostile environments.",
         "mounts": ["Flex","Main","Heavy"],
@@ -178,11 +178,11 @@
             },
             {
                 "name": "Leg Room",
-                "description": "Your mech can comfortably carry another human sized being inside it, along with mounting +1 system with the AI tag.",
+                "description": "Your mech can comfortably carry another human sized being inside it, along with increasing the amount of systems with the AI tag that you can mount by +2.",
                 "bonuses": [
                     {
                         "id": "ai_cap",
-                        "val": 1
+                        "val": 2
                     }
                 ]
             },
@@ -219,7 +219,7 @@
                 {
                     "name": "NHP Power Reroute",
                     "activation": "Protocol",
-                    "detail": "Choose 1 of the listed effects per equipped AI: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2.<li>Gain +2 speed for round.<li>Gain Accurate on 1 mount for this turn."
+                    "detail": "Choose 1 of the listed effects per equipped AI, up to 3: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2.<li>Gain +2 speed for round.<li>Gain Accurate on 1 mount for this turn."
                 }
             ],
             "integrated": ["bdf_big_gun"]
@@ -231,7 +231,7 @@
         "source": "BDF",
         "name": "DAO",
         "mechtype": ["Support"],
-        "image_url": "https://i.imgur.com/sdUKVNO.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/dao_render%202_1080.png?raw=true",
         "y_pos": 40,
         "description": "Every military action is combined arms.  Baronic Unified Command created the Dao to serve as a mobile command fortress and force amplifier. Armed with an onboard flash printer and an assigned squad of subalterns to create assets to draw fire away from the rest of the forward units participating in an assault, the Dao is credited with reducing BDF casualties a statistically significant percent.",
         "mounts": ["Main","Main/Aux"],
@@ -318,7 +318,7 @@
         "source": "BDF",
         "name": "JIAN",
         "mechtype": ["Striker"],
-        "image_url": "https://i.imgur.com/podIiYI.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/jian_1080.png?raw=true",
         "y_pos": 10,
         "description": "Baronic Unified Command issued procurement for a line mech to rival the capacity of the Harrison Armory Sherman, and the Jian is the BDF’s response. Designed as a stick and move chassis around a lighter frame with rapid maneuver capability to integrate with infantry deployment, the Jian mounts enough firepower to disable softer armored targets and enough supplemental explosives to dismantle stubborn enemy formations from unexpected ranges and angles.",
         "mounts": ["Main","Main"],
@@ -377,7 +377,7 @@
         "source": "BDF",
         "name": "KAMPILAN",
         "mechtype": ["Support","Controller"],
-        "image_url": "https://i.imgur.com/CgjSz50.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/kampilan1080.png?raw=true",
         "y_pos": 15,
         "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit. Companies of warrior-pattern Kampilan chassis were deployed en masse and found lacking in operational capacity, as the high powered lasers they carried required frequent resupply and their command structure reliant on omninet connection - a favorite target of HORUS.  Despite a projected success rate of 10%, the Kampilan scout-pattern pilots came back from each sortie the sole survivors. Distant and aloof, unwilling to discuss what happened in the tunnels of Free Sanjak, the craters of the Dawnline Shore, or in the palaces of Throne Karrakis, Baronic Unified Command continues to send Kampilan pilots back into the field to accumulate telemetry tuning the frame’s performance even further beyond factory spec.",
         "mounts": ["Aux/Aux","Aux/Aux"],
@@ -400,11 +400,11 @@
         "traits": [
             {
                 "name": "Electronic Impulse Muscles",
-                "description": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack.",
+                "description": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack.<br>Tech attacks instead gain +2 additional Heat.",
                 "synergies": [
                     {
-                        "locations": ["weapon"],
-                        "detail": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack."
+                        "locations": ["weapon", "tech_attack"],
+                        "detail": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack.<br>Tech attacks instead gain +2 additional Heat."
                     }
                 ]
             },
@@ -439,7 +439,7 @@
             "active_synergies": [
                 {
                     "locations": ["active_effects"],
-                    "detail": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a Blast 4 profile instead of a Blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. Unlike a normal Self Destruct, this leaves behind a Destroyed mech wreck. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan."
+                    "detail": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a Blast 4 profile instead of a Blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. Unlike a normal Self Destruct, this leaves behind a Destroyed mech wreck that the pilot can Dismount as usual. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan."
                 }
             ]
         }
@@ -450,7 +450,7 @@
         "source": "BDF",
         "name": "KHANDA",
         "mechtype": ["Striker"],
-        "image_url": "https://i.imgur.com/3XTFtPr.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/khanda_1080.png?raw=true",
         "y_pos": 20,
         "description": "BDF Engineers were tasked with the impossible, of mounting the heaviest payloads on the tallest, most mobile chassis on the battlefield.  Aggressive negotiations during the prototyping phase thanks to the House of Hues resulted in the development of the Khanda, a frame capable of rapid repositioning and unparalleled firepower at angles traditional chassis could not make. Often festooned in regalia and with signature forearm-mounted weaponry allowing for unhindered hands, Khanda chassis are often seen on public relations tours by aspiring Barons of minor Houses fraternizing with BDF pilots and civilians alike.",
         "mounts": ["Heavy","Heavy"],
@@ -512,7 +512,7 @@
         "license_level": 2,
         "name": "KIEM",
         "mechtype": ["Defender"],
-        "image_url": "https://i.imgur.com/7laChaP.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/kiem_1080.png?raw=true",
         "y_pos": 40,
         "description": "The Kiem is a chassis designed for aggressive interdiction of incoming fire, placing itself in front of its allies to clear fortifications with heavy suppressive fire.  Advances in materials engineering resulted in a compact frame capable of underground operations and in hostile environments. The designer of the Kiem, Colonel Mi Ceran of the minor House of Luggage, was shot out of her frame in every sortie she ever went on, spurring her to layer every available shielding system onto the design document in an attempt to prevent other BDF troopers from meeting such a fate.",
         "mounts": ["Main","Heavy"],
@@ -562,7 +562,7 @@
         "source": "BDF",
         "name": "KLEWANG",
         "mechtype": ["Striker","Controller"],
-        "image_url": "https://i.imgur.com/OUdWING.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/klewang1080.jpeg?raw=true",
         "y_pos": 35,
         "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through. The House of Dust, undeterred by the incident of The Maw, decided the best way to enhance BDF operational capacity with minimal printer queue time was to program additional greywash nanites to convert civilian mechs into military-grade chassis. The results were chaotic, unpredictable, and ultimately replicable via printers.",
         "mounts": ["Flex","Main","Heavy"],
@@ -633,7 +633,7 @@
         "source": "BDF",
         "name": "SHOTEL",
         "mechtype": ["Striker"],
-        "image_url": "https://i.imgur.com/MLjTz66.png",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/shotel_1080p.png?raw=true",
         "y_pos": 55,
         "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero-G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
         "mounts": ["Main","Main","Main"],
