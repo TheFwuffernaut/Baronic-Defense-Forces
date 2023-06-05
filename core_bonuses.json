@@ -56,6 +56,12 @@
                 "id": "repcap",
                 "val": 2
             }
+        ],
+        "synergies": [
+            {
+                "locations": ["repair", "hull"],
+                "detail": "You should have +2 repcap, CC unfortunately doesn't process this bonus type correctly at this time, please note that you have 2 extra repairs. Thank you for your time."
+            }
         ]
     },
     {
