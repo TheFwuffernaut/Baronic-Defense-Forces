@@ -50,7 +50,7 @@
                 "range": [{"type": "Burst", "val": 4}],
                 "damage": [{"type": "Kinetic", "val": "2d6"}],
                 "tags": [{"id": "tg_knockback", "val": 3}],
-                "detail": "This mine's activation area is a Line 8 that is up to 8 spaces tall, selected from free spaces when placed. Targets within the Range 4 up to Height 4, and targets from Ranges 5 to 8 between Heights 5 to 8 caught in the detonation area must pass a <b>HULL</b> Save or take 2d6 <b>KINETIC</b> damage and be knocked back 3 spaces. Each use places two C-Spray Mines."
+                "detail": "This mine's activation area is a Line 5 that is up to 10 spaces tall, selected from free spaces when placed. Targets caught in the detonation area must pass a <b>HULL</b> Save or take 1d6+2 <b>KINETIC</b> damage and be knocked back 3 spaces. Each use places two C-Spray Mines."
             }
         ],
         "description": "<i>Some demolition work requires charges tailored to close quarters combat. Experimental tactics from the Hosue of Cured Meats to stave off local megafauna predators resulted in wide area munitions capable of scattering foes across wide areas.</i>"
@@ -69,7 +69,7 @@
                 "name": "Release the Lion",
                 "activation": "Full",
                 "cost": 0,
-                "detail": "Make a tech attack against a target that has the LOCK ON condition. Hit or miss, your target takes 3 Heat. On a Miss, no Limited charges are consumed. On a Hit, you also deploy a Size 3 Lion Coast Missile in a free space at Range 10 from your target, as high above the ground as the battlefield's flight ceiling allows for that space."
+                "detail": "To activate this system as a Full Action, make a tech attack against a target within Sensors and Line of Sight that has the LOCK ON condition. Hit or miss, your target takes 3 Heat. On a Miss, no Limited charges are consumed. On a Hit, you also deploy a Size 3 Lion Coast Missile in a free space at Range 10 from your target, as high above the ground as the battlefield's flight ceiling allows for that space."
             }
         ],
         "deployables": [
@@ -100,7 +100,7 @@
             {
                 "name": "Line Of Fire",
                 "activation": "Full",
-                "detail": "At the start of your next turn after you activate this system, gain 2 Heat and draw two Line 5 areas from your mech. Targets caught in these areas take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active."
+                "detail": "At the start of your next turn after you activate this system, gain 2 Heat, move up to your SPEED, and draw two Line 5 areas from your mech. Targets caught in these areas take 2 Energy damage and 4 Burn, or half damage on an Engineering save. You are Slowed and cannot fire weapons while this system is active."
             }
         ],
         "description": "<i>A chemical-based incendiary system with a system of rotating barrels to extend operational lifespan allows a terrifying deluge of flame after a predictable windup. Limited fuel canisters and heat venting requirements interfere with normal weapons usage when the barrels are spinning up.</i>"
@@ -154,7 +154,7 @@
         "id": "bdf_double_time_armor",
         "name": "Double Time Armor",
         "type": "Armor",
-        "sp": 1,
+        "sp": 2,
         "tags": [{"id": "tg_unique"}],
         "source": "BDF",
         "license": "DAO",
@@ -183,7 +183,7 @@
                 "evasion": 10,
                 "recall": "Quick",
                 "redeploy": "Quick",
-                "detail": "This drone flies and can be deployed to a free space within SENSORS and line of sight, including in the air. Gain the FIRE SUPPORT reaction, which can be taken once for each deployed Helicopter Drone.",
+                "detail": "This drone flies and can be deployed to a free space within SENSORS and line of sight, including in the air. Gain the FIRE SUPPORT reaction, which can be taken once for each deployed Helicopter Drone (each instance of this system can deploy one Helicopter Drone).",
                 "actions": [
                     {
                         "name": "Fire Support",
@@ -223,7 +223,7 @@
                 "name": "Flower Drone",
                 "activation": "Quick",
                 "size": 0.5,
-                "hp": "5 + {grit}",
+                "hp": 5,
                 "armour": 0,
                 "edef": 10,
                 "evasion": 10,
@@ -277,7 +277,7 @@
                 "range": [{"type": "Range","val": 3},{"type": "Blast","val": 2}],
                 "damage": [{"type": "Explosive","val": "1d3+1"}],
                 "tags": [{"id": "tg_knockback","val": 3}],
-                "detail": "All characters caught within the Blast must make a Hull Save, taking 1d3+1 Explosive damage on a failure and half on success. Whether the save is successful or not all characters are knocked back 3 spaces."
+                "detail": "All characters caught within the Blast must make a Hull Save, taking 3 Explosive damage on a failure and half on success. Whether the save is successful or not all characters are knocked back 3 spaces."
             }
         ],
         "deployables": [
@@ -285,7 +285,7 @@
                 "name": "Volatile Mine",
                 "type": "Mine",
                 "range": [{"type": "Blast","val": 2}],
-                "damage": [{"type": "Explosive","val": "1d3+1"}],
+                "damage": [{"type": "Explosive","val": 3}],
                 "detail": "This mine detonates when a character moves into an adjacent space or above an adjacent space, up to height 10. Characters in a Burst 2 area extending 10 spaces high take 1d3+1 Explosive damage and are knocked back 3 spaces, and any characters in the air take an additional 1d6 Explosive damage."
             }
         ],
@@ -329,14 +329,14 @@
                 "name": "Pinwheel Grenade",
                 "activation": "Quick",
                 "range": [{"type": "Range","val": 5}],
-                "detail": "When thrown, the detonation creates 3 Line 3 areas originating from the targeted space. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
+                "detail": "When thrown, the detonation creates 3 Line 3 areas originating from the targeted space outward in a direction of your choice. These areas cannot overlap. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
             }
         ],
         "deployables": [
             {
                 "name": "Supernova Mine",
                 "type": "Mine",
-                "detail": "When detonated, this system creates 3 Line 5 areas originating from the mine’s space. These areas can overlap and target the same character up to one additional time. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
+                "detail": "When detonated, this system creates 3 Line 5 areas originating from the mine’s space outward in a direction of your choice. These areas can overlap and target the same character up to one additional time. Characters caught in these areas take 3 Energy damage, or half on a successful Hull Save."
             }
         ],
         "description": "<i>A pinwheel-shaped charge, designed to saturate the target area with plasma. Crude, unfocused - not enough to get through ship armor, but more than enough to decrew it.<br><br>“The Barons like to throw a bunch of these down a shaft and think it’ll get the job done. Not enough force to take down a p-g on their own, more than enough when you throw a dozen.”</i>"
@@ -360,7 +360,7 @@
             {
                 "name": "Positional Mapping",
                 "activation": "Full Tech",
-                "detail": "Mark 3 free spaces or spaces with planted mines within your Sensors. The next grenade thrown onto those spaces or mine detonated on those spaces deals an additional 2 Heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 Heat total)."
+                "detail": "Mark 3 free spaces or spaces with planted mines within your Sensors. The next grenade thrown onto each of those spaces or mine detonated on each of those spaces deals an additional 2 Heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 Heat total)."
             }
         ],
         "description": "<i>Baronic command-and-control units rely on telemetrics provided by frontline scouts to coordinate fire support missions and troop movements.<br><br>“Hacking the BUC just isn’t fun any more. It’s all information we already know - where we are, where we’re going, what’s going to blow us up.”</i>"
@@ -434,7 +434,7 @@
                 "detail": "You gain Resistance to that damage and all further damage from that character until the end of your next turn. If you take damage from a closer or equally distant hostile actor while this effect is active, as a reaction you can then gain Resistance to that character's damage for no heat cost. These effects continue until you take Structure damage or do not take any damage until the beginning of your next turn."
             }
         ],
-        "description": "<i>Captured HORUS agitators embedded among the yielded several PLAYER_TWO COMP/CON units, subsequently reverse engineered by the BDF and installed in scout-pattern Kampilan frames as a long range search and destroy unit operating independently of resupply for extended periods.  These PLAYER_TWO units, designed to operate a soldier’s hardsuit while they slept based on data from a flash pattern of their subjectivity, were scrubbed of any code related to HORUS and severed from the subjectivity of the soldier - a machine to fight when the soldier could not.</i>"
+        "description": "<i>Captured HORUS agitators embedded among the Ungratefuls yielded several PLAYER_TWO COMP/CON units, subsequently reverse engineered by the BDF and installed in scout-pattern Kampilan frames as a long range search and destroy unit operating independently of resupply for extended periods.  These PLAYER_TWO units, designed to operate a soldier’s hardsuit while they slept based on data from a flash pattern of their subjectivity, were scrubbed of any code related to HORUS and severed from the subjectivity of the soldier, miraculously resulting in the genesis of a NHP capable of operating the soldier’s hardsuit in a manner similar to a homunculus - a machine to fight when the soldier could not.  Knowledge of BANSHEE-Class NHPs is suppressed by the BUC and their personalities are both gregarious and fatalistic.</i>"
     },
     {
         "id": "bdf_lock_on_nuggets",
@@ -500,7 +500,7 @@
             {
                 "name": "Blazing Jump",
                 "activation": "Passive",
-                "detail": "Whenever and wherever you jump you leave a trail of Dangerous Terrain (Energy) behind you. If the trail would not be in a valid space, the Dangerous Terrain forms in the closest valid space below the path of the jump."
+                "detail": "Whenever and wherever you jump you leave a trail of special Dangerous Terrain (Energy) behind you. This Dangerous Terrain requires an Engineering Save versus your Save Target rather than an Engineering Check to avoid damage. If the trail would not be in a valid space, the Dangerous Terrain forms in the closest valid space below the path of the jump."
             }
         ],
         "description": "<i>The BDF’s RIVER-class Comp/Con unit is a special purpose tactical companion to pilots seeking to weaponize their coldcore reactors in a sustainable, controlled fashion.  Originally designed as a complement to a materials science officer, the RIVER-class Comp/Con was repurposed after it developed an unsettling obsession with magnesium and other pyrotechnic elements.  BDF engineers saw an opportunity to combine this fascination with light, sound, and fury with mechanized chassis, to the delight of crowds everywhere during synchronized armored formation demonstrations.</i>"
@@ -584,7 +584,7 @@
             {
                 "name": "Deploy Missile Minefield",
                 "activation": "Quick",
-                "detail": "Choose a space within Range 5 of you. You create a Blast 1 area that deals 1d6 AP EXPLOSIVE damage when entered by characters Size 1 or larger."
+                "detail": "Choose a space within Range 5 of you. You create a Blast 1 area that deals 1d6 AP EXPLOSIVE damage when entered by characters Size 1 or larger that lasts until the end of the scene."
             }
         ],
         "description": "<i>Short range artillery platoons shadow mechanized chassis in the field, providing suppressive fire on demand.  BDF pilots mark an area for saturation fire using floating phased lasers and the artillery platoons provide direct fire support when the proximity triggers are activated by chassis-scale targets, safeguarding the infantry on a combined arms operation.</i>"
@@ -631,16 +631,16 @@
                 "name": "BAIT TAKEN",
                 "frequency": "3/round",
                 "trigger": "An ally within range 5 is hit by an attack.",
-                "detail": "You may Skirmish for half damage. If this attack hits the attacker must make a Hull Save or fall Prone."
+                "detail": "You may Skirmish for half damage against the attacking character. If this attack hits the attacker must make a Hull Save or fall Prone."
             }
         ],
-        "description": "<i>The SALMON-class NHP was born from the rites of succession in the minor House of Fish, from a bureaucratic accident involving tracking the noble lineage of an illegally imported SISYPHUS-class NHP attempting to wrest succession of the House from its rightfully chosen by divine wrestling combat Baron.  Attempts to regulate all the sports bets on a match between the Baron of the House of Fish and the NHP resulted in a stochastically separated NHP manifested simultaneously in each COMP/CON unit regulating the match.  SALMON-class NHPs are pragmatic and nihilistic, fascinated with materials deconstruction and recombination.</i>"
+        "description": "<i>The SALMON-class NHP was born from the rites of succession in the minor House of Fish, from a bureaucratic accident involving tracking the noble lineage of an illegally kidnapped SISYPHUS-class NHP attempting to wrest succession of the House from its rightfully chosen by divine wrestling combat Baron.  Attempts to regulate all the sports bets on a match between the Baron of the House of Fish and the NHP resulted in a stochastically separated NHP manifested simultaneously in each COMP/CON unit regulating the match.  SALMON-class NHPs are pragmatic and nihilistic, fascinated with materials deconstruction and recombination.</i>"
     },
     {
         "id": "bdf_carapace_crash_pads",
         "name": "Carapace Crash Pads",
         "type": "System",
-        "sp": 2,
+        "sp": 1,
         "tags": [{"id": "tg_unique"}],
         "source": "BDF",
         "license": "SHOTEL",
@@ -694,7 +694,7 @@
                 "detail": "Expend a charge to allow your next ranged or melee attack to be drawn from a number of spaces away from you equal to the heat generated by this protocol, as long as the weapon deals any Energy, Explosive, or Burn.<br>Targets hit by this boosted attack are SLOWED on hit until the end of their next turn."
             }
         ],
-        "description": "<i>The first DAEVA-class NHP was found in the COMP/CON unit attending the Baron O’Hara of the House of Thunder, cascading after attempting to balance the dietary needs of his collection of giant insects and frogs against his penchant to bring them on his trips across the Baronies. DAEVA-class NHPs were installed on frames across the Baronies in fire support roles using their personality to sort items meticulously among a barrage of incoming telemetry.</i>"
+        "description": "<i>The first DAEVA-class NHP was found in the COMP/CON unit attending the Baron O’Hara of the House of Thunder, cascading after attempting to balance the dietary needs of his collection of giant insects and frogs against his penchant to bring them on his trips across the Baronies. DAEVA-class NHPs are assigned to frames across the Baronies in fire support roles using their personality to sort items meticulously among a barrage of incoming telemetry.</i>"
     },
     {
         "id": "bdf_coin_grenade",
@@ -731,7 +731,7 @@
                 "evasion": 10,
                 "edef": 10,
                 "hp": 10,
-                "detail": "Characters in a Burst 3 radius of this pylon gain +1 Knockback on all ranged and melee attacks. Characters making tech attacks can push the target 1 space in a direction of the attacker’s choice."
+                "detail": "Characters in a Burst 3 radius of this pylon gain +1 Knockback on all ranged and melee attacks. Characters making tech attacks can on hit push the target 1 space in a direction of the attacker’s choice."
             }
         ],
         "description": "<i>Localized anti-gravity technology is not only the goal of the Purview - the Baronies have their best and brightest working to localize manipulations of gravity fields to enhance BDF field operations. Controversy was had among the noble Houses when it was revealed that the most common use of this fantastic technology was jury rigged bounce houses.</i>"
@@ -754,7 +754,14 @@
                 "evasion": 10,
                 "edef": 10,
                 "hp": 5,
-                "detail": "When adjacent to an allied character or yourself, that character gains +1 ACCURACY to all mech skill checks and saves. If this Drone is Destroyed by a hostile source of damage, gain +5 bonus damage on your next melee or ranged attack."
+                "detail": "Gain the Maintain Puppy Formation Protocol.<br>When adjacent to an allied character or yourself, that character gains +1 ACCURACY to all mech skill checks and saves. If this Drone is Destroyed by a hostile source of damage, gain +5 bonus damage on your next melee or ranged attack.",
+                "actions": [
+                    {
+                        "name": "Maintain Puppy Formation",
+                        "activation": "Protocol",
+                        "detail": "Move the Puppy Patrol Drone up to 4 spaces directly towards you."
+                    }
+                ]
             }
         ],
         "description": "<i>Originally developed as a person-sized companion drone to accompany subaltern legions, the Aggressive Reclamation Field Drone was designed for long range search and rescue missions. BDF troopers instead took amicably to the drones, refusing to use their BUC field designations and assigning a colloquial name to “very good boys and girls.”</i>"

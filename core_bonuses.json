@@ -19,7 +19,7 @@
         "id": "bdf_spiderline_failsafes",
         "name": "Spiderline Failsafes",
         "source": "BDF",
-        "effect": "1/round, when it would become Prone from an attack or failed Save, as a reaction, your mech can take 2 Heat to force a hostile character in range 5 to make an Agility save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target.",
+        "effect": "1/round, when it would become Prone from an attack or failed Save from a hostile character, as a reaction, your mech can take 2 Heat to force a hostile character in Line of Sight to make an Agility save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target. If the hostile character fails the Save and was flying, it instead immediately lands (this counts as falling without any damage).",
         "description": "Reactive armor lined with hypertensile tethers is primed to fire off when gyroscopes in the mech indicate a cataclysmic fall, using the momentum of a nearby opponent to kip up and return the finest war machine in the Baronies back to the fight.",
         "actions": [
             {
@@ -28,7 +28,7 @@
                 "frequency": "1/round",
                 "trigger": "Your mech would become Prone from an attack or failed Save",
                 "heat_cost": 2,
-                "detail": "You take 2 Heat to force a hostile character in Range 5 to make an Agility Save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target."
+                "detail": "You take 2 Heat to force a hostile character in Line of Sight to make an Agility save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target. If the hostile character fails the Save and was flying, it instead immediately lands (this counts as falling without any damage)."
             }
         ]
     },
@@ -68,12 +68,12 @@
         "id": "bdf_nanoweb_countermeasures",
         "name": "Nanoweb Countermeasures",
         "source": "BDF",
-        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character.",
+        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions.",
         "description": "Self-sealing nanite armor plates in the BDF’s elite units allow them to both stay in the fight longer as well as channel the resultant sparks into a light show capable of painting targets.",
         "synergies": [
             {
                 "locations": ["boost"],
-                "detail": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character."
+                "detail": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions."
             }
         ]
     },

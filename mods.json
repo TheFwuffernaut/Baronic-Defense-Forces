@@ -72,12 +72,11 @@
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 2,
-        "effect": "1/round, on a Critical Hit, you can force your target to pass a HULL save or become Immobilized and Slowed until the end of their next turn.",
+        "effect": "On a Critical Hit, you can force your target to pass a HULL save or become Immobilized and Slowed until the end of their next turn.",
         "actions": [
             {
                 "name": "Acidic Communications",
                 "activation": "Passive",
-                "frequency": "1/round",
                 "detail": "On a Critical Hit, you can force your target to pass a Hull Save or become Immobilized and Slowed until the end of their next turn."
             }
         ],

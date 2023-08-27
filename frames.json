@@ -5,7 +5,7 @@
         "source": "BDF",
         "name": "AKINAKA",
         "mechtype": ["Controller","Support"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/akinaka_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/akinaka_1080.png?raw=true",
         "y_pos": 5,
         "description": "Every combined arms assault needs air power. Air power needs eyes on the ground. BDF engineers created a platform to take the radio-equipped infantryman and elevate them to the station they deserve - armored cowls to protect CIC infrastructure on the frame and elevated limbs to provide better spotting and laser painting capabilities. Whether it’s mortars, satellites, or laser-guided bombs, there’s no fashion statement like overwhelming firepower.",
         "mounts": ["Aux/Aux","Flex"],
@@ -46,7 +46,7 @@
             "name": "Whale Beacon",
             "description": "Boots on the ground need eyes in the sky. The Akinaka has an integrated communication suite allowing laser painting of fire support from artillery, close air support, and orbital strikes, depending on the battlefield.",
             "active_name": "One In The Pocket",
-            "active_effect": "1/scene you can activate the Whale Beacon immediately on a target in Sensors; Whale Beacon's damage upgrades to 3d6 EXPLOSIVE damage base for the rest of the scene.",
+            "active_effect": "1/scene you can activate the Whale Beacon immediately on a target in Sensors; Whale Beacon's damage upgrades to 3d6+GRIT EXPLOSIVE damage base for the rest of the scene.",
             "use": "Encounter",
             "activation": "Free",
             "passive_name": "Whale Beacon",
@@ -66,7 +66,7 @@
         "source": "BDF",
         "name": "AKRAFENA",
         "mechtype": ["Striker","Controller"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/Akrafena1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/Akrafena1080.png?raw=true",
         "y_pos": 47,
         "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
         "mounts": ["Main","Main","Main","Main"],
@@ -145,9 +145,9 @@
         "source": "BDF",
         "name": "CHAMBI",
         "mechtype": ["Artillery"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/Chambi_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/Chambi_1080.png?raw=true",
         "y_pos": 26,
-        "description": "The siege of Creighton and defeat of the Baronic Warhost resulted in a black eye for the Baronies and the genesis of the artillery project that became the BDF Chambi.  Dissent in the ranks on naming the project after a blunt instrument instead of the swords of the rest of the BDF chassis was quelled when field tests resulted in an entire battlefield of nails melting under the hammer.  The Chambi sports an integrated NHP co-pilot to serve as weapons officer during extended sieges, freeing mental capacity for the pilot to navigate the mech through hostile environments.",
+        "description": "The Siege of Creighton and defeat of the Baronic Warhost resulted in a black eye for the Baronies and the genesis of the artillery project that became the BDF Chambi.  There was dissent in the ranks on naming the project after a blunt instrument instead of the swords of other BDF chassis, quelled when field tests melted an entire battlefield of nails under the hammer.  The Chambi’s operation is aided by an integrated STAR-Class NHP co-pilot to serve as weapons officer during extended sieges, freeing mental capacity for the pilot to navigate the mech through hostile environments.  STAR-Class NHPs are meticulous and enjoy bleak humor, often aware of the paradox of being tasked to a mechanized chassis designed for renewable energy and converted to a war machine.",
         "mounts": ["Flex","Main","Heavy"],
         "stats": {
             "size": 3,
@@ -162,17 +162,17 @@
             "sensor_range": 10,
             "tech_attack": 0,
             "save": 10,
-            "speed": 2,
+            "speed": 3,
             "sp": 6
         },
         "traits": [
             {
                 "name": "Stable Footing",
-                "description": "The Chambi has +1 Difficulty on attacks when not on level ground. 1/round, it may gain +1 Accuracy on attacks when on level ground.",
+                "description": "The Chambi has +1 Difficulty on ranged and melee weapon attacks after it moves on a turn. 1/round, it has +1 Accuracy on all attacks made from a weapon when fired before moving on a turn.",
                 "synergies": [
                     {
                         "locations": ["weapon"],
-                        "detail": "The Chambi has +1 Difficulty on attacks when not on level ground. 1/round, it may gain +1 Accuracy on attacks when on level ground."
+                        "detail": "The Chambi has +1 Difficulty on ranged and melee weapon attacks after it moves on a turn. 1/round, it has +1 Accuracy on all attacks made from a weapon when fired before moving on a turn."
                     }
                 ]
             },
@@ -198,28 +198,28 @@
             }
         ],
         "core_system": {
-            "name": "NON-HUMAN PERSON CO-PILOT",
-            "description": "<i>Every war machine needs more hands.  NHP Co-pilots are a BDF innovation enabling the efficiency of a tank crew while maintaining the efficiency of mechanized chassis.</i>",
+            "name": "STAR-CLASS NON-HUMAN PERSON CO-PILOT",
+            "description": "<i>Every war machine needs more hands.  NHP Co-pilots are a BDF innovation enabling the efficiency of a tank crew while maintaining the efficiency of mechanized chassis.  BDF pilots respect their crewmates.</i>",
             "active_name": "Fire The Big Gun",
             "active_effect": "All attacks can choose to fire as a Blast 1 within their Range and gain Knockback 2. You may also fire “The Big Gun” until the end of the scene as a Barrage after activating this Core Power.",
             "use": "Encounter",
             "activation": "Full",
-            "passive_name": "NHP Power Reroute",
-            "passive_effect": "Gain a Reload Die, beginning at 2 and the NHP Power Reroute Protocol.",
+            "passive_name": "NHP Extra Hands",
+            "passive_effect": "Gain a Reload Die, beginning at 4 and the NHP Extra Hands Protocol.",
             "counters": [
                 {
                     "id": "bdf_reload_die",
                     "name": "RELOAD DIE",
-                    "max": 2,
-                    "min": 0,
-                    "default_value": 2
+                    "max": 4,
+                    "min": 1,
+                    "default_value": 4
                 }
             ],
             "passive_actions": [
                 {
-                    "name": "NHP Power Reroute",
+                    "name": "NHP Extra Hands",
                     "activation": "Protocol",
-                    "detail": "Choose 1 of the listed effects per equipped AI, up to 3: <li>Decrease the Reload Die by 1. When the Reload Die hits 0 you may reload a Loading weapon of your choice, the Reload Die is then set to 2.<li>Gain +2 speed for round.<li>Gain Accurate on 1 mount for this turn."
+                    "detail": "Decrease the Reload Die by 1. When the Reload Die hits 1 you may reload a Loading weapon of your choice; the Reload Die is then set to 4."
                 }
             ],
             "integrated": ["bdf_big_gun"]
@@ -231,7 +231,7 @@
         "source": "BDF",
         "name": "DAO",
         "mechtype": ["Support"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/dao_render%202_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/dao_render%202_1080.png?raw=true",
         "y_pos": 40,
         "description": "Every military action is combined arms.  Baronic Unified Command created the Dao to serve as a mobile command fortress and force amplifier. Armed with an onboard flash printer and an assigned squad of subalterns to create assets to draw fire away from the rest of the forward units participating in an assault, the Dao is credited with reducing BDF casualties a statistically significant percent.",
         "mounts": ["Main","Main/Aux"],
@@ -300,7 +300,7 @@
                 {
                     "name": "Subaltern Drone",
                     "type": "Drone",
-                    "detail": "1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 3+GRIT/2 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
+                    "detail": "When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
                     "activation": "Full",
                     "size": 0.5,
                     "hp": "10 + {grit}",
@@ -318,7 +318,7 @@
         "source": "BDF",
         "name": "JIAN",
         "mechtype": ["Striker"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/jian_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/jian_1080.png?raw=true",
         "y_pos": 10,
         "description": "Baronic Unified Command issued procurement for a line mech to rival the capacity of the Harrison Armory Sherman, and the Jian is the BDF’s response. Designed as a stick and move chassis around a lighter frame with rapid maneuver capability to integrate with infantry deployment, the Jian mounts enough firepower to disable softer armored targets and enough supplemental explosives to dismantle stubborn enemy formations from unexpected ranges and angles.",
         "mounts": ["Main","Main"],
@@ -363,10 +363,10 @@
             "name": "Deployable Mechanized Combat Vehicle",
             "description": "While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor. Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike. The coin grenades on the Jian were invented by a Karrakin Royal Foundries lambbeef line cook tired of being unable to tip his local BDF peacekeepers, so the cook repurposed a printer to create customized munitions by way of thanks.",
             "active_name": "“Moonlight” Combat Cycle",
-            "active_effect": "Deploy two Drones with 20 HP which occupy 1x2x1 spaces each into adjacent free and valid spaces. The drones count as Size 1 and each can hold one size 1 or size ½ actor as a rider. The drones can combine as a Protocol into a single Size 2 character to hold a size 2 actor. A character may mount either of them as a Quick Action. As a protocol, you may move each of the drones up to 6 spaces (independently if they aren’t linked) and you can then fire a Line 5 machine gun from each Moonlight Combat Cycle, making ranged attacks using your GRIT for 2 Kinetic damage on hit. As a Quick Action per Drone, You can prime a Self Destruct on that drone, which then explodes at the end of the next turn in a Blast 2 area for 2d6 damage, or half damage on a successful AGILITY save.",
+            "active_effect": "Deploy two Drones with 20 HP which occupy 1x2x1 spaces each into adjacent free and valid spaces. The drones count as Size 1 and each can hold one size 1 or size ½ actor as a rider. The drones can combine as a Protocol into a single Size 2 character to hold a size 2 actor. A character may mount either drone as a Quick Action, moving the drones with them on all their movements. As a protocol, you may move each of the drones up to 6 spaces (independently if they aren’t combined), carrying their riders with them. As a Quick Action per drone, you can prime a Self Destruct on that drone, which then explodes at the end of the next turn in a Blast 2 area for 2d6 damage, or half damage on a successful AGILITY save.",
             "use": "Encounter",
             "activation": "Protocol",
-            "passive_name": " ",
+            "passive_name": "INTEGRATED SYSTEM NOTIFICATION",
             "passive_effect": "The Jian comes with a set of COIN GRENADES as an integrated system.",
             "integrated": ["bdf_coin_grenade"]
         }
@@ -377,7 +377,7 @@
         "source": "BDF",
         "name": "KAMPILAN",
         "mechtype": ["Support","Controller"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/kampilan1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/kampilan1080.png?raw=true",
         "y_pos": 15,
         "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit. Companies of warrior-pattern Kampilan chassis were deployed en masse and found lacking in operational capacity, as the high powered lasers they carried required frequent resupply and their command structure reliant on omninet connection - a favorite target of HORUS.  Despite a projected success rate of 10%, the Kampilan scout-pattern pilots came back from each sortie the sole survivors. Distant and aloof, unwilling to discuss what happened in the tunnels of Free Sanjak, the craters of the Dawnline Shore, or in the palaces of Throne Karrakis, Baronic Unified Command continues to send Kampilan pilots back into the field to accumulate telemetry tuning the frame’s performance even further beyond factory spec.",
         "mounts": ["Aux/Aux","Aux/Aux"],
@@ -450,7 +450,7 @@
         "source": "BDF",
         "name": "KHANDA",
         "mechtype": ["Striker"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/khanda_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/khanda_1080.png?raw=true",
         "y_pos": 20,
         "description": "BDF Engineers were tasked with the impossible, of mounting the heaviest payloads on the tallest, most mobile chassis on the battlefield.  Aggressive negotiations during the prototyping phase thanks to the House of Hues resulted in the development of the Khanda, a frame capable of rapid repositioning and unparalleled firepower at angles traditional chassis could not make. Often festooned in regalia and with signature forearm-mounted weaponry allowing for unhindered hands, Khanda chassis are often seen on public relations tours by aspiring Barons of minor Houses fraternizing with BDF pilots and civilians alike.",
         "mounts": ["Heavy","Heavy"],
@@ -512,7 +512,7 @@
         "license_level": 2,
         "name": "KIEM",
         "mechtype": ["Defender"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/kiem_1080.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/kiem_1080.png?raw=true",
         "y_pos": 40,
         "description": "The Kiem is a chassis designed for aggressive interdiction of incoming fire, placing itself in front of its allies to clear fortifications with heavy suppressive fire.  Advances in materials engineering resulted in a compact frame capable of underground operations and in hostile environments. The designer of the Kiem, Colonel Mi Ceran of the minor House of Luggage, was shot out of her frame in every sortie she ever went on, spurring her to layer every available shielding system onto the design document in an attempt to prevent other BDF troopers from meeting such a fate.",
         "mounts": ["Main","Heavy"],
@@ -543,7 +543,7 @@
             },
             {
                 "name": "Low Profile",
-                "description": "The Kiem occupies 1 less space vertically than its size (for example, as a Size 2, it occupies 2 spaces wide, 2 spaces long, and 1 space tall). It always counts as size 1 for Grapples and Rams. The surfaces of the Kiem count as valid spaces to attach Deployables, which then move with the Kiem."
+                "description": "The Kiem occupies 1 less space vertically than its size (for example, as a Size 2, it occupies 2 spaces wide, 2 spaces long, and 1 space tall and draws Line of Sight over cover from Height 1). It always counts as size 1 for Grapples and Rams. The surfaces of the Kiem count as valid spaces to attach Deployables, which then move with the Kiem."
             }
         ],
         "core_system": {
@@ -562,7 +562,7 @@
         "source": "BDF",
         "name": "KLEWANG",
         "mechtype": ["Striker","Controller"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/klewang1080.jpeg?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/klewang1080.png?raw=true",
         "y_pos": 35,
         "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through. The House of Dust, undeterred by the incident of The Maw, decided the best way to enhance BDF operational capacity with minimal printer queue time was to program additional greywash nanites to convert civilian mechs into military-grade chassis. The results were chaotic, unpredictable, and ultimately replicable via printers.",
         "mounts": ["Flex","Main","Heavy"],
@@ -633,7 +633,7 @@
         "source": "BDF",
         "name": "SHOTEL",
         "mechtype": ["Striker"],
-        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/master/shotel_1080p.png?raw=true",
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/shotel_1080p.png?raw=true",
         "y_pos": 55,
         "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero-G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
         "mounts": ["Main","Main","Main"],
@@ -645,7 +645,7 @@
             "hp": 6,
             "evasion": 10,
             "edef": 6,
-            "heatcap": 7,
+            "heatcap": 6,
             "repcap": 3,
             "sensor_range": 8,
             "tech_attack": 1,
