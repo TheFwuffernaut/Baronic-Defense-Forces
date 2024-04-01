@@ -1,0 +1,443 @@
+[
+    {   "id": "bdf_limpet_launcher",
+        "name": "Limpet Launcher",
+        "mount": "Auxiliary",
+        "type": "Launcher",
+        "range": [{"type": "Range","val": 10}],
+        "damage": [{"type": "Kinetic","val": 2}],
+        "tags": [{"id": "tg_loading"}],
+        "effect": "Enemies hit by this weapon are marked with an explosive limpet charge, up to 6 times (use a die to track this). When you reload this weapon, all limpets on the target explode in a <b>BLAST</b> 1 area, causing 1d3 <b>EXPLOSIVE</b> damage per charge and pushing the target 2 spaces in a direction of your choice. If your target is Destroyed before detonating the limpets, the limpets remain on the target’s wreck and can still be detonated.",
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 1,
+        "description": "<i>Remote demolitions work requires accurate, long range payload delivery and the ability to gain sufficient distance prior to detonation.  BDF engineers use proprietary limpets in space and ground operations to both safeguard themselves from the explosions and direct the wreckage away from BDF frontline troops.</i>"
+    },
+    {   "id": "bdf_rftd",
+        "name": "Yazata Rapid Fire Turret Drones",
+        "mount": "Main",
+        "type": "Nexus",
+        "range": [{"type": "Range","val": 10}],
+        "damage": [{"type": "Kinetic","val": 3}],
+        "tags": [{"id": "tg_smart"},{"id": "tg_seeking"},{"id": "tg_unique"}],
+        "effect": "This weapon may be used to attack as normal, or deployed as a Drone.",
+        "deployables": [
+            {
+                "name": "Rapid Fire Turret Drone",
+                "type": "Drone",
+                "activation": "Quick",
+                "size": 0.5,
+                "hp": 5,
+                "edef": 10,
+                "armor": 1,
+                "evasion": 10,
+                "recall": "Quick",
+                "redeploy": "Quick",
+                "detail": "This can be deployed to a free, valid space within <b>RANGE</b> 5 and Line of Sight as a quick action where it becomes a stationary, hovering <b>DRONE</b>. Once deployed, the weapon loses the Seeking tag and you may fire it 2/round as a Free action with line of sight and <b>RANGE</b> traced from the drone's location. You may recall or redeploy the Yazata Rapid Fire Turret Drones as a Quick action. Until recalled or destroyed, it remains deployed until the end of the scene. If destroyed, they follow the rules for destroyed DRONES and can’t be used until repaired."
+            }
+        ],
+        "source": "BDF",
+        "license": "AKINAKA",
+        "license_level": 3,
+        "description": "<i>Desires to keep troops out of lines of fire led to the House of Triptychs to pioneer the use of mobile turrets in lieu of conventional chassis munitions.  Capable of shooting around corners in light arms configuration and capable of operating independently in drone configuration, the Yazata line of munitions trade direct firepower in favor of suppression to keep pilots safe.</i>"
+    },
+    {   "id": "bdf_laser_mortar",
+        "name": "Laser Mortar",
+        "mount": "Main",
+        "type": "Cannon",
+        "range": [{"type": "Range","val": 5},{"type": "Cone","val": 3}],
+        "damage": [{"type": "Energy","val": "1d3+3"}],
+        "tags": [{"id": "tg_loading"},{"id": "tg_inaccurate"},{"id": "tg_arcing"}],
+        "effect": "This weapon can make two attacks when fired. The attack areas cannot overlap.",
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 1,
+        "description": "<i>Traditional mortar propulsion of discs of reflective mirrors followed by a directed energy blast allow a wide area dispersal of fire from angles traditional armor configurations neglect or cannot cover efficiently. Reports of captured ordnance used for dance parties by Ungrateful cells are not verified and should not be disseminated over the omninet.</i>"
+    },
+    {   "id": "bdf_swds",
+        "name": "Silk Web Defense Screen",
+        "mount": "Main",
+        "type": "Melee",
+        "range": [{"type": "Threat","val": 1}],
+        "damage": [{"type": "Kinetic","val": 3}],
+        "tags": [{"id": "tg_knockback","val": 3}],
+        "effect": "Gain the Momentum Riposte reaction.",
+        "actions": [
+            {
+                "name":"Momentum Riposte",
+                "activation": "Reaction",
+                "frequency": "1/round",
+                "trigger": "An enemy within Range 5 targets you with an attack.",
+                "detail": "You may take 1d6 AP Energy damage to interrupt it and Skirmish with the Silk Web Defense Screen, regardless if the enemy is in range of the weapon.<br>On hit, the target character’s attack will be reflected back at it for half damage, Heat, and Burn, and you, not the enemy, can be pushed directly away by the combined value of the enemy attack’s knockback and your own knockback."
+            }
+        ],
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 2,
+        "description": "<i>Derived from hardlight, a combination of a plassteel outer frame and electrically charged webbed nanites allow projection of an ionic field to magnetically redirect attacks away from the pilot and lend additional momentum to defensive strikes. The high risk of these maneuvers results in a statistically significant increase in variance of maintenance time for frames using this system.</i>"
+    },
+    {   "id": "bdf_starpoint",
+        "name": "Starpoint Spear",
+        "mount": "Main",
+        "type": "Melee",
+        "range": [{"type": "Threat","val": 1}],
+        "damage": [{"type": "Explosive","val": "1d6+2"}],
+        "tags": [{"id": "tg_unique"}],
+        "effect": "This weapon begins with 4 charges (Use a die to track this). After firing this weapon, decrease the number of charges by 1. When the number of charges is odd, this weapon deals +1d6 bonus damage, costs 1 Heat to fire, and gains +2 Threat. When the number of charges reaches 1, gain the Loading tag. You can still fire this weapon as long as it has charges. When it hits 0 charges you must reload. Reloading this weapon resets the number of charges to 4 and removes the Loading tag.<br><br>Charges persist between scenes.",
+        "source": "BDF",
+        "license": "AKRAFENA",
+        "license_level": 3,
+        "description": "<i>Concentrated plasma magnetically accelerated to a pointed tip allows for a breaching tool design that can capitalize on the momentum from prior applications.  Care must be used to ensure uptime, as the weapon contains a limited amount of fuel before it must be reloaded.</i>",
+        "counters": [
+            {
+                "id": "bdf_starpoint_charges",
+                "name": "Charges",
+                "defaultValue": 4,
+                "min": 0,
+                "max": 4
+            }
+        ]
+    },
+    {   "id": "bdf_burst_sniper",
+        "name": "Burst Sniper",
+        "mount": "Main",
+        "type": "Rifle",
+        "range": [{"type": "Range", "val": 15}],
+        "damage": [{"type": "Kinetic", "val": 2}],
+        "tags": [{"id": "tg_ordnance"},{"id": "tg_knockback","val": 1}],
+        "effect": "This weapon attacks its target 3 times. Sources of bonus damage can only apply their bonus damage once when this weapon is fired.",
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 2,
+        "description": "<i>Long barrel precision suppression and anti-air compensators work together to provide outgoing fire diverting incoming fire.</i>"
+    },
+    {   "id": "bdf_codename_blaster",
+        "name": "Codename: BLASTER",
+        "mount": "Main",
+        "type": "Rifle",
+        "range": [{"type": "Range", "val": 15},{"type": "Cone","val": 5}],
+        "damage": [{"type": "Energy","val": "2d6"}],
+        "tags": [{"id": "tg_limited","val": 1},{"id": "tg_knockback","val": 3},{"id": "tg_heat_self", "val": 4},{"id": "tg_loading"},{"id": "tg_unique"}],
+        "effect": "This weapon begins each scene unloaded and must be reloaded before it can fire. This weapon can be fired 1/scene.",
+        "source": "BDF",
+        "license": "DAO",
+        "license_level": 3,
+        "description": "<i>10% of the power of a short cycle spool weapon in a package 1% the size, the BDF’s secret energy weapon project requires a proportionate amount of time to spool up before it can fire. Onboard safety measures prevent excess use of the weapon lest the barrel or user melt.</i>"
+    },
+    {   "id": "bdf_stinger",
+        "name": "Stinger Launcher",
+        "mount": "Main",
+        "type": "Launcher",
+        "range": [{"type": "Range","val": 10},{"type": "Blast","val": 1}],
+        "damage": [{"type": "Explosive","val": "1d6"}],
+        "tags": [{"id": "tg_loading"}, {"id": "tg_knockback", "val": 1}, {"id": "tg_unique"}],
+        "effect": "This weapon can fire twice before it needs to reload.<br>Mounting the Stinger Launcher grants the <b>Suppressing Fire Wall</b> Invade option. Using the granted Invade option counts as firing the Stinger Launcher. This Invade option cannot be used while the Stinger Launcher is Unloaded.",
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 1,
+        "actions": [
+            {
+                "name": "SUPPRESSING FIRE WALL",
+                "activation": "Invade",
+                "detail": "Push your target up to 3 spaces directly away from you. All characters within Burst 2 of your target must succeed on a Hull Save or gain +1 Difficulty on attacks until the end of their next turn."
+            }
+        ],
+        "description": "<i>BDF engineers understand that the worst situation to be is out of ammunition, and so design their munitions to come with double double capacity loads, since the line forces of the BDF responded enthusiastically in surveys that double loads were simply not enough firepower.</i>"
+    },
+    {   "id": "bdf_slaughter_shotgun",
+        "name": "Slaughter Shotgun",
+        "mount": "Main",
+        "type": "CQB",
+        "range": [{"type": "Line","val": 5}],
+        "damage": [{"type": "Kinetic","val": "1d6"}],
+        "tags": [{"id": "tg_unique"}],
+        "effect": "This weapon has +1 accuracy attacking the closest target in the line area.",
+        "actions": [
+            {
+                "name": "Sunderer Round",
+                "activation": "Quick",
+                "detail": "You load a Sunderer Round causing an additional 4 Explosive damage on hit to each target in the Line and creating a Cone 3 directly behind the last target in the line that deals 4 Explosive damage to everyone caught in it."
+            }
+        ],
+        "source": "BDF",
+        "license": "JIAN",
+        "license_level": 3,
+        "description": "<i>BDF engineers were faced with the twin challenges of not enough ammunition and a target rich environment, and designed a shotgun whose every round would count twice.  Featuring multiple fire modes, a flash printer, and integrated rangefinding sights, the resultant shotgun was considered an unmitigated success at being able to deliver loads on target all day, every day.</i>"
+    },
+    {
+        "id": "bdf_disposable_binary_laser_rifle",
+        "name": "Binary Laser Rifle",
+        "mount": "Auxiliary",
+        "type": "Rifle",
+        "damage": [{"type": "Energy", "val": 3}],
+        "range": [{"type": "Range", "val": 5}],
+        "tags": [{"id": "tg_ap"}, {"id": "tg_limited","val": 6}],
+        "on_hit": "The target must make a HULL Save or become Jammed.",
+        "effect": "This weapon mount can be chosen to be destroyed on a “Weapon Destroyed” structure roll or as a free action. When destroyed or when out of charges, this weapon changes to the Rifle Butt profile.",
+        "integrated": ["bdf_rifle_butt"]
+    },
+    {
+        "id": "bdf_rifle_butt",
+        "name": "Rifle Butt",
+        "mount": "Auxiliary",
+        "type": "Melee",
+        "damage": [{"type": "Kinetic", "val": "1d3"}],
+        "range": [{"type": "Threat", "val": 1}],
+        "tags": [{"id": "tg_knockback","val": 1}],
+        "on_hit": "The target must make a HULL Save or become Prone and Impaired.",
+        "effect": "Attacking with this weapon counts as an Improvised Attack rather than a weapon attack. This weapon's base damage cannot be modified by talents and gains +2 bonus damage, up to +6, for every destroyed Mount, System, or completely expended Limited System, including the Binary Laser Rifle.",
+        "synergies": [
+            {
+                "locations": ["weapon"],
+                "detail": "Attacking with the Rifle Butt counts as an Improvised Attack rather than a weapon attack."
+            }
+        ]
+    },
+    {   "id": "bdf_golden_wave",
+        "name": "Golden Wave Laser",
+        "mount": "Auxiliary",
+        "type": "Rifle",
+        "range": [{"type": "Range", "val": 3},{"type": "Cone","val": 3}],
+        "damage": [{"type": "Energy","val": 2},{"type": "Heat","val": 1}],
+        "tags": [{"id":"tg_heat_self","val": 2},{"id": "tg_limited","val": 6}],
+        "effect": "This weapon is not affected by Engagement penalties.",
+        "source": "BDF",
+        "license": "KAMPILAN",
+        "license_level": 2,
+        "description": "<i>Wrist-mounted in pairs, Golden Wave pattern laser weaponry allows frame manipulators to remain free for handling delicate engineering work. They were rejected from wider adoption by the BUC due to excessive melting of barrels and limited batteries.  BDF pilots are reviving the weapon pattern to achieve sustained firepower capable of overheating enemy coldcore reactors and outright destroying frames with expired warranties.</i>",
+        "synergies": [
+            {
+                "locations": ["weapon"],
+                "detail": "The Golden Wave Laser is not affected by Engagement penalties."
+            }
+        ]
+    },   
+    {
+        "id": "bdf_aura_missile_launcher",
+        "name": "Aura Missile Launcher",
+        "mount": "Main",
+        "type": "Launcher",
+        "damage": [{"type": "Energy","val": 2}],
+        "range": [{"type": "Range","val": 10},{"type": "Blast","val": 1}],
+        "effect": "This weapon cannot be fired normally. When you consume Lock On, this weapon may attack targeting the character who had Lock On status.",
+        "on_hit": "Gain the Lock On condition."
+    },
+    {   "id": "bdf_poetry_cannon",
+        "name": "Poetry Rockets",
+        "mount": "Heavy",
+        "type": "Nexus",
+        "range": [{"type": "Line","val": 12}],
+        "damage": [{"type": "Explosive","val": "2d6"}],
+        "tags": [{"id": "tg_loading"}],
+        "effect": "This weapon cannot attack targets within Range 5 of you.",
+        "on_hit": "This weapon rolls all damage dice one additional time, keeping the highest damage dice as per a critical hit.",
+        "on_crit": "Damage dice are rolled three times in total, keeping the highest result.",
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 1,
+        "description": "<i>A complicated weapon with payloads composed of monofilament gossamer rounds, the Poetry Rockets detonate in a way to carve bespoke messages from the operator into the surfaces of their foes, so as to leave a stinging rebuke beyond simple destruction.</i>",
+        "synergies": [
+            {
+                "locations": ["weapon"],
+                "detail": "The Poetry Cannon cannot attack targets within Range 5 of you."
+            }
+        ]
+    },
+    {   "id": "bdf_dancing_cannon",
+        "name": "Dancing Cannon",
+        "mount": "Heavy",
+        "type": "CQB",
+        "range": [{"type": "Range","val": 12}],
+        "damage": [{"type": "Energy","val": "1d6"}],
+        "tags": [{"id": "tg_ap"}, {"id": "tg_heat_self", "val": 1}],
+        "effect": "This weapon attacks twice - you may select the same target twice - and creates a Dangerous Terrain tile in one space the target is occupying.<br>This weapon only triggers self heat once when fired.",
+        "source": "BDF",
+        "license": "KHANDA",
+        "license_level": 3,
+        "description": "<i>The weapon of choice for Barons looking to give their rivals a toast, the Dancing cannon is so named for the contents of its canisters, each containing a mix of chemicals and reagents capable of burning in environments with no atmosphere and no gravity.  Targets struck by the Dancing Cannon are quickly surrounded by caustic slag and must reposition lest the battlefield see they have no rhythm.</i>"
+    },
+    {   "id": "bdf_sponson_turrets",
+        "name": "Sponson Turrets",
+        "mount": "Auxiliary",
+        "type": "CQB",
+        "range": [{"type": "Range","val": 5},{"type": "Threat","val": 5}],
+        "damage": [{"type": "Kinetic","val": "1d3+1"}],
+        "tags": [{"id": "tg_inaccurate"}],
+        "effect": "This weapon cannot attack or Overwatch targets within Range 3.",
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 1,
+        "description": "<i>Turns out a mountain of a mech makes mounting anti-air guns on the head have a terrible traversal angle. The minor House of Intangible Delicacies won the contract for this weapon pattern through a con game played on the BDF procurement team, using musical idols to testify to the efficacy of this weapon in synchronized concert exercises.</i>",
+        "synergies": [
+            {
+                "locations": ["weapon"],
+                "detail": "This weapon cannot attack or Overwatch targets within Range 3."
+            }
+        ]
+    },
+    {   "id": "bdf_tungsten_boot",
+        "name": "Typhoon Boot",
+        "mount": "Heavy",
+        "type": "Melee",
+        "range": [{"type": "Threat","val": 2}],
+        "damage": [{"type": "Kinetic","val": "1d6+2"}],
+        "tags": [{"id": "tg_ordnance"}],
+        "effect": "As part of attacking with this weapon, you may fly up to 3 spaces directly towards a targeted character. This flight movement ignores Ordnance restrictions and can be used to attack a valid target.",
+        "on_attack": "This weapon attacks all characters within Range 2",
+        "on_crit": "Your Target and Targets in Engagement with you must pass a Hull Save or be knocked Prone.",
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 2,
+        "description": "<i>Sometimes kinetic energy is best delivered as a dance. Ritual mechanized chassis duels between the minor House of Twisting and the minor House of Shouting proved devastating to local infrastructure, and so mech-scale armored boots were developed to instead resolve their differences through dance contests. BDF engineers used the additional frame reinforcement to instead create earth-shattering stomps and roundhouses.</i>"
+    },
+    {   "id": "bdf_cargo_crane",
+        "name": "Cargo Crane",
+        "mount": "Superheavy",
+        "type": "Melee",
+        "range": [{"type": "Threat","val": 2}],
+        "damage": [{"type": "Kinetic","val": "2d6"}],
+        "tags": [{"id": "tg_knockback","val": 2}],
+        "effect": "This weapon can attack twice. Enemies destroyed by this weapon explode in a Burst 1 area, damaging all targets within for 2 KINETIC damage.",
+        "on_hit": "The target is placed under the effects of Lift Together, automatically if they are STUNNED or willing, unwilling characters may resist by making a successful HULL Save.",
+        "on_crit": "The target must make a HULL save or be Slowed.",
+        "actions": [
+            {
+                "name": "Lift Together",
+                "activation": "Full",
+                "detail": "You may lift and drag objects and characters up to Size 6, becoming Slowed while doing so.<br>STUNNED or willing characters are automatically effected, unwilling characters may resist by making a successful HULL Save.<br>The lift breaks if the character or object leaves the Cargo Crane's Threat."
+            },
+            {
+                "name": "Reposition Cargo",
+                "activation": "Protocol",
+                "detail": "You may rotate lifted or dragged objects and characters with the crane freely around you into free spaces within the Cargo Crane's Threat."
+            }
+        ],
+        "source": "BDF",
+        "license": "KLEWANG",
+        "license_level": 3,
+        "description": "<i>“If it can haul multiple tons of cargo, it can haul multiple tons of mechanized cavalry torso!”<br><br>Nanites injected into common civilian construction equipment resulted in oddly strong melee weapons, resembling anything from tonfas to hook swords, while still retaining the lift capacity of their prior configuration.  BDF engineers monitor the nanites for deviations from their matter replication settings or possible development of non-human thought processes.</i>"
+    },
+    {
+        "id": "bdf_big_gun",
+        "name": "“The Big Gun”",
+        "mount": "Superheavy",
+        "type": "Cannon",
+        "damage": [{"type": "Explosive","val": "6d6"},{"type": "Heat","val": 4}],
+        "range": [{"type": "Range","val": 20},{"type": "Blast","val": 1}],
+        "tags": [{"id": "tg_loading"}],
+        "effect": "This weapon can only be fired after spending 1 CP and cannot be fired without an adjacent allied character. Allied characters can reload “The Big Gun” as a Quick Action. This weapon must be reloaded twice to fire again."
+    },
+    {   "id": "bdf_tandem_cannon",
+        "name": "Tandem Cannon",
+        "mount": "Heavy",
+        "type": "Cannon",
+        "range": [{"type": "Range","val": 8}],
+        "damage": [{"type": "Explosive","val": "5"}],
+        "effect": "This weapon cannot attack targets within range 3.<br><br><b>On Miss:</b> You may take 2 Heat to target another character within range 3 of your original target and within this weapon’s Range. You cannot target a character you already missed.",
+        "on_hit": "Once per turn per target you may attack that target again.",
+        "source": "BDF",
+        "license": "CHAMBI",
+        "license_level": 1,
+        "description": "<i>Sponson-mounted machine guns were popular choices among BDF frontline pilots for supplemental suppression until the minor House of Cheesesteaks developed a larger caliber implementation, at which point demand caused print requests to fly off the shelves.</i>",
+        "synergies": [
+            {
+                "locations": ["weapon"],
+                "detail": "The Tandem Cannon cannot attack targets within Range 3."
+            }
+        ]
+    },
+    {   "id": "bdf_splendid_energy_elephant_gun",
+        "name": "Lava Load Cannon",
+        "mount": "Superheavy",
+        "type": "Cannon",
+        "profiles": [
+            {
+                "name": "Counterbattery",
+                "range": [{"type": "Range","val": 20},{"type": "Blast","val": 2}],
+                "damage": [{"type": "Energy","val": "1d6"}],
+                "tags": [{"id": "tg_heat_self","val": 2},{"id": "tg_knockback","val": 2},{"id": "tg_arcing"}]
+            },
+            {
+                "name": "Triple Tap",
+                "range": [{"type": "Range","val": 15}],
+                "damage": [{"type": "Energy","val":3}],
+                "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_knockback","val": 2}]
+            }
+        ],
+        "effect": "On Attack: Choose to fire in either Counterbattery mode or Triple Tap mode.<br>If firing in Triple Tap mode, this weapon attacks three times.",
+        "source": "BDF",
+        "license": "CHAMBI",
+        "license_level": 3,
+        "description": "<i>Incursions by Harrison Armory in the Dawnline Shore using Barbarossa chassis resulted in the need for a Baronies-produced competitor to the Siege Cannon.  The House of Smoke contributed to the development of a cannon whose munitions flash-cook upon firing to create molten shots traveling across artillery distances.  The weapon fires in rapid bursts to prevent melting the barrel.</i>"
+    },
+    {   "id": "bdf_plasma_cannon",
+        "name": "Plasma Cannon",
+        "mount": "Main",
+        "type": "Cannon",
+        "range": [{"type": "Range","val": 10},{"type": "Blast","val": 1}],
+        "damage": [{"type": "Energy","val": "1d6"}],
+        "tags": [{"id": "tg_heat_self","val": 1}],
+        "actions": [
+            {
+                "name": "Charge Plasma Cannon",
+                "activation": "Quick",
+                "detail": "Increase this weapon's area of effect from Blast 1 to Blast 2 for its next attack."
+            }
+        ],
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 1,
+        "description": "<i>Conventional shoulder-mounted anti-armor launchers reworked into man-portable party cannons. Limitless resources for batteries fueled into limitless power - the Baronic way.</i>"
+    },
+    {   "id": "bdf_laser_chainsaw",
+        "name": "Laser Chainsaw",
+        "mount": "Main",
+        "type": "Melee",
+        "range": [{"type": "Threat","val": 1}],
+        "damage": [{"type": "Energy","val": "1d6+2"}],
+        "tags": [{"id": "tg_heat_self","val": 3}],
+        "effect": "This weapon attacks additional targets in a Line 3 area originating from a space behind your target; if you are at a higher elevation than your first target when you attack, instead of choosing a single target in Threat 1, this weapon can instead attack as a Cone 3, with the Line 3 area originating out of the furthest target.",
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 2,
+        "description": "<i>Coldcore reactor bleed funneled through plasma capillaries and cycled away from the frame creates directed bursts of energy. These “blades” are weaponized by daredevil pilots in close combat; by directing the intense energy into another solid target and not radiating the waste heat in the air, these pilots actually impede heat diffusion in their own frame.</i>"
+    },
+    {   "id": "bdf_thunder_stinger",
+        "name": "Thunder Stinger",
+        "mount": "Main",
+        "type": "CQB",
+        "range": [{"type": "Range","val": 1}],
+        "damage": [{"type": "Energy","val": 1},{"type": "Burn","val": 2}],
+        "tags": [{"id": "tg_heat_self","val": 6}],
+        "effect": "When you attack with this weapon, make a Cone 3 area and a Cone 5 area originating from the space of your attack, in the same direction as your attack. Make attack rolls for each target caught in each area; this can hit the same target multiple times. The Cone 3 and Cone 5 secondary attacks do 1d6 ENERGY damage each hit.",
+        "source": "BDF",
+        "license": "SHOTEL",
+        "license_level": 3,
+        "description": "<i>The Thunder Stinger is a crossbow-shaped weapon using an enormous magnet to shape electrical discharges from ionized rails. The rapid diffusion of energy into the air limits operational effectiveness, and only the most reckless SHOTEL pilots utilize this weapon, as the Baronies never procured it for mass production.</i>"
+    },
+    {   "id": "bdf_shotgun_gatling",
+        "name": "Shotgun Minigun",
+        "mount": "Heavy",
+        "type": "Rifle",
+        "range": [{"type": "Range","val": 8},{"type": "Cone", "val": 5}],
+        "damage": [{"type": "Explosive", "val": 5}],
+        "tags": [{"id": "tg_inaccurate"}, {"id": "tg_ordnance"},{"id": "tg_knockback", "val": 2}],
+        "effect": "The first target hit takes an additional +3 EXPLOSIVE Bonus Damage.<br>The Cone attack area must face directly away from you.",
+        "source": "BDF",
+        "license": "KIEM",
+        "license_level": 1,
+        "description": "<i>Requests for additional mech-sized shotguns eventually outgrew the hand and arm capacity of traditional mechanized chassis. The minor House of Boogie Woogie contains a hero, a visionary, one Lieutenant Vo Mina, who instructed BDF engineers to strap together an array of shotguns in a rotary configuration, to the delight of all in her unit.</i>"
+    },
+    {   "id": "bdf_sinusoid_laser",
+        "name": "Sinusoid Laser",
+        "mount": "Heavy",
+        "type": "Nexus",
+        "range": [{"type": "Range", "val": 5}],
+        "damage": [{"type": "Energy", "val": "2d6+1"}],
+        "tags": [{"id": "tg_loading"}, {"id": "tg_heat_self", "val": 2}],
+        "effect": "Create an adjacent Line 8 area extending in the same direction as your attack, with the area originating from your target’s space. All targets adjacnet to this area may also be attacked.<br>These secondary attacks can't deal BONUS DAMAGE, trigger the Sinusoid Laster's Self Heat costs, or additional secondary attacks.<br>The recoil of firing this weapon pushes your mech 3 spaces directly away from the first target of the attack.",
+        "source": "BDF",
+        "license": "KIEM",
+        "license_level": 3,
+        "description": "<i>Utilizing a trifold lens and multiple redundant batteries, the BDF pioneered a wide-angle laser capable of arcing in concentric patterns for maximum target coverage. Though single target effectiveness is lessened as a result of the energy diffusion, BDF troopers hail the Sinusoid Laser as a triumph in saturation fire.</i>"
+    }
+]

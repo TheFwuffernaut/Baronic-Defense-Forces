@@ -1,0 +1,93 @@
+[
+    {
+        "id": "bdf_nanocomposite_crash_couches",
+        "name": "Nanocomposite Crash Couches",
+        "source": "BDF",
+        "effect": "1/round, your mech can take 1d6 Heat to take the Boost action as a Reaction to being targeted by an incoming attack, interrupting the attack and ignoring reactions. If this causes your mech to move out of Range or line of sight of the attack, the attack resolves as normal and the damage is Resisted.",
+        "description": "Baronic pilots routinely perform maneuvers that would shake apart lesser cockpit chairs. Your cockpit contains the latest in compression materials science, for it is your throne.",
+        "actions": [
+            {
+                "name": "Duck And Weave",
+                "activation": "Reaction",
+                "frequency": "1/round",
+                "trigger": "A hostile target targets you with an attack.",
+                "detail": "Take 1d6 Heat to take the Boost action, interrupting the attack and ignoring Reactions. If this causes your mech to move out of Range or line of sight of the attack, the triggering attack resolves as normal and the damage is Resisted."
+            }
+        ]
+    },
+    {
+        "id": "bdf_spiderline_failsafes",
+        "name": "Spiderline Failsafes",
+        "source": "BDF",
+        "effect": "1/round, when it would become Prone from an attack or failed Save from a hostile character, as a reaction, your mech can take 2 Heat to force a hostile character in Line of Sight to make an Agility save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target. If the hostile character fails the Save and was flying, it instead immediately lands (this counts as falling without any damage).",
+        "description": "Reactive armor lined with hypertensile tethers is primed to fire off when gyroscopes in the mech indicate a cataclysmic fall, using the momentum of a nearby opponent to kip up and return the finest war machine in the Baronies back to the fight.",
+        "actions": [
+            {
+                "name": "Safety Net",
+                "activation": "Reaction",
+                "frequency": "1/round",
+                "trigger": "Your mech would become Prone from an attack or failed Save",
+                "heat_cost": 2,
+                "detail": "You take 2 Heat to force a hostile character in Line of Sight to make an Agility save. A failed Save makes you Immune to the source of the Prone and instead inflicts Prone on your target. If the hostile character fails the Save and was flying, it instead immediately lands (this counts as falling without any damage)."
+            }
+        ]
+    },
+    {
+        "id": "bdf_electromagnetic_thrusters",
+        "name": "Electromagnetic Thrusters",
+        "source": "BDF",
+        "effect": "1/turn, your mech gains +4 Evasion and +4 E-Def against the next attack after taking the Boost action or Brace Reaction. This cannot cause your Evasion or E-Def to be greater than 20.",
+        "description": "Speed is life, and BDF engineers have engineered vector thrusters to give a mechanized chassis the life of a Cosmopolitan for only four times the Manna cost of traditional maneuver equipment.",
+        "synergies": [
+            {
+                "locations": ["boost", "brace"],
+                "detail": "1/turnyour mech gains +4 Evasion and +4 E-Def against the next attack after taking the Boost action or Brace Reaction. This cannot cause your Evasion or E-Def to be greater than 20."
+            }
+        ]
+    },
+    {
+        "id": "bdf_bespoke_filigree_project",
+        "name": "Bespoke Filigree Project",
+        "source": "BDF",
+        "effect": "Gain 2 Repair Cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
+        "description": "Barons of esteem devote untold resources to preening and festooning their mech with the heraldry of their House. You have taken your frame and turned form into function.",
+        "bonus": [
+            {
+                "id": "repcap",
+                "val": 2
+            }
+        ],
+        "synergies": [
+            {
+                "locations": ["repair", "hull"],
+                "detail": "You should have +2 repcap, CC unfortunately doesn't process this bonus type correctly at this time, please note that you have 2 extra repairs. Thank you for your time."
+            }
+        ]
+    },
+    {
+        "id": "bdf_nanoweb_countermeasures",
+        "name": "Nanoweb Countermeasures",
+        "source": "BDF",
+        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions.",
+        "description": "Self-sealing nanite armor plates in the BDF’s elite units allow them to both stay in the fight longer as well as channel the resultant sparks into a light show capable of painting targets.",
+        "synergies": [
+            {
+                "locations": ["boost"],
+                "detail": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions."
+            }
+        ]
+    },
+    {
+        "id": "bdf_compression_carapace",
+        "name": "Compression Carapace",
+        "source": "BDF",
+        "effect": "After you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against the next source of damage you take. This effect stacks with other sources of damage reduction.",
+        "description": "Layered armor plates compress on impact instead of shatter, directing the force away from BDF pilots and their allies.",
+        "synergies": [
+            {
+                "locations": ["stabilize"],
+                "detail": "After you Stabilize, your mech and an adjacent allied character has 3 additional damage reduction against the next source of damage you take. This effect stacks with other sources of damage reduction."
+            }
+        ]
+    }
+]

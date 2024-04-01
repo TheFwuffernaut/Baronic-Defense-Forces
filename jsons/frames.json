@@ -1,0 +1,697 @@
+[
+    {
+        "id": "bdf_akinaka",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "AKINAKA",
+        "mechtype": ["Controller","Support"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/akinaka_1080.png?raw=true",
+        "y_pos": 5,
+        "description": "Every combined arms assault needs air power. Air power needs eyes on the ground. BDF engineers created a platform to take the radio-equipped infantryman and elevate them to the station they deserve - armored cowls to protect CIC infrastructure on the frame and elevated limbs to provide better spotting and laser painting capabilities. Whether it’s mortars, satellites, or laser-guided bombs, there’s no fashion statement like overwhelming firepower.",
+        "mounts": ["Aux/Aux","Flex"],
+        "stats": {
+            "size": 1,
+            "structure": 4,
+            "stress": 4,
+            "armor": 0,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 10,
+            "heatcap": 5,
+            "repcap": 8,
+            "sensor_range": 15,
+            "tech_attack": 1,
+            "save": 11,
+            "speed": 4,
+            "sp": 8
+        },
+        "traits": [
+            {
+                "name": "Eye of the storm",
+                "description": "1/round the Akinaka is IMMUNE to the damage and effects of an attack or save caused by a BLAST, CONE, BURST, or LINE area, from either itself, a hostile source or an allied source.",
+                "use": "Round"
+            },
+            {
+                "name": "Weak",
+                "description": "The Akinaka has +1 Difficulty on HULL saves.",
+                "synergies": [
+                    {
+                        "locations": ["hull","skill_check"],
+                        "detail": "Gain +1 Difficulty on HULL checks and saves."
+                    }
+                ]
+            }
+        ],
+        "core_system": {
+            "name": "Whale Beacon",
+            "description": "Boots on the ground need eyes in the sky. The Akinaka has an integrated communication suite allowing laser painting of fire support from artillery, close air support, and orbital strikes, depending on the battlefield.",
+            "active_name": "One In The Pocket",
+            "active_effect": "1/scene you can activate the Whale Beacon immediately on a target in Sensors; Whale Beacon's damage upgrades to 3d6+GRIT EXPLOSIVE damage base for the rest of the scene.",
+            "use": "Encounter",
+            "activation": "Free",
+            "passive_name": "Whale Beacon",
+            "passive_actions": [
+                {
+                    "name": "Whale Beacon",
+                    "activation": "Quick",
+                    "detail": "1/round you can detonate a Drone as a Quick Action, destroying it. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6+GRIT EXPLOSIVE damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
+                    "use": "round"
+                }
+            ]
+        }
+    },
+    {
+        "id": "bdf_akrafena",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "AKRAFENA",
+        "mechtype": ["Striker","Controller"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/Akrafena1080.png?raw=true",
+        "y_pos": 47,
+        "description": "Advances in subjectivity interfacing firmware allows the Baronic Defense Forces a novel opportunity to augment infantry: a mech’s firepower mounted to a hardsuit through a backpack harness and stabilizing legs. Additional plating and energy-based interception screens protect the pilot from incoming fire which would otherwise incapacitate a dismounted soldier. Originally designed as a fire support frame for infantry platoons, noble commanders immediately began to retrofit the frame for duels with other forces’ commanding officers. The frame’s offensive maneuverability scales non-linearly with the pilot’s willingness to exceed factory specifications and disregard their own safety.",
+        "mounts": ["Main","Main","Main","Main"],
+        "stats": {
+            "size": 0.5,
+            "structure": 4,
+            "stress": 4,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 6,
+            "edef": 8,
+            "heatcap": 6,
+            "repcap": 5,
+            "sensor_range": 5,
+            "tech_attack": 0,
+            "save": 10,
+            "speed": 5,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "Weapon Bracing",
+                "description": "The Akrafena comes with 2 weapon mounts capable of mounting 2 Main or smaller weapons apiece. After firing a weapon, the Akrafena cannot fire weapons from any other mount until the start of the next turn.",
+                "synergies": [
+                    {
+                        "locations": ["weapon"],
+                        "detail": "After firing a weapon, you cannot fire weapons from any other mount until the start of the next turn."
+                    }
+                ]
+            },
+            {
+                "name": "Reactive Thrusters",
+                "description": "When the Akrafena Boosts, it cannot be knocked back, pushed, pulled, or be knocked prone by actors up to its size +1 (rounded up) until the start of its next turn.<br>During the Boost, you may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed.",
+                "synergies": [
+                    {
+                        "locations": ["boost"],
+                        "detail": "After you boost you cannot be knocked back, pushed, pulled or knocked prone by actors up to your size +1 (rounded up) until the start of your next turn.<br>During the Boost, you may deal 10 AP Kinetic damage to all objects and terrain that would obstruct this movement, allowing continued movement if the object or terrain is destroyed."
+                    }
+                ]
+            },
+            {
+                "name": "Slow",
+                "description": "The Akrafena has +1 Difficulty on agility checks and saves.",
+                "synergies": [
+                    {
+                        "locations": ["agility","skill_check"],
+                        "detail": "Gain +1 Difficulty on AGILITY checks and saves."
+                    }
+                ]
+            },
+            {
+                "name": "MOUNT RULES",
+                "description": "Hi, this is here to tell you that the 4 main mounts are - in fact - 2 Main/Main mounts. Its Aux/Aux but with Mains! Firing rules wise, they're 4 separate Main mounts, but for the purposes of core bonuses, relevant traits on the Akrafena, and systems destruction - its two Main/Main mounts.<br>The the two on the left half are as far as the rules are concerned linked (so if you have two loading weapons and fire that mount they're both unloaded), same goes for the pair on the right.<br>Apologies that this couldn't be done in a cleaner way - maybe in the future."
+            }
+        ],
+        "core_system": {
+            "name": "PEDIPALPS Augmented Hardpoints",
+            "description": "Integrated additional limbs and recoil stabilizers allow a terrifying volume of sustained fire. During spikes of reactor activity, static defense capabilities surge as weapons are reloaded by tertiary limbs as fast as they cycle.",
+            "active_name": "Synchronize Limbs",
+            "active_effect": "After using this protocol, for the rest of this scene, the Akrafena can fire 2 weapons and reload 2 weapons when it uses Lock And Cycle.<br>If less than 2 weapons on the Akrafena need to be reloaded, the Akrafena may instead reload an adjacent allied character's weapon or be pushed 4 spaces directly away from its target.",
+            "use": "Encounter",
+            "activation": "Protocol",
+            "passive_name": "Lock And Cycle",
+            "passive_actions": [
+                {
+                    "name": "Lock And Cycle",
+                    "activation": "Full",
+                    "detail": "The Akrafena fires a weapon and reloads a weapon as a Full Action. This counts as a Barrage. The Akrafena is Slowed until the start of its next turn after using this action.<br>If no weapons on the Akrafena need to be reloaded, the Akrafena may reload an adjacent allied character's weapon or be pushed 4 spaces directly away from its target."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bdf_macuahuitl",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "CHAMBI",
+        "mechtype": ["Artillery"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/Chambi_1080.png?raw=true",
+        "y_pos": 26,
+        "description": "The Siege of Creighton and defeat of the Baronic Warhost resulted in a black eye for the Baronies and the genesis of the artillery project that became the BDF Chambi.  There was dissent in the ranks on naming the project after a blunt instrument instead of the swords of other BDF chassis, quelled when field tests melted an entire battlefield of nails under the hammer.  The Chambi’s operation is aided by an integrated STAR-Class NHP co-pilot to serve as weapons officer during extended sieges, freeing mental capacity for the pilot to navigate the mech through hostile environments.  STAR-Class NHPs are meticulous and enjoy bleak humor, often aware of the paradox of being tasked to a mechanized chassis designed for renewable energy and converted to a war machine.",
+        "mounts": ["Flex","Main","Heavy"],
+        "stats": {
+            "size": 3,
+            "structure": 4,
+            "stress": 4,
+            "armor": 2,
+            "hp": 10,
+            "evasion": 6,
+            "edef": 12,
+            "heatcap": 8,
+            "repcap": 4,
+            "sensor_range": 10,
+            "tech_attack": 0,
+            "save": 10,
+            "speed": 3,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "Stable Footing",
+                "description": "The Chambi has +1 Difficulty on ranged and melee weapon attacks after it moves on a turn. 1/round, it has +1 Accuracy on all attacks made from a weapon when fired before moving on a turn.",
+                "synergies": [
+                    {
+                        "locations": ["weapon"],
+                        "detail": "The Chambi has +1 Difficulty on ranged and melee weapon attacks after it moves on a turn. 1/round, it has +1 Accuracy on all attacks made from a weapon when fired before moving on a turn."
+                    }
+                ]
+            },
+            {
+                "name": "Leg Room",
+                "description": "Your mech can comfortably carry another human sized being inside it, along with increasing the amount of systems with the AI tag that you can mount by +2.",
+                "bonuses": [
+                    {
+                        "id": "ai_cap",
+                        "val": 2
+                    }
+                ]
+            },
+            {
+                "name": "Top Heavy",
+                "description": "The Chambi has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement.",
+                "synergies": [
+                    {
+                        "locations": ["skill_check"],
+                        "detail": "The Chambi has +1 Difficulty on all saves vs Prone, Knockback, or Involuntary Movement."
+                    }
+                ]
+            }
+        ],
+        "core_system": {
+            "name": "STAR-CLASS NON-HUMAN PERSON CO-PILOT",
+            "description": "<i>Every war machine needs more hands.  NHP Co-pilots are a BDF innovation enabling the efficiency of a tank crew while maintaining the efficiency of mechanized chassis.  BDF pilots respect their crewmates.</i>",
+            "active_name": "Fire The Big Gun",
+            "active_effect": "All attacks can choose to fire as a Blast 1 within their Range and gain Knockback 2. You may also fire “The Big Gun” until the end of the scene as a Barrage after activating this Core Power.",
+            "use": "Encounter",
+            "activation": "Full",
+            "passive_name": "NHP Extra Hands",
+            "passive_effect": "Gain a Reload Die, beginning at 4 and the NHP Extra Hands Protocol.",
+            "counters": [
+                {
+                    "id": "bdf_reload_die",
+                    "name": "RELOAD DIE",
+                    "max": 4,
+                    "min": 1,
+                    "default_value": 4
+                }
+            ],
+            "passive_actions": [
+                {
+                    "name": "NHP Extra Hands",
+                    "activation": "Protocol",
+                    "detail": "Decrease the Reload Die by 1. When the Reload Die hits 1 you may reload a Loading weapon of your choice; the Reload Die is then set to 4."
+                }
+            ],
+            "integrated": ["bdf_big_gun"]
+        }
+    },
+    {
+        "id": "bdf_dao",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "DAO",
+        "mechtype": ["Support"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/dao_render%202_1080.png?raw=true",
+        "y_pos": 40,
+        "description": "Every military action is combined arms.  Baronic Unified Command created the Dao to serve as a mobile command fortress and force amplifier. Armed with an onboard flash printer and an assigned squad of subalterns to create assets to draw fire away from the rest of the forward units participating in an assault, the Dao is credited with reducing BDF casualties a statistically significant percent.",
+        "mounts": ["Main","Main/Aux"],
+        "stats": {
+            "size": 2,
+            "structure": 4,
+            "stress": 4,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 9,
+            "heatcap": 5,
+            "repcap": 3,
+            "sensor_range": 12,
+            "tech_attack": 1,
+            "save": 10,
+            "speed": 4,
+            "sp": 7
+        },
+        "traits": [
+            {
+                "name": "Lead from the Front",
+                "description": "Drones the Dao controls have +2 HP and +2 Evasion and +2 E-Defense (Evasion and E-Defense cannot go over 20).",
+                "bonuses": [
+                    {
+                        "id": "deployable_hp",
+                        "val": 2
+                    },
+                    {
+                        "id": "deployable_evasion",
+                        "val": 2
+                    },
+                    {
+                        "id": "deployable_edef",
+                        "val": 2
+                    }
+                ]
+            },
+            {
+                "name": "Guardian",
+                "description": "Adjacent allies may use the Dao as Hard Cover."
+            },
+            {
+                "name": "Bottom Heavy",
+                "description": "The Dao is Immobilized when Prone. It can still stand up from Prone."
+            }
+        ],
+        "core_system": {
+            "name": "Light's Dawn Field Printer",
+            "description": "An onboard printer and carrying cages on the Dao allows it to command an entire squad of subalterns to act as a force amplifier and draw fire away from VIP targets in an assault.",
+            "active_name": "Full Deployment",
+            "active_effect": "Create 3 additional Subaltern Drones. In addition, gain the Shed Armor reaction.",
+            "active_actions": [
+                {
+                    "name": "Shed Armor",
+                    "activation": "Reaction",
+                    "frequency": "1/scene",
+                    "trigger": "You are hit by an attack or fail a hostile save and learn the damage or hostile effect.",
+                    "detail": "Become Immune to the attack or save’s damage, heat, and all other effects. Until the end of the scene, after activating this reaction, your Size is reduced by 1, your Armor is reduced by 1, and you gain 2 Speed. A Size 2 object is created in an adjacent square that grants Hard Cover as well as Resistance to all damage and Heat to characters who benefit from the Hard Cover."
+                }
+            ],
+            "use": "Encounter",
+            "activation": "Quick",
+            "passive_name": "Subaltern Drone Systems",
+            "deployables": [
+                {
+                    "name": "Subaltern Drone",
+                    "type": "Drone",
+                    "detail": "When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
+                    "activation": "Full",
+                    "size": 0.5,
+                    "hp": "10 + {grit}",
+                    "edef": "your mech's",
+                    "evasion": "your mech's",
+                    "speed": "your mech's"
+                }
+            ],
+            "passive_effect": "Your mech can print independent Drone companions. This drone can be deployed in an adjacent space and moves independently on your turn. The Subaltern Drone shares your EVASION, E-DEFENSE, and SPEED. Begin the scene with 1 Subaltern Drone already in play."
+        }
+    },
+    {
+        "id": "bdf_jian",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "JIAN",
+        "mechtype": ["Striker"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/jian_1080.png?raw=true",
+        "y_pos": 10,
+        "description": "Baronic Unified Command issued procurement for a line mech to rival the capacity of the Harrison Armory Sherman, and the Jian is the BDF’s response. Designed as a stick and move chassis around a lighter frame with rapid maneuver capability to integrate with infantry deployment, the Jian mounts enough firepower to disable softer armored targets and enough supplemental explosives to dismantle stubborn enemy formations from unexpected ranges and angles.",
+        "mounts": ["Main","Main"],
+        "stats": {
+            "size": 1,
+            "structure": 4,
+            "stress": 4,
+            "armor": 0,
+            "hp": 10,
+            "evasion": 9,
+            "edef": 7,
+            "heatcap": 6,
+            "repcap": 4,
+            "sensor_range": 8,
+            "tech_attack": 1,
+            "save": 11,
+            "speed": 4,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "Experimental Munitions",
+                "description": "Grenades have extra throw range equal to the last movement you made in a straight line. When throwing a grenade, if you choose to Immobilize yourself until the start of your next turn, the grenade explodes with extra force, creating an additional Blast 1 area in the target space. Targets caught inside the area must make an Agility Save or be knocked back 1 space and take 1d6 Explosive damage, taking half damage and not being knocked back on a successful Save."
+            },
+            {
+                "name": "Combat Roll",
+                "description": "Gain the Do A Flip! reaction",
+                "actions": [{
+                    "name": "Do A Flip!",
+                    "activation": "Reaction",
+                    "frequency": "1/turn",
+                    "trigger": "When an attack misses you or you are knocked back",
+                    "detail": "You may move 1 space, ignoring engagement and not provoking reactions. If this causes you to collide with or become adjacent to an object or piece of terrain, deal 10 AP KINETIC damage to that object or piece of terrain."
+                }]
+            },
+            {
+                "name": "Combat Bandolier",
+                "description": "The Jian has +2 to Limited Systems with the Grenade or Mine. It suffers +1 Knockback from all sources of Knockback and has +1 difficulty on saves against Prone."
+            }
+        ],
+        "core_system": {
+            "name": "Deployable Mechanized Combat Vehicle",
+            "description": "While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor. Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike. The coin grenades on the Jian were invented by a Karrakin Royal Foundries lambbeef line cook tired of being unable to tip his local BDF peacekeepers, so the cook repurposed a printer to create customized munitions by way of thanks.",
+            "active_name": "“Moonlight” Combat Cycle",
+            "active_effect": "Deploy two Drones with 20 HP which occupy 1x2x1 spaces each into adjacent free and valid spaces. The drones count as Size 1 and each can hold one size 1 or size ½ actor as a rider. The drones can combine as a Protocol into a single Size 2 character to hold a size 2 actor. A character may mount either drone as a Quick Action, moving the drones with them on all their movements. As a protocol, you may move each of the drones up to 6 spaces (independently if they aren’t combined), carrying their riders with them. As a Quick Action per drone, you can prime a Self Destruct on that drone, which then explodes at the end of the next turn in a Blast 2 area for 2d6 damage, or half damage on a successful AGILITY save.",
+            "use": "Encounter",
+            "activation": "Protocol",
+            "passive_name": "INTEGRATED SYSTEM NOTIFICATION",
+            "passive_effect": "The Jian comes with a set of COIN GRENADES as an integrated system.",
+            "integrated": ["bdf_coin_grenade"]
+        }
+    },
+    {
+        "id": "bdf_kampilan",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "KAMPILAN",
+        "mechtype": ["Support","Controller"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/kampilan1080.png?raw=true",
+        "y_pos": 15,
+        "description": "The Ungratefuls uprising across the Baronies requires infantry augmentation beyond the capabilities of a single hardsuit. Companies of warrior-pattern Kampilan chassis were deployed en masse and found lacking in operational capacity, as the high powered lasers they carried required frequent resupply and their command structure reliant on omninet connection - a favorite target of HORUS.  Despite a projected success rate of 10%, the Kampilan scout-pattern pilots came back from each sortie the sole survivors. Distant and aloof, unwilling to discuss what happened in the tunnels of Free Sanjak, the craters of the Dawnline Shore, or in the palaces of Throne Karrakis, Baronic Unified Command continues to send Kampilan pilots back into the field to accumulate telemetry tuning the frame’s performance even further beyond factory spec.",
+        "mounts": ["Aux/Aux","Aux/Aux"],
+        "stats": {
+            "size": 0.5,
+            "structure": 4,
+            "stress": 4,
+            "armor": 0,
+            "hp": 6,
+            "evasion": 9,
+            "edef": 7,
+            "heatcap": 5,
+            "repcap": 6,
+            "sensor_range": 15,
+            "tech_attack": 1,
+            "save": 10,
+            "speed": 5,
+            "sp": 8
+        },
+        "traits": [
+            {
+                "name": "Electronic Impulse Muscles",
+                "description": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack.<br>Tech attacks instead gain +2 additional Heat.",
+                "synergies": [
+                    {
+                        "locations": ["weapon", "tech_attack"],
+                        "detail": "1/round, if a character fails a save against you the Kampilan gains +1d6 bonus damage and +1 knockback on its next attack.<br>Tech attacks instead gain +2 additional Heat."
+                    }
+                ]
+            },
+            {
+                "name": "Statistical Anomaly",
+                "description": "The Kampilan never rolls more than one die for Structure checks and only costs 2 repairs to repair Destroyed status. No matter the circumstances surrounding the wreck, after a battle the Kampilan can always be repaired.",
+                "synergies": [
+                    {
+                        "locations": ["structure"],
+                        "detail": "The Kampilan never rolls more than one die for Structure checks."
+                    },
+                    {
+                        "locations": ["rest"],
+                        "detail": "The Kampilan only costs 2 repairs to repair Destroyed status."
+                    }
+                ]
+            },
+            {
+                "name": "Plasteel Frame",
+                "description": "If the Kampilan moves at least 6 spaces in a round, 1/round it can move 3 spaces in the same direction as its last movement as a free action.",
+                "use": "Free"
+            }
+        ],
+        "core_system": {
+            "name": "Forever Armor",
+            "description": "Baronic Unified Command commissioned mechs that could fight even in the worst of combat conditions: outright destruction. The Kampilan's proprietary Forever Armor is designed to keep the fight going by any means possible, at any expense.",
+            "active_name": "Subjectivity Diffusion Engine",
+            "active_effect": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a Blast 4 profile instead of a Blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. Unlike a normal Self Destruct, this leaves behind a Destroyed mech wreck. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan.",
+            "use": "Encounter",
+            "activation": "Full",
+            "integrated": ["bdf_disposable_binary_laser_rifle"],
+            "active_synergies": [
+                {
+                    "locations": ["active_effects"],
+                    "detail": "1/scene, the Kampilan pilot can choose to overcharge the coldcore reactor on the frame. This causes the mech to prime a Self Destruct with a Blast 4 profile instead of a Blast 2. The Self Destruct activates immediately if the pilot Ejects or if the frame experiences a Direct Hit roll on a Structure Check. Unlike a normal Self Destruct, this leaves behind a Destroyed mech wreck that the pilot can Dismount as usual. After Dismounting or Ejecting, until the end of the scene the Kampilan’s pilot can make Improvised Attack actions as if mounted, using the mech traits, systems, and mech talents of the Kampilan."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bdf_khanda",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "KHANDA",
+        "mechtype": ["Striker"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/khanda_1080.png?raw=true",
+        "y_pos": 20,
+        "description": "BDF Engineers were tasked with the impossible, of mounting the heaviest payloads on the tallest, most mobile chassis on the battlefield.  Aggressive negotiations during the prototyping phase thanks to the House of Hues resulted in the development of the Khanda, a frame capable of rapid repositioning and unparalleled firepower at angles traditional chassis could not make. Often festooned in regalia and with signature forearm-mounted weaponry allowing for unhindered hands, Khanda chassis are often seen on public relations tours by aspiring Barons of minor Houses fraternizing with BDF pilots and civilians alike.",
+        "mounts": ["Heavy","Heavy"],
+        "stats": {
+            "size": 2,
+            "structure": 4,
+            "stress": 4,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 7,
+            "edef": 7,
+            "heatcap": 5,
+            "repcap": 4,
+            "sensor_range": 12,
+            "tech_attack": -1,
+            "save": 10,
+            "speed": 3,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "Parallel Processors",
+                "description": "The Khanda gains +1 accuracy on attacks that consume Lock On.",
+                "synergies": [
+                    {
+                        "locations": ["weapon"],
+                        "detail": "The Khanda gains +1 accuracy on attacks that consume Lock On."
+                    }
+                ]
+            },
+            {
+                "name": "Stand Tall",
+                "description": "The Khanda occupies spaces 1 taller than its Size. For example, the Khanda is 2 spaces tall, 1 wide, and 1 long when Size 1.<br>When the Khanda jumps, it may fly 3 spaces.",
+                "synergies": [
+                    {
+                        "locations": ["move","boost"],
+                        "detail": "When the Khanda jumps, it may fly 3 spaces."
+                    }
+                ]
+            },
+            {
+                "name": "Load Balancing",
+                "description": "The Khanda cannot mount Superheavy weapons and after firing a Heavy weapon, the Khanda cannot fire other Heavy weapons until the start of the next turn. All Heavy Weapons mounted on the Khanda gain the Unique tag."
+            }
+        ],
+        "core_system": {
+            "name": "Aura Missile Launcher",
+            "description": "Originally designed for fireworks shows, the Aura Missile Launcher utilizes Gauss technology to accelerate special purpose incendiary missiles prior to their launch to achieve firing arcs and payload delivery times unmatched by other BDF gear.",
+            "active_name": "Shine Brightest",
+            "active_effect": "You may immediately fire the Aura Missile Launcher 6 times anywhere within range without the need for a Lock On and without consuming Lock On. Shots fired this way create dangerous terrain tiles in the targeted spaces.",
+            "use": "Encounter",
+            "activation": "Protocol",
+            "integrated": ["bdf_aura_missile_launcher"]
+        }
+    },
+    {
+        "id": "bdf_kiem",
+        "source": "BDF",
+        "license_level": 2,
+        "name": "KIEM",
+        "mechtype": ["Defender"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/kiem_1080.png?raw=true",
+        "y_pos": 40,
+        "description": "The Kiem is a chassis designed for aggressive interdiction of incoming fire, placing itself in front of its allies to clear fortifications with heavy suppressive fire.  Advances in materials engineering resulted in a compact frame capable of underground operations and in hostile environments. The designer of the Kiem, Colonel Mi Ceran of the minor House of Luggage, was shot out of her frame in every sortie she ever went on, spurring her to layer every available shielding system onto the design document in an attempt to prevent other BDF troopers from meeting such a fate.",
+        "mounts": ["Main","Heavy"],
+        "stats": {
+            "size": 2,
+            "structure": 4,
+            "stress": 4,
+            "armor": 1,
+            "hp": 8,
+            "evasion": 8,
+            "edef": 8,
+            "heatcap": 6,
+            "repcap": 5,
+            "sensor_range": 10,
+            "tech_attack": -1,
+            "save": 11,
+            "speed": 3,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "Leg Day",
+                "description": "The Kiem can jump up to 10 spaces vertically without sustaining fall damage.  It has integrated mag-clamps allowing it to walk on walls and climb at full speed."
+            },
+            {
+                "name": "Angled Plating",
+                "description": "1/turn, when damaged by an attack, roll a d6. On a 5+, gain Resistance to all damage until the end of the turn."
+            },
+            {
+                "name": "Low Profile",
+                "description": "The Kiem occupies 1 less space vertically than its size (for example, as a Size 2, it occupies 2 spaces wide, 2 spaces long, and 1 space tall and draws Line of Sight over cover from Height 1). It always counts as size 1 for Grapples and Rams. The surfaces of the Kiem count as valid spaces to attach Deployables, which then move with the Kiem."
+            }
+        ],
+        "core_system": {
+            "name": "Waterfall Projected Shield Arrays",
+            "description": "Building on the success of the GMS Type-3 Projected Shield, BDF designers used even higher wattage lasers to intercept incoming fire and deflect it away both from the Kiem and its charges.",
+            "active_name": "Rainy Day Funds",
+            "active_effect": "Your mech has two Cone 3 shields placed adjacent to opposite sides of the character’s spaces.  Attacks or saves tracing a line of effect through one of these cones suffer +1 Difficulty on attacks versus their target and have their damage reduced by 1. Attacks or saves tracing a line of effect through both cones have the effects increased to +2 Difficulty and 2 damage reduction. You may rotate the cones and which spaces they originate from as a Protocol.",
+            "activation": "Protocol",
+            "passive_name": "Rearrange Shields",
+            "passive_effect": "The Waterfall Projected Shield Arrays become Cone 5 and their effects increase to +2 difficulty and 2 damage reduction each, stacking up to +4 Difficulty and 4 damage reduction for lines of effect traced through both cones."
+        }
+    },
+    {
+        "id": "bdf_klewang",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "KLEWANG",
+        "mechtype": ["Striker","Controller"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/klewang1080.png?raw=true",
+        "y_pos": 35,
+        "description": "A repurposed cargo loader frame, the Klewang is designed to close the gap under fire from enemy artillery to break the defensive lines, allowing infantry to surge through. The House of Dust, undeterred by the incident of The Maw, decided the best way to enhance BDF operational capacity with minimal printer queue time was to program additional greywash nanites to convert civilian mechs into military-grade chassis. The results were chaotic, unpredictable, and ultimately replicable via printers.",
+        "mounts": ["Flex","Main","Heavy"],
+        "stats": {
+            "size": 3,
+            "structure": 4,
+            "stress": 4,
+            "armor": 2,
+            "hp": 9,
+            "evasion": 6,
+            "edef": 6,
+            "heatcap": 5,
+            "repcap": 6,
+            "sensor_range": 15,
+            "tech_attack": -2,
+            "save": 10,
+            "speed": 2,
+            "sp": 5
+        },
+        "traits": [
+            {
+                "name": "Agressive Underhooks",
+                "description": "The Klewang has +1 Accuracy on HULL saves and checks while Grappling and can maintain active Grapples at up to range 3 (the Klewang losing adjacency does not break Grapples until the grapple participant is 4 or more spaces away).",
+                "synergies": [
+                    {
+                        "locations": ["hull","skill_check"],
+                        "detail": "The Klewang has +1 Accuracy on HULL saves and checks while Grappling"
+                    },
+                    {
+                        "locations": ["grapple"],
+                        "detail": "The Klewang has +1 Accuracy on HULL saves and checks while Grappling and can maintain active Grapples at up to range 3 (the Klewang losing adjacency does not break Grapples until the grapple participant is 4 or more spaces away)."
+                    }
+                ]
+            },
+            {
+                "name": "Follow-Through",
+                "description": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Klewang moves at least 4 spaces in a round, 1/round it can move 2 additional spaces as a free action.",
+                "use": "Free",
+                "synergies": [
+                    {
+                        "locations": ["weapon"],
+                        "detail": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target)."
+                    }
+                ]
+            }
+        ],
+        "core_system": {
+            "name": "Greywash Actuators",
+            "description": "Mechs aren’t supposed to bend like that.",
+            "active_name": "Six Meters Under",
+            "active_effect": "Until the end of the scene, when the Klewang activates Piledriver Protocols or Boosts in the direction of the nearest enemy character it creates a Cone 5 shockwave at the end of its movement for 2d6 Explosive damage that must at least partially include one of the original targets in the case of Piledriver Protocols or include the nearest enemy character in the case of a Boost. Characters caught in the area who pass a HULL save take half damage.",
+            "use": "Encounter",
+            "activation": "Full",
+            "passive_name": "Piledriver Protocols",
+            "passive_effect": "The Klewang gains access to the Piledriver Full Action",
+            "passive_actions": [
+                {
+                    "name": "Piledriver",
+                    "activation": "Full",
+                    "detail": "Fly 3 spaces and attempt to initiate a Grapple against a target within Range 3; if the attack roll is successful, the target is Grappled and the Klewang may switch positions with the Grapple target, placing it in an adjacent square of the Klewang’s choice. Hit or miss, the target is Prone. On a miss, the Klewang is also Prone."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bdf_shotel",
+        "license_level": 2,
+        "source": "BDF",
+        "name": "SHOTEL",
+        "mechtype": ["Striker"],
+        "image_url": "https://github.com/TheFwuffernaut/Baronic-Defense-Forces/blob/0fa66886dae02b1a9296de0af21b98bd2a685480/shotel_1080p.png?raw=true",
+        "y_pos": 55,
+        "description": "The BDF Shotel is the Baronies’ attempt to weaponize infantry in anti-ship actions in zero-G with a design emphasis on sustained operations without external resupply.  Advanced radiator systems allow for controlled heat bleed even in the vacuum of space, and an integrated flight unit in the frame’s legs allows for rapid repositioning and fire support to frontline boarding frames.  Baronic nobles immediately neglected its intended use and took Shotel prototypes to duels, jousts, and high profile criminal cases involving obfuscating forensic investigations.  The concerns with payload weight and ability to maintain flight under fire relegated the Shotel to use by special forces on search and destroy operations rather than widespread infantry adoption.",
+        "mounts": ["Main","Main","Main"],
+        "stats": {
+            "size": 0.5,
+            "structure": 4,
+            "stress": 4,
+            "armor": 0,
+            "hp": 6,
+            "evasion": 10,
+            "edef": 6,
+            "heatcap": 6,
+            "repcap": 3,
+            "sensor_range": 8,
+            "tech_attack": 1,
+            "save": 10,
+            "speed": 4,
+            "sp": 6
+        },
+        "traits": [
+            {
+                "name": "HiveFlight Boosters",
+                "description": "The Shotel can fly when it moves. When the Shotel ends its turn without having made a weapon attack, its next weapon attack after the start of its next turn Impairs all enemies affected.",
+                "synergies": [
+                    {
+                        "locations": ["move","boost"],
+                        "detail": "The Shotel can fly when it moves."
+                    }
+                ]
+            },
+            {
+                "name": "Heat Bleed",
+                "description": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn. Each turn this trait activates, the Shotel inflicts an additional +2 Heat on its next attack, up to +6.",
+                "synergies": [
+                    {
+                        "locations": ["heat","stress","structure"],
+                        "detail": "At the end of its turn, the Shotel cools 2 Heat. When it takes stress or structure damage, this effect ceases until the end of its next turn. Each turn this trait activates, the Shotel inflicts an additional +2 Heat on its next attack, up to +6."
+                    }
+                ]
+            },
+            {
+                "name": "Exposed Reactor",
+                "description": "The Shotel receives +1 Difficulty on Engineering checks and saves.",
+                "synergies": [
+                    {
+                        "locations": ["engineering","skill_check"],
+                        "detail": "The Shotel receives +1 Difficulty on Engineering checks and saves."
+                    }
+                ]
+            }
+        ],
+        "core_system": {
+            "name": "Pandora's Pepperbox",
+            "description": "The minor House of Spiders pioneered the use of weaponizing coldcore reactors within the Baronies, and took their tactics to the logical extreme with the Pandora’s Pepperbox, a single use attachment to the Shotel allowing an emergency burst of offense, the best defense.",
+            "active_name": "Pandora's Pepperbox",
+            "active_effect": "Your Heat cools to zero. Choose a space within Range 5 and mark a Cone 7 area; at start of your next two turns, all characters and objects caught inside take on failed Agility save take 2d6 Energy plus your Heat value when you activated this protocol, and half damage on a successful save.",
+            "use": "Round",
+            "activation": "Protocol"
+        }
+    }
+]
