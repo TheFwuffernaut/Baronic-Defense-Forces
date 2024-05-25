@@ -8,7 +8,7 @@
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 2,
-        "effect": "Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads), and allow you to make attacks against characters with the Hidden status.",
+        "effect": "Choose a Launcher or Nexus weapon. Attacks with this weapon count as AoEs for the purposes of resistance/vulnerability to AoEs (e.g. The Drake and Squads), and allow you to make attacks against characters with the Hidden status.",
         "actions": [
             {
                 "name": "Mark of Splendor",
@@ -32,6 +32,7 @@
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 2,
+        "effect": "Choose a Melee weapon. Gain the <b>Pierce The Heart</b> Quick Action.",
         "actions": [
             {
                 "name": "Pierce The Heart",
@@ -52,12 +53,13 @@
         "license": "JIAN",
         "license_level": 2,
         "added_tags": [{"id": "tg_arcing"}],
+        "effect": "Choose a CQB, Launcher, or Nexus weapon. The weapon this mod is equipped to gains the Arcing tag, and you gain the Laser Guided Course Correction Quick Action.",
         "actions": [
             {
                 "name": "Laser Guided Course Correction",
                 "activation": "Quick",
                 "frequency": "1/round",
-                "trigger": "You miss your initial attack target.",
+                "trigger": "You miss your initial attack target with the weapon this mod is equipped to.",
                 "detail": "You may reroll the attack against one enemy within Range 5 of the original target. The new target can be outside the attack area of a templated weapon, as long as it is within Range 5 of the original target."
             }
         ],
@@ -72,12 +74,12 @@
         "source": "BDF",
         "license": "KHANDA",
         "license_level": 2,
-        "effect": "On a Critical Hit, you can force your target to pass a HULL save or become Immobilized and Slowed until the end of their next turn.",
+        "effect": "Choose a Launcher, Cannon, or CQB weapon; on a Critical Hit, you can force your target to become <b>Immobilized</b> and <b>Slowed</b> until the end of their next turn.",
         "actions": [
             {
                 "name": "Acidic Communications",
                 "activation": "Passive",
-                "detail": "On a Critical Hit, you can force your target to pass a Hull Save or become Immobilized and Slowed until the end of their next turn."
+                "detail": "On a Critical Hit, you can force your target to become <b>Immobilized</b> and <b>Slowed</b> until the end of their next turn."
             }
         ],
         "description": "<i>The minor House of Assonance, notorious for elaborate wordplay during battle, modified their munitions to disperse hostile code into enemy computers upon impact in a manner not intended to breach firewalls but etiquette by flashing stunning insults across their screens on impact.  Other Houses have implemented the High Philosophy munitions into fireworks during particularly tense anniversary celebrations.</i>"
@@ -91,7 +93,7 @@
         "license": "KIEM",
         "license_level": 2,
         "restricted_types": ["Melee"],
-        "effect": "Choose a Ranged Weapon. Your attacks with that weapon now affect and damage ground tiles and terrain. 1/round, cause 2d6 AP Explosive bonus damage to the ground tiles, objects and terrain in the area of effect. Destroy 1 depth of ground tile spaces inside the area for every 10 damage dealt to the ground. Single target weapons apply this bonus damage to a single ground or terrain space the target occupies.",
+        "effect": "Choose a Ranged Weapon. Your attacks with that weapon now affect and damage ground tiles and terrain. 1/round, cause 20 AP Explosive bonus damage to the ground tiles, objects and terrain in the area of effect. Destroy 1 depth of ground tile spaces inside the area for every 10 damage dealt to the ground. Single target weapons apply this bonus damage to a single ground or terrain space the target occupies.",
         "description": "<i>The minor House of Pressure developed a series of increasingly volatile mine defusal ordnance which resulted in far more damage than the mines themselves would have caused.  BDF engineers saw an opportunity for mech-scale terraforming and terrain restructuring, allocating print requests for these modifications only to the most decorated and stable soldiers in the field.</i>"
     },
     {

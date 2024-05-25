@@ -110,7 +110,7 @@
         "name": "WEAVER-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [{"id": "tg_ai"}],
+        "tags": [{"id": "tg_ai"}, {"id": "tg_unique"}],
         "source": "BDF",
         "license": "AKRAFENA",
         "license_level": 3,
@@ -119,7 +119,7 @@
             {
                 "name": "WEAVER Protocol",
                 "activation": "Protocol",
-                "detail": "Your attacks gain +2 knockback. You gain the Graceful Dance Reaction. This effect ends at the start of your next turn.",
+                "detail": "Take 2 Heat. Until the start of your next turn, your attacks gain +2 Knockback and you gain the Graceful Dance Reaction.",
                 "heat_cost": 2
             },
             {
@@ -190,7 +190,7 @@
                         "activation": "Reaction",
                         "frequency": "1/round per Helicopter Drone",
                         "trigger": "An Ally makes an attack versus a target within Range 8 of the Helicopter Drone",
-                        "detail": "The Helicopter Drone can fly up to 3 spaces in a direction of the controller's choice and draw a cone 5 area that includes the ally's original target; targets inside this area take 1 Burn and must make a Hull Save. On a failed Save, they are also IMPAIRED"
+                        "detail": "The Helicopter Drone can fly up to 3 spaces in a direction of the controller's choice and draw a cone 5 area that includes the ally's original target; targets inside this area take 1 BURN and are also IMPAIRED."
                     }
                 ]
             }
@@ -272,21 +272,21 @@
         "license_level": 2,
         "actions": [
             {
-                "name": "Volatile Grenade",
+                "name": "Meteor Grenade",
                 "activation": "Quick",
                 "range": [{"type": "Range","val": 3},{"type": "Blast","val": 2}],
-                "damage": [{"type": "Explosive","val": "1d3+1"}],
+                "damage": [{"type": "Explosive","val": 4}],
                 "tags": [{"id": "tg_knockback","val": 3}],
-                "detail": "All characters caught within the Blast must make a Hull Save, taking 3 Explosive damage on a failure and half on success. Whether the save is successful or not all characters are knocked back 3 spaces."
+                "detail": "All characters caught within the Blast must make a Hull Save, taking 4 Explosive damage on a failure and half on success. Whether the save is successful or not all characters are knocked back 3 spaces."
             }
         ],
         "deployables": [
             {
-                "name": "Volatile Mine",
+                "name": "Firecracker Mine",
                 "type": "Mine",
                 "range": [{"type": "Blast","val": 2}],
                 "damage": [{"type": "Explosive","val": 3}],
-                "detail": "This mine detonates when a character moves into an adjacent space or above an adjacent space, up to height 10. Characters in a Burst 2 area extending 10 spaces high take 1d3+1 Explosive damage and are knocked back 3 spaces, and any characters in the air take an additional 1d6 Explosive damage."
+                "detail": "This mine detonates when a character moves into an adjacent space or above an adjacent space, up to height 10. Characters in a Burst 2 area extending 10 spaces high take 3 Explosive damage and are knocked back 3 spaces, and the triggering character and any characters in the air take an additional 6 Explosive damage."
             }
         ],
         "description": "<i>Research into duplicating the Harrison Armory “Roller” Directed Payload Charges resulted in a procurement program rife with fraud and finger pointing, as the resultant weapon delivered did not meet specifications and exploded in too large of an area to be safe to the user.  BDF line troops loved the system and illegally requisition illicit reproductions constantly.</i>"
@@ -360,7 +360,7 @@
             {
                 "name": "Positional Mapping",
                 "activation": "Full Tech",
-                "detail": "Mark 3 free spaces or spaces with planted mines within your Sensors. The next grenade thrown onto each of those spaces or mine detonated on each of those spaces deals an additional 2 Heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 Heat total)."
+                "detail": "Mark in sensor range 3 Blast 1 areas in free spaces or containing spaces with planted mines (this can include obstructed spaces).  The next grenade thrown onto each of those marked areas or mine detonated on each those marked areas deals an additional 2 heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 heat total per detonated mine or grenade)."
             }
         ],
         "description": "<i>Baronic command-and-control units rely on telemetrics provided by frontline scouts to coordinate fire support missions and troop movements.<br><br>“Hacking the BUC just isn’t fun any more. It’s all information we already know - where we are, where we’re going, what’s going to blow us up.”</i>"
@@ -386,7 +386,7 @@
             {
                 "name": "Glory Mine",
                 "type": "Mine",
-                "detail": "When detonated, this system detonates in a series of sinusoidal lasers, creating 3 Burst 1 areas within range 2 of the mine’s space. These areas cannot overlap. Characters within the affected areas must succeed on an AGILITY save or take 3 Burn. On a success, they take 2 Burn."
+                "detail": "When detonated, this system detonates in a series of sinusoidal lasers, creating 3 Burst 1 areas within range 2 of the mine’s space. These areas cannot overlap. Characters within the affected areas must succeed on an AGILITY save or take 6 Burn. On a success, they take 2 Burn."
             }
         ],
         "description": "<i>“I saw one of the Barons, looking at me from the top of the ruins, caught his grenade on rebar, just laughing to himself. Didn’t miss a beat as he keyed the release and watched the charge sail down past us and into our fellow cell on the first floor. Never stopped laughing.”</i>"
@@ -403,12 +403,12 @@
         "actions": [
             {
                 "name": "Sledgehammer Spray",
-                "activation": "Full",
+                "activation": "Quick",
                 "detail": "An adjacent Object, Drone, or Deployable gains (8) OVERSHIELD.  If this overshield is depleted, the object explodes in a Burst 3 area and affected targets must make a Hull save or be knocked back 2 spaces and become Prone on a failed save."
             },
             {
                 "name": "“Sixty-Six” Solvent Spray",
-                "activation": "Full",
+                "activation": "Quick",
                 "detail": "Deal 20 AP KINETIC damage to an adjacent object, Drone, or Deployable. If this would bring the object’s HP to 1 or less, the object’s HP becomes 1. Other characters involuntarily moved into the affected spaces of the object, Drone, or Deployable afterwards must pass a Hull save or become Immobilized in the closest available space of the object that fits the character."
             }
         ],
@@ -419,17 +419,16 @@
         "name": "BANSHEE-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}, {"id": "tg_heat_self","val": 4}], 
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 3,
-        "effect": "Your mech gains the AI property and the Uncaring Howl reaction. This AI always cascades on a Direct Hit Structure check result and automatically ends cascade when the closest character at the time of structure check is Destroyed. When cascading, it always prioritizes causing Prone, then Destroyed status to the nearest character by any means and Uncaring Howl’s heat cost is reduced to 1.",
+        "effect": "Your mech gains the AI property, and you gain the <b>Uncaring Howl</b> reaction.  This NHP always cascades on a <b>Direct Hit Structure check</b> result and automatically ends cascade when the closest character at the time of structure check is <b>Destroyed</b>.<br> When cascading, the player retains control of the mech’s play with the NHP in control, who prioritizes causing <b>Prone</b> and <b>Destroyed</b> status to the character who caused the Structure check by any means in any order.<br>During this cascade, <b>Uncaring Howl’s</b> heat cost is reduced to 0 and all attacks cause <b>Prone</b> Status to their target.",
         "actions": [
             {
                 "name": "Uncaring Howl",
                 "activation": "Reaction",
                 "frequency": "3/round",
-                "tags": [{"id": "tg_heat_self","val": 4}],
                 "trigger": "You take damage from a character.",
                 "detail": "You gain Resistance to that damage and all further damage from that character until the end of your next turn. If you take damage from a closer or equally distant hostile actor while this effect is active, as a reaction you can then gain Resistance to that character's damage for no heat cost. These effects continue until you take Structure damage or do not take any damage until the beginning of your next turn."
             }
@@ -447,7 +446,7 @@
         "license_level": 1,
         "actions": [
             {
-                "name": "Lock On Grenade",
+                "name": "Glitter Grenade",
                 "activation": "Quick",
                 "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
                 "detail": "All characters caught within this grenade's blast area must make a Systems Save or gain the Locked On condition and 2 Heat. Biological targets in the area take 3 Energy damage."
@@ -455,10 +454,10 @@
         ],
         "deployables": [
             {
-                "name": "Lock On Mine",
+                "name": "Shock Smoke Mine",
                 "type": "Mine",
                 "range": [{"type": "Blast","val":2}],
-                "detail": "Targets in a Blast 2 area gain the Lock On condition and 2 Heat. Biological targets in the area take 6 Energy damage."
+                "detail": "Targets in a Blast 2 area gain the Lock On condition and 6 Heat. Biological targets in the area take 6 Energy damage."
             }
         ],
         "description": "<i>Operating on a principle opposite of chaff, electric smoke uses the ionic charge to paint targets for fire support, and results in a hostile environment to non-grounded beings. The minor House of Residuals has used these in aggressive copyright negotiations to assert primary use of certain wrestling and concert performances.</i>"
@@ -616,7 +615,7 @@
         "name": "SALMON-Class NHP",
         "type": "AI",
         "sp": 3,
-        "tags": [{"id": "tg_ai"},{"id": "tg_heat_self","val": 2},{"id": "tg_unique"}],
+        "tags": [{"id": "tg_ai"},{"id": "tg_unique"}],
         "source": "BDF",
         "license": "CHAMBI",
         "license_level": 3,
@@ -624,7 +623,8 @@
             {
                 "name": "Activate SALMON-Class NHP",
                 "activation": "Protocol",
-                "detail": "Gain access to the BAIT TAKEN Reaction until the start of your next turn."
+                "detail": "Take 2 Heat. Gain access to the BAIT TAKEN Reaction until the start of your next turn.",
+                "heat_cost": 2
             },
             {
                 "activation": "Reaction",
@@ -672,7 +672,7 @@
                 "name": "Queen's Retort",
                 "activation": "Quick",
                 "cost": 1,
-                "detail": "Target a character within range 8. They must make an Agility Save, taking 1d6+1 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
+                "detail": "Target a character within range 8. They must make an Agility Save, taking 5 Energy damage on failure and half on a successful save; repeat this save on two targets within range 3 of the initial target for 2 Energy damage each on a failed save."
             }
         ],
         "description": "<i>The QUEEN-class refraction laser fills the most fundamental tactical need identified in ship to ship combat involving fights in long hallways - how to shoot without being exposed. Mirror-bearing hover micro-drones are deployed into strategic positions to reflect shots from an under-barrel-mounted laser. The system was quickly repurposed by minor Barons for political assassinations and mine clearing during labor disputes.</i>"
@@ -691,7 +691,7 @@
             {
                 "name": "DAEVA Protocol",
                 "activation": "Protocol",
-                "detail": "Expend a charge to allow your next ranged or melee attack to be drawn from a number of spaces away from you equal to the heat generated by this protocol, as long as the weapon deals any Energy, Explosive, or Burn.<br>Targets hit by this boosted attack are SLOWED on hit until the end of their next turn."
+                "detail": "Expend a charge and take 1d3+2 Heat to allow your next ranged or melee attack to be drawn from a number of spaces away from you equal to the heat generated by this protocol, as long as the weapon deals any Energy, Explosive, or Burn.<br>Targets hit by this boosted attack are SLOWED on hit until the end of their next turn."
             }
         ],
         "description": "<i>The first DAEVA-class NHP was found in the COMP/CON unit attending the Baron O’Hara of the House of Thunder, cascading after attempting to balance the dietary needs of his collection of giant insects and frogs against his penchant to bring them on his trips across the Baronies. DAEVA-class NHPs are assigned to frames across the Baronies in fire support roles using their personality to sort items meticulously among a barrage of incoming telemetry.</i>"

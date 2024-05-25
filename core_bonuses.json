@@ -49,18 +49,12 @@
         "id": "bdf_bespoke_filigree_project",
         "name": "Bespoke Filigree Project",
         "source": "BDF",
-        "effect": "Gain 2 Repair Cap. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
+        "effect": "Once per full repair, gain 2 repairs during a rest. When your mech overheats, roll a d6. On a 6, the stress is prevented and your Heat rolls back to 0.",
         "description": "Barons of esteem devote untold resources to preening and festooning their mech with the heraldry of their House. You have taken your frame and turned form into function.",
-        "bonus": [
-            {
-                "id": "repcap",
-                "val": 2
-            }
-        ],
         "synergies": [
             {
                 "locations": ["repair", "hull"],
-                "detail": "You should have +2 repcap, CC unfortunately doesn't process this bonus type correctly at this time, please note that you have 2 extra repairs. Thank you for your time."
+                "detail": "Once per full repair, gain 2 repairs during a rest."
             }
         ]
     },

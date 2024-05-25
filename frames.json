@@ -54,7 +54,7 @@
                 {
                     "name": "Whale Beacon",
                     "activation": "Quick",
-                    "detail": "1/round you can detonate a Drone as a Quick Action, destroying it. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6+GRIT EXPLOSIVE damage, half on a hull save; 1/scene if an enemy is killed by a Whale Beacon, gain a repair.",
+                    "detail": "1/round you can detonate any Drone in line of sight and Sensors as a Quick Action, Destroying it.  Alternately, this Quick Action can be used on a character with Lock On condition, which does not cause an effect to the target. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6+GRIT EXPLOSIVE damage, half on a hull save; 1/scene if a character is Destroyed by a Whale Beacon activation or forced save, gain a repair.",
                     "use": "round"
                 }
             ]
@@ -89,7 +89,7 @@
         "traits": [
             {
                 "name": "Weapon Bracing",
-                "description": "The Akrafena comes with 2 weapon mounts capable of mounting 2 Main or smaller weapons apiece. After firing a weapon, the Akrafena cannot fire weapons from any other mount until the start of the next turn.",
+                "description": "The Akrafena comes with 2 weapon mounts capable of mounting 2 Main or smaller weapons apiece. After firing a weapon, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn.",
                 "synergies": [
                     {
                         "locations": ["weapon"],
@@ -254,7 +254,7 @@
         "traits": [
             {
                 "name": "Lead from the Front",
-                "description": "Drones the Dao controls have +2 HP and +2 Evasion and +2 E-Defense (Evasion and E-Defense cannot go over 20).",
+                "description": "Drones the Dao controls have +2 HP and +2 Evasion and +2 E-Defense (Evasion and E-Defense cannot go over 20); and gain Resistance to damage and heat from attacks and saves when within Range 3 of their attacker.",
                 "bonuses": [
                     {
                         "id": "deployable_hp",
@@ -393,7 +393,7 @@
             "repcap": 6,
             "sensor_range": 15,
             "tech_attack": 1,
-            "save": 10,
+            "save": 12,
             "speed": 5,
             "sp": 8
         },
@@ -549,11 +549,11 @@
         "core_system": {
             "name": "Waterfall Projected Shield Arrays",
             "description": "Building on the success of the GMS Type-3 Projected Shield, BDF designers used even higher wattage lasers to intercept incoming fire and deflect it away both from the Kiem and its charges.",
-            "active_name": "Rainy Day Funds",
-            "active_effect": "Your mech has two Cone 3 shields placed adjacent to opposite sides of the character’s spaces.  Attacks or saves tracing a line of effect through one of these cones suffer +1 Difficulty on attacks versus their target and have their damage reduced by 1. Attacks or saves tracing a line of effect through both cones have the effects increased to +2 Difficulty and 2 damage reduction. You may rotate the cones and which spaces they originate from as a Protocol.",
+            "passive_name": "Rainy Day Funds",
+            "passive_effect": "Your mech has two Cone 3 shields placed adjacent to opposite sides of the character’s spaces, called <b>Waterfall Projected Shield Arrays</b>.  Attacks or saves tracing a line of effect through one of these cones suffer +1 Difficulty on attacks versus their target and have their damage reduced by 1. Attacks or saves tracing a line of effect through both cones have the effects increased to +2 Difficulty and 2 damage reduction. You may rotate the cones and which spaces they originate from as a Protocol.",
             "activation": "Protocol",
-            "passive_name": "Rearrange Shields",
-            "passive_effect": "The Waterfall Projected Shield Arrays become Cone 5 and their effects increase to +2 difficulty and 2 damage reduction each, stacking up to +4 Difficulty and 4 damage reduction for lines of effect traced through both cones."
+            "active_name": "Rearrange Waterfall Shields",
+            "active_effect": "The Waterfall Projected Shield Arrays become Cone 5 and their effects increase to +2 difficulty and 2 damage reduction each, stacking up to +4 Difficulty and 4 damage reduction for lines of effect traced through both cones."
         }
     },
     {
@@ -584,7 +584,7 @@
         },
         "traits": [
             {
-                "name": "Agressive Underhooks",
+                "name": "Aggressive Underhooks",
                 "description": "The Klewang has +1 Accuracy on HULL saves and checks while Grappling and can maintain active Grapples at up to range 3 (the Klewang losing adjacency does not break Grapples until the grapple participant is 4 or more spaces away).",
                 "synergies": [
                     {
@@ -599,7 +599,7 @@
             },
             {
                 "name": "Follow-Through",
-                "description": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Klewang moves at least 4 spaces in a round, 1/round it can move 2 additional spaces as a free action.",
+                "description": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Klewang moves at least 4 spaces in a turn from its starting position, 1/round it can move 2 additional spaces in the direction of its last movement.",
                 "use": "Free",
                 "synergies": [
                     {
