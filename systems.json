@@ -145,7 +145,7 @@
             {
                 "name": "Deploy Nano Solder",
                 "activation": "Quick",
-                "detail": "This system creates a BLAST 1 area of nanites within Range 5. Characters standing in this area immediately gain 4 Overshield. When in this area, allied characters can spend a free action to gain 4 Overshield. The zone lasts until the end of the scene or expires after 3 uses of the quick action. Only 1 Nano Solder area can be active at a time; if you create a new one, the old one disintegrates."
+                "detail": "This system creates a BLAST 1 area of nanites within Range 5. Characters standing in this area immediately gain 4 Overshield. When in this area, allied characters can spend a free action to gain 4 Overshield. The zone lasts until the end of the scene or expires after 3 uses of the free action by allies. Only 1 Nano Solder area can be active at a time; if you create a new one, the old one disintegrates."
             }
         ],
         "description": "<i>Field repairs lack time more than they lack materials. Baronies designers identified a direct fire delivery mechanism for emergency repairs by loading a programmed mass of nanites into a payload of printer rawmat.  BDF soldiers complain about the imprecision of the application of the nano solder on ruining the paint jobs and filigree.</i>"
@@ -159,7 +159,7 @@
         "source": "BDF",
         "license": "DAO",
         "license_level": 1,
-        "effect": "After you are hit by an attack, you can move 1 space in a direction of your choice at the start of your turn and each time after you BOOST. This effect does not stack and lasts until the end of your next turn. This free movement is not prevented by BRACE or the SLOWED condition.",
+        "effect": "After you are hit by an attack in a round, after the attack, at the start of your next turn, and each time after you BOOST, you can move 1 space in a direction of your choice. This effect does not stack and lasts until the end of your next turn. This free movement is not prevented by BRACE, the SLOWED condition, or by difficult terrain.",
         "description": "<i>A system of liquid composites alloyed in overlapping layers provides a lightweight compression armor able to direct the force of incoming fire into additional acceleration for the equipping frame.  BDF soldiers refer to it as “Double Time” not due to the accelerated gait as part of the training program for the license, but due to the length of payment plan required to compensate BUC for the license.</i>"
     },
     {
@@ -274,7 +274,7 @@
             {
                 "name": "Meteor Grenade",
                 "activation": "Quick",
-                "range": [{"type": "Range","val": 3},{"type": "Blast","val": 2}],
+                "range": [{"type": "Range","val": 5},{"type": "Blast","val": 2}],
                 "damage": [{"type": "Explosive","val": 4}],
                 "tags": [{"id": "tg_knockback","val": 3}],
                 "detail": "All characters caught within the Blast must make a Hull Save, taking 4 Explosive damage on a failure and half on success. Whether the save is successful or not all characters are knocked back 3 spaces."
@@ -379,7 +379,7 @@
                 "name": "Blaze Grenade",
                 "activation": "Quick",
                 "range": [{"type": "Range","val": 5},{"type": "Blast","val": 1}],
-                "detail": "This area created by this grenade lasts until the end of your turn. At the end of your turn, this explosion causes a new secondary Blast 1 area in a free space within Range 3 of the original. 1/round, Characters caught in either area or moving into it for the first time on their turn take 2 Burn on a failed AGILITY save. The secondary area expires at the start of your next turn."
+                "detail": "This area created by this grenade lasts until the end of your turn. At the end of your turn, this explosion causes a new secondary Blast 1 area in a free space within Range 3 of the original. 1/round per area, Characters caught in either area or moving into it for the first time on their turn take 2 Burn on a failed AGILITY save. The secondary area expires at the start of your next turn."
             }
         ],
         "deployables": [
@@ -423,7 +423,7 @@
         "source": "BDF",
         "license": "KAMPILAN",
         "license_level": 3,
-        "effect": "Your mech gains the AI property, and you gain the <b>Uncaring Howl</b> reaction.  This NHP always cascades on a <b>Direct Hit Structure check</b> result and automatically ends cascade when the closest character at the time of structure check is <b>Destroyed</b>.<br> When cascading, the player retains control of the mech’s play with the NHP in control, who prioritizes causing <b>Prone</b> and <b>Destroyed</b> status to the character who caused the Structure check by any means in any order.<br>During this cascade, <b>Uncaring Howl’s</b> heat cost is reduced to 0 and all attacks cause <b>Prone</b> Status to their target.",
+        "effect": "Your mech gains the AI property, and you gain the <b>Uncaring Howl</b> reaction.  This NHP always cascades on a <b>Direct Hit Structure check</b> result and automatically ends cascade when the character who triggered the time of structure check is <b>Destroyed</b>.<br> When cascading, the player retains control of the mech’s play and ignores the Stunned condition with the NHP in control, who prioritizes causing <b>Prone</b> and <b>Destroyed</b> status to the character who caused the Structure check by any means in any order.<br>During this cascade, <b>Uncaring Howl’s</b> heat cost is reduced to 0 and all attacks cause <b>Prone</b> Status to their target.",
         "actions": [
             {
                 "name": "Uncaring Howl",
@@ -477,10 +477,10 @@
                 "type": "Deployable",
                 "activation": "Quick",
                 "count": 1,
-                "size": "see description",
+                "size": 2,
                 "hp": 20,
                 "evasion": 5,
-                "detail": "This deployable is 6 spaces tall, 2 spaces wide, 2 spaces long, and grants Hard Cover. You pick the orientation upon deployment, and this system may be deployed in spaces occupied by characters as long as the characters do not intersect its boundaries. This is not an obstruction to allies, can be targeted, and does not block line of sight. Characters can stand inside the zone and cannot Hide in it."
+                "detail": "<b>This deployable is 6 spaces tall</b>, 2 spaces wide, 2 spaces long, and grants Hard Cover. You pick the orientation upon deployment, and this system may be deployed in spaces occupied by characters as long as the characters do not intersect its boundaries. This is not an obstruction to allies, can be targeted, and does not block line of sight. Characters can stand inside the zone and cannot Hide in it."
             }
         ],
         "description": "<i>In crowded battlefield conditions, directed shields were needed on a larger scale than the Type-3 GMS Shield could provide. BDF engineers hailing from the minor House of Sour Candy and the minor House of Amplification created the Tiger Cage Anti-Air Bunker as a way to cut off enemy approaches while safeguarding BDF troops in all directions.</i>"
@@ -499,7 +499,7 @@
             {
                 "name": "Blazing Jump",
                 "activation": "Passive",
-                "detail": "Whenever and wherever you jump you leave a trail of special Dangerous Terrain (Energy) behind you. This Dangerous Terrain requires an Engineering Save versus your Save Target rather than an Engineering Check to avoid damage. If the trail would not be in a valid space, the Dangerous Terrain forms in the closest valid space below the path of the jump."
+                "detail": "Whenever and wherever you jump you leave a trail of special Dangerous Terrain (Energy) behind you. This Dangerous Terrain requires an Engineering Save versus your Save Target rather than an Engineering Check to avoid damage. If the trail would not be in a valid space, the Dangerous Terrain forms in the closest valid space below the path of the jump.<br>All Dangerous Terrain created by this system in a round by a character counts as a single zone for Dangerous Terrain damage checks."
             }
         ],
         "description": "<i>The BDF’s RIVER-class Comp/Con unit is a special purpose tactical companion to pilots seeking to weaponize their coldcore reactors in a sustainable, controlled fashion.  Originally designed as a complement to a materials science officer, the RIVER-class Comp/Con was repurposed after it developed an unsettling obsession with magnesium and other pyrotechnic elements.  BDF engineers saw an opportunity to combine this fascination with light, sound, and fury with mechanized chassis, to the delight of crowds everywhere during synchronized armored formation demonstrations.</i>"

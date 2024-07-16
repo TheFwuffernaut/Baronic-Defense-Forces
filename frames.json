@@ -89,11 +89,11 @@
         "traits": [
             {
                 "name": "Weapon Bracing",
-                "description": "The Akrafena comes with 2 weapon mounts capable of mounting 2 Main or smaller weapons apiece. After firing a weapon, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn.",
+                "description": "The Akrafena comes with 4 weapon mounts capable of mounting 1 Main or smaller weapon apiece, mounted in left and right pairs. When firing one of these paired mounted weapons as a Skirmish or Barrage, 1/turn the Akrafena can fire another Main weapon from that same pair of mounts. After firing a weapon with those actions, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn.",
                 "synergies": [
                     {
                         "locations": ["weapon"],
-                        "detail": "After firing a weapon, you cannot fire weapons from any other mount until the start of the next turn."
+                        "detail": "After firing a weapon with the Skirmish or Barrage action, you cannot fire weapons from any other non-integrated mounts until the start of the next turn."
                     }
                 ]
             },
@@ -201,7 +201,7 @@
             "name": "STAR-CLASS NON-HUMAN PERSON CO-PILOT",
             "description": "<i>Every war machine needs more hands.  NHP Co-pilots are a BDF innovation enabling the efficiency of a tank crew while maintaining the efficiency of mechanized chassis.  BDF pilots respect their crewmates.</i>",
             "active_name": "Fire The Big Gun",
-            "active_effect": "All attacks can choose to fire as a Blast 1 within their Range and gain Knockback 2. You may also fire “The Big Gun” until the end of the scene as a Barrage after activating this Core Power.",
+            "active_effect": "All Ranged Attacks can choose to fire as a Blast 1 within their Range and gain Knockback 2. You may also fire “The Big Gun” until the end of the scene as a Barrage after activating this Core Power.",
             "use": "Encounter",
             "activation": "Full",
             "passive_name": "NHP Extra Hands",
@@ -300,13 +300,13 @@
                 {
                     "name": "Subaltern Drone",
                     "type": "Drone",
-                    "detail": "When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
+                    "detail": "<b>This drone's Edef, Evasion, and Speed are equal to your mech's. The default unadjusted DAO stats have been input for your convenience, but you will need to track changes manually.</b><br><br>When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
                     "activation": "Full",
                     "size": 0.5,
                     "hp": "10 + {grit}",
-                    "edef": "your mech's",
-                    "evasion": "your mech's",
-                    "speed": "your mech's"
+                    "edef": 9,
+                    "evasion": 7,
+                    "speed": 4
                 }
             ],
             "passive_effect": "Your mech can print independent Drone companions. This drone can be deployed in an adjacent space and moves independently on your turn. The Subaltern Drone shares your EVASION, E-DEFENSE, and SPEED. Begin the scene with 1 Subaltern Drone already in play."
@@ -550,7 +550,7 @@
             "name": "Waterfall Projected Shield Arrays",
             "description": "Building on the success of the GMS Type-3 Projected Shield, BDF designers used even higher wattage lasers to intercept incoming fire and deflect it away both from the Kiem and its charges.",
             "passive_name": "Rainy Day Funds",
-            "passive_effect": "Your mech has two Cone 3 shields placed adjacent to opposite sides of the character’s spaces, called <b>Waterfall Projected Shield Arrays</b>.  Attacks or saves tracing a line of effect through one of these cones suffer +1 Difficulty on attacks versus their target and have their damage reduced by 1. Attacks or saves tracing a line of effect through both cones have the effects increased to +2 Difficulty and 2 damage reduction. You may rotate the cones and which spaces they originate from as a Protocol.",
+            "passive_effect": "Your mech has two Cone 3 shields placed adjacent to opposite sides of the character’s spaces and facing outwards, called <b>Waterfall Projected Shield Arrays</b>.  Attacks or saves tracing a line of effect through one of these cones suffer +1 Difficulty on attacks versus their target and have their damage reduced by 1. Attacks or saves tracing a line of effect through both cones have the effects increased to +2 Difficulty and 2 damage reduction. You may rotate the cones and change the spaces they originate from as a Protocol as long as the cones originate from opposite sides of the Kiem and do not overlap the character's spaces.",
             "activation": "Protocol",
             "active_name": "Rearrange Waterfall Shields",
             "active_effect": "The Waterfall Projected Shield Arrays become Cone 5 and their effects increase to +2 difficulty and 2 damage reduction each, stacking up to +4 Difficulty and 4 damage reduction for lines of effect traced through both cones."

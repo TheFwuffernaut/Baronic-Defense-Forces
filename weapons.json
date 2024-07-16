@@ -1,5 +1,6 @@
 [
-    {   "id": "bdf_limpet_launcher",
+    {   
+        "id": "bdf_limpet_launcher",
         "name": "Limpet Launcher",
         "mount": "Auxiliary",
         "type": "Launcher",
@@ -182,7 +183,7 @@
         "type": "Melee",
         "damage": [{"type": "Kinetic", "val": "1d3"}],
         "range": [{"type": "Threat", "val": 1}],
-        "tags": [{"id": "tg_knockback","val": 1}],
+        "tags": [{"id": "tg_ap"}, {"id": "tg_knockback","val": 1}],
         "on_hit": "The target must make a HULL Save or become Prone and Impaired.",
         "effect": "Attacking with this weapon counts as an Improvised Attack rather than a weapon attack. This weapon's base damage cannot be modified by talents and gains +2 bonus damage, up to +6, for every destroyed Mount, System, or completely expended Limited System, including the Binary Laser Rifle.",
         "synergies": [
@@ -282,8 +283,8 @@
         "range": [{"type": "Threat","val": 2}],
         "damage": [{"type": "Kinetic","val": "1d6+3"}],
         "tags": [{"id": "tg_ordnance"}],
-        "effect": "As part of attacking with this weapon, you may fly up to 3 spaces directly towards a targeted character. This flight movement ignores Ordnance restrictions and can be used to attack a valid target.",
-        "on_attack": "This weapon attacks all characters within Range 2",
+        "effect": "As part of attacking with this weapon, 1/turn you may fly up to 3 spaces directly towards a targeted character. This flight movement ignores Ordnance restrictions and can be used to attack a valid target.",
+        "on_attack": "This weapon then also attacks all characters at Range 2",
         "on_crit": "Your Target and Targets in Engagement with you must pass a Hull Save or be knocked Prone.",
         "source": "BDF",
         "license": "KLEWANG",
